@@ -1,14 +1,32 @@
+import { useEffect, useState } from 'react';
 import { Box, Typography, Button } from '@mui/material';
 import { HeroBackground } from './components';
 
 export const HeroSection = () => {
+    const [rightStyle, setRightStyle] = useState(
+        window.innerWidth > 1600 ? 0 : 'calc(40% - 640px)'
+    );
+
+    useEffect(() => {
+        const handleResize = () => {
+            setRightStyle(window.innerWidth > 1600 ? 0 : 'calc(40% - 640px)');
+        };
+
+        window.addEventListener('resize', handleResize);
+
+        handleResize();
+
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
     return (
         <Box
             sx={ {
                 position: 'relative',
-                bgcolor: 'background.paper',
                 pt: 8,
                 pb: 6,
+                overflow: 'hidden',
+                height: '100vh',
+                width: '100%',
             } }
         >
             {/* SVG Background */ }
@@ -16,7 +34,7 @@ export const HeroSection = () => {
                 style={ {
                     position: 'absolute',
                     top: 0,
-                    right: 'calc(40% - 640px)',
+                    right: rightStyle,
                 } }
             />
             <Box sx={ { padding: 12, width: '55%' } }>

@@ -18,6 +18,18 @@ const theme = createTheme({
             fontFamily: '"DIN Alternate", sans-serif',
         },
 
+        h2: {
+            fontFamily: '"CircularStd", sans-serif',
+        },
+
+        h3: {
+            fontFamily: '"CircularStd", sans-serif',
+        },
+
+        h4: {
+            fontFamily: '"CircularStd", sans-serif',
+        },
+
         // Default text font for body1
         body1: {
             fontFamily: '"CircularStd", sans-serif',

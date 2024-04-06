@@ -1,6 +1,6 @@
 import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
-import { HeroSection } from './pages/LandingPage';
+import { LandingPage } from './pages';
 import { Navbar } from './components';
 import theme from './themes/theme';
 
@@ -9,7 +9,7 @@ function App () {
         <ThemeProvider theme={ theme }>
             <CssBaseline />
             <Navbar />
-            <HeroSection />
+            <LandingPage />
         </ThemeProvider>
     );
 }

@@ -1,5 +1,4 @@
-import { FeaturesSection, HeroSection } from './';
-import GuidanceSection from './GuidanceSection/GuidanceSection';
+import { ClubsSection, FeaturesSection, HeroSection, GuidanceSection, MapSection } from './';
 
 export const LandingPage = () => {
     return (
@@ -7,6 +6,8 @@ export const LandingPage = () => {
             <HeroSection />
             <FeaturesSection />
             <GuidanceSection />
+            <ClubsSection />
+            <MapSection />
         </>
     );
 };

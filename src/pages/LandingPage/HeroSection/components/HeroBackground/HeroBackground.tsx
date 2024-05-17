@@ -13,8 +13,8 @@ export const HeroBackground: React.FC<HeroBackgroundProps> = ({ style }) => {
                 <path d="M60 0H780V713H533.7C516.467 713 500.449 704.126 491.31 689.516L60 0Z" fill="#006AEA" />
             </g>
             <defs>
-                <filter id="filter0_d_4_130" x="46.5326" y="-28.2512" width="793.467" height="831.251" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <filter id="filter0_d_4_130" x="46.5326" y="-28.2512" width="793.467" height="831.251" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
                     <feOffset dy="30" />
                     <feGaussianBlur stdDeviation="30" />
@@ -23,8 +23,8 @@ export const HeroBackground: React.FC<HeroBackgroundProps> = ({ style }) => {
                     <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_4_130" />
                     <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_4_130" result="shape" />
                 </filter>
-                <filter id="filter1_d_4_130" x="0" y="-30" width="840" height="833" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <filter id="filter1_d_4_130" x="0" y="-30" width="840" height="833" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
                     <feOffset dy="30" />
                     <feGaussianBlur stdDeviation="30" />

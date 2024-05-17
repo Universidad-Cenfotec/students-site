@@ -1,10 +1,10 @@
 import { Box, Grid, Typography, Button } from '@mui/material';
 import { BlogGraphic, StudentKitGraphic } from './components';
 
-const GuidanceSection = () => {
+export const GuidanceSection = () => {
 
     return (
-        <Box sx={ { width: '100%', height: '110vh', textAlign: 'center', my: 4 } }>
+        <Box sx={ { width: '100%', height: '125vh', textAlign: 'center', my: 4 } }>
             <Typography variant="h4" sx={ { mx: 12, my: 2, textAlign: 'left', fontSize: 18, fontWeight: 600, letterSpacing: 1 } }>
                 Sitio de Estudiantes
             </Typography>
@@ -76,5 +76,3 @@ const GuidanceSection = () => {
         </Box >
     );
 };
-
-export default GuidanceSection;

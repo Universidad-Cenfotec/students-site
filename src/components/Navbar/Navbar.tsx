@@ -14,9 +14,9 @@ export const Navbar = () => {
     };
 
     return (
-        <AppBar position="absolute" color="transparent" elevation={ 0 } sx={ { paddingY: 4 } }>
+        <AppBar position="absolute" color="transparent" elevation={ 0 } sx={ { paddingY: 4, marginRight: '10rem' } }>
             <Container>
-                <Toolbar disableGutters>
+                <Toolbar>
                     <Box sx={ { flexGrow: 0.1 } }>
                         {/* Link wrapped around the image for clicking the logo to navigate home */ }
                         {/* <RouterLink to="/"> */ }

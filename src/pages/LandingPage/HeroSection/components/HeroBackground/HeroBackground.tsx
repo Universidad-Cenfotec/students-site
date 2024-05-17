@@ -5,7 +5,7 @@ interface HeroBackgroundProps {
 
 export const HeroBackground: React.FC<HeroBackgroundProps> = ({ style }) => {
     return (
-        <svg style={ style } width="780" height="803" viewBox="0 0 780 803" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg style={ style } viewBox="0 0 780 803" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g filter="url(#filter0_d_4_130)">
                 <path d="M371.747 60.4316C376.013 50.5155 385.278 43.656 396.007 42.4693L763.351 1.84136C772.234 0.858911 780 7.81331 780 16.7505V698C780 706.284 773.284 713 765 713H136.565C115.01 713 100.489 690.945 109.007 671.144L371.747 60.4316Z" fill="#00479B" />
             </g>

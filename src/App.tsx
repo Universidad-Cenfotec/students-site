@@ -1,7 +1,7 @@
 import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import { LandingPage } from './pages';
-import { Navbar } from './components';
+import { Footer, Navbar } from './components';
 import theme from './themes/theme';
 
 function App () {
@@ -10,6 +10,7 @@ function App () {
             <CssBaseline />
             <Navbar />
             <LandingPage />
+            <Footer />
         </ThemeProvider>
     );
 }

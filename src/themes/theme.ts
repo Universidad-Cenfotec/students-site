@@ -34,6 +34,10 @@ const theme = createTheme({
             fontFamily: '"CircularStd", sans-serif',
         },
 
+        h6: {
+            fontFamily: '"CircularStd", sans-serif',
+        },
+
         // Default text font for body1
         body1: {
             fontFamily: '"CircularStd", sans-serif',

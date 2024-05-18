@@ -10,9 +10,11 @@ export const MapSection = () => {
             <Typography variant="h2" sx={ { mx: 12, textAlign: 'left', color: 'primary.main', fontSize: 48, fontWeight: 600 } }>
                 ¿Deseas visitarnos?
             </Typography>
-            <Grid container sx={ { my: 8, maxWidth: '80%', mx: 'auto' } }>
-                <Map />
-            </Grid>
+            <Box>
+                <Grid container sx={ { my: 8, maxWidth: '80%', mx: 'auto' } }>
+                    <Map />
+                </Grid>
+            </Box>
         </Box>
     );
 };

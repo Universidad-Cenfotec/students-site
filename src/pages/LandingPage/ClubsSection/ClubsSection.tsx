@@ -5,22 +5,56 @@ import { ClubCard } from './components';
 
 export const ClubsSection = () => {
     return (
-        <Box sx={ { width: '100%', height: '85vh', textAlign: 'center', my: 4 } }>
-            <Typography variant="h4" sx={ { mx: 12, my: 2, textAlign: 'left', fontSize: 18, fontWeight: 600, letterSpacing: 1 } }>
+        <Box sx={ { width: '100%', height: 'auto', textAlign: { xs: 'center', md: 'left' }, my: '10rem', px: { xs: '2rem', md: '6rem' } } }>
+            <Typography variant="h4" sx={ { mx: 'auto', my: '0.5rem', textAlign: { xs: 'center', md: 'left' }, fontSize: { xs: '1rem', sm: '1.125rem' }, fontWeight: 600, letterSpacing: '0.0625rem' } }>
                 Sitio de Estudiantes
             </Typography>
-            <Typography variant="h2" sx={ { mx: 12, textAlign: 'left', color: 'primary.main', fontSize: 48, fontWeight: 600 } }>
+            <Typography variant="h2" sx={ { mx: 'auto', textAlign: { xs: 'center', md: 'left' }, color: 'primary.main', fontSize: { xs: '2rem', sm: '3rem' }, fontWeight: 600 } }>
                 ¿Ya conoces nuestros clubes?
             </Typography>
-            <Grid container sx={ { my: 8, maxWidth: '80%', mx: 'auto', height: '100%' } }>
+            <Grid container sx={ { my: '4rem', mx: 'auto', height: 'auto', minHeight: '34rem' } }>
                 <Swiper
-                    spaceBetween={ 50 }
-                    slidesPerView={ 3 }
-                    style={ { paddingRight: 50, paddingLeft: 50 } }
+                    slidesPerView={ 1 }
+                    spaceBetween={ 10 }
+                    breakpoints={ {
+                        900: { slidesPerView: 2, spaceBetween: 16 },
+                        1200: { slidesPerView: 2, spaceBetween: 16 },
+                        1500: { slidesPerView: 3, spaceBetween: 16 },
+                    } }
+                    watchSlidesProgress
+                    loop={ true }
+                    style={ { paddingRight: 50, paddingLeft: 50, margin: '0 auto' } }
                 >
-                    <SwiperSlide><ClubCard title="Club de Ajedrez" description="Un punto de encuentro para entusiastas del ajedrez que buscan afinar su pensamiento estratégico y competir en un entorno de respeto mutuo y mejora continua." imageUrl="https://res.cloudinary.com/glovooker/image/upload/v1715972808/students-site/ajedrez.png" /></SwiperSlide>
-                    <SwiperSlide><ClubCard title="Club de Programación Competitiva" description="Dirigido a aquellos que disfrutan resolviendo problemas, para desarrollar habilidades de programación y competir en eventos nacionales e internacionales." imageUrl="https://res.cloudinary.com/glovooker/image/upload/v1715972808/students-site/progra-compe.png" /></SwiperSlide>
-                    <SwiperSlide><ClubCard title="Club Deportivo" description="Un colectivo para los apasionados del deporte que se esfuerzan por un equilibrio entre el bienestar físico y el compañerismo, representando valores de disciplina y trabajo en equipo." imageUrl="https://res.cloudinary.com/glovooker/image/upload/v1715972808/students-site/deportivo.png" /></SwiperSlide>
+                    <SwiperSlide>
+                        { ({ isVisible }) => (
+                            <ClubCard
+                                title="Club de Ajedrez"
+                                description="Un punto de encuentro para entusiastas del ajedrez que buscan afinar su pensamiento estratégico y competir en un entorno de respeto mutuo y mejora continua."
+                                imageUrl="https://res.cloudinary.com/glovooker/image/upload/v1715972808/students-site/ajedrez.png"
+                                style={ { display: isVisible ? 'block' : 'none' } }
+                            />
+                        ) }
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        { ({ isVisible }) => (
+                            <ClubCard
+                                title="Club de Programación Competitiva"
+                                description="Dirigido a aquellos que disfrutan resolviendo problemas, para desarrollar habilidades de programación y competir en eventos nacionales e internacionales."
+                                imageUrl="https://res.cloudinary.com/glovooker/image/upload/v1715972808/students-site/progra-compe.png"
+                                style={ { display: isVisible ? 'block' : 'none' } }
+                            />
+                        ) }
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        { ({ isVisible }) => (
+                            <ClubCard
+                                title="Club Deportivo"
+                                description="Un colectivo para los apasionados del deporte que se esfuerzan por un equilibrio entre el bienestar físico y el compañerismo, representando valores de disciplina y trabajo en equipo."
+                                imageUrl="https://res.cloudinary.com/glovooker/image/upload/v1715972808/students-site/deportivo.png"
+                                style={ { display: isVisible ? 'block' : 'none' } }
+                            />
+                        ) }
+                    </SwiperSlide>
                 </Swiper>
             </Grid>
         </Box>

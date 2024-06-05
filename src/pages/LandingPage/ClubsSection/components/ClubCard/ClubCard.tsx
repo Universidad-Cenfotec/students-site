@@ -4,11 +4,12 @@ interface ClubCardProps {
     title: string;
     description: string;
     imageUrl: string;
+    style?: React.CSSProperties;
 }
 
-export const ClubCard = ({ title, description, imageUrl }: ClubCardProps) => {
+export const ClubCard = ({ title, description, imageUrl, style }: ClubCardProps) => {
     return (
-        <Card sx={ { maxWidth: 366, height: 455, borderRadius: '12px', textAlign: 'left', boxShadow: '0px 30px 60px rgba(71, 74, 87, 0.25)', cursor: 'pointer' } }>
+        <Card sx={ { maxWidth: 366, height: 455, borderRadius: '12px', textAlign: 'left', boxShadow: '0px 30px 60px rgba(71, 74, 87, 0.25)', cursor: 'pointer' } } style={ style }>
             <CardMedia
                 component="img"
                 height="236"

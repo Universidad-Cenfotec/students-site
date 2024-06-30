@@ -1,8 +1,9 @@
+import { StudentAffairsSection } from './';
 
 export const AboutPage = () => {
     return (
         <>
-            <h1>About Us Section</h1>
+            <StudentAffairsSection />
         </>
     );
 };

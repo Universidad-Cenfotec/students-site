@@ -10,7 +10,6 @@ function App () {
         <ThemeProvider theme={ theme }>
             <CssBaseline />
             <Router>
-
                 <Navbar />
                 <Routes>
                     <Route path="/" element={ <LandingPage /> } />

@@ -1,4 +1,5 @@
-import { AppBar, Toolbar, Button, IconButton, useMediaQuery, useTheme, Box, Drawer, List, ListItem, ListItemText } from '@mui/material';
+import { AppBar, Toolbar, Button, IconButton, useMediaQuery, useTheme, Box, Drawer, List, ListItem, ListItemText, ListItemButton } from '@mui/material';
+import { Link } from 'react-router-dom';
 import MenuIcon from '@mui/icons-material/Menu';
 import logo from '../../assets/images/logo.png';
 import { useState } from 'react';
@@ -30,14 +31,14 @@ export const Navbar = () => {
                 <Toolbar sx={ { justifyContent: { xs: 'space-between', xl: 'start' } } }>
                     <Box sx={ { flexGrow: 0.1 } }>
                         {/* Link wrapped around the image for clicking the logo to navigate home */ }
-                        {/* <RouterLink to="/"> */ }
-                        <img src={ logo } alt="Logo" style={ { height: '3.5rem' } } /> {/* Convertido a rem */ }
-                        {/* </RouterLink> */ }
+                        <Link to="/">
+                            <img src={ logo } alt="Logo" style={ { height: '3.5rem' } } /> {/* Convertido a rem */ }
+                        </Link>
                     </Box>
                     { isLargeScreen ? (
                         <Box>
                             <Button component="a" href="/" sx={ buttonStyle }>Inicio</Button>
-                            <Button component="a" href="/about-us" sx={ buttonStyle }>Sobre Nosotros</Button>
+                            <Button component="a" href="/about" sx={ buttonStyle }>Sobre Nosotros</Button>
                             <Button component="a" href="/academy" sx={ buttonStyle }>Academia</Button>
                             <Button component="a" href="/community" sx={ buttonStyle }>Comunidad</Button>
                             <Button component="a" href="/support" sx={ buttonStyle }>Soporte</Button>
@@ -51,21 +52,21 @@ export const Navbar = () => {
             </AppBar>
             <Drawer anchor="left" open={ drawerOpen } onClose={ handleDrawerToggle }>
                 <List>
-                    <ListItem button>
+                    <ListItemButton href='/'>
                         <ListItemText primary="Inicio" />
-                    </ListItem>
-                    <ListItem button>
+                    </ListItemButton>
+                    <ListItemButton href='/about'>
                         <ListItemText primary="Sobre Nosotros" />
-                    </ListItem>
-                    <ListItem button>
+                    </ListItemButton>
+                    <ListItemButton href='/academy'>
                         <ListItemText primary="Academia" />
-                    </ListItem>
-                    <ListItem button>
+                    </ListItemButton>
+                    <ListItemButton href='/community'>
                         <ListItemText primary="Comunidad" />
-                    </ListItem>
-                    <ListItem button>
+                    </ListItemButton>
+                    <ListItemButton href='/support'>
                         <ListItemText primary="Soporte" />
-                    </ListItem>
+                    </ListItemButton>
                 </List>
             </Drawer>
         </>

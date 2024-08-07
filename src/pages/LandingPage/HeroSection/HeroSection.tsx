@@ -7,12 +7,12 @@ export const HeroSection = () => {
     const isLargeScreen = useMediaQuery(theme.breakpoints.up('lg'));
 
     const [rightStyle, setRightStyle] = useState(
-        window.innerWidth > 1600 ? 0 : 'calc(40% - 40rem)'
+        window.innerWidth > 1600 ? 0 : 'calc(40% - 37.8rem)'
     );
 
     useEffect(() => {
         const handleResize = () => {
-            setRightStyle(window.innerWidth > 1600 ? 0 : 'calc(40% - 40rem)');
+            setRightStyle(window.innerWidth > 1600 ? 0 : 'calc(40% - 37.8rem)');
         };
 
         window.addEventListener('resize', handleResize);
@@ -86,7 +86,7 @@ export const HeroSection = () => {
                         position: 'absolute',
                         top: 0,
                         right: rightStyle,
-                        maxHeight: '100%',
+                        maxHeight: '90%',
                     } }
                 />
             ) }

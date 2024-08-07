@@ -6,7 +6,7 @@ import { useState } from 'react';
 
 export const Navbar = () => {
     const theme = useTheme();
-    const isLargeScreen = useMediaQuery(theme.breakpoints.up('xl'));
+    const isLargeScreen = useMediaQuery(theme.breakpoints.up('sm'));
     const [drawerOpen, setDrawerOpen] = useState(false);
 
     const handleDrawerToggle = () => {
@@ -28,7 +28,7 @@ export const Navbar = () => {
     return (
         <>
             <AppBar position="static" sx={ { backgroundColor: 'white', boxShadow: 'none', padding: '2rem' } }>
-                <Toolbar sx={ { justifyContent: { xs: 'space-between', xl: 'start' } } }>
+                <Toolbar sx={ { justifyContent: { xs: 'space-between', lg: 'start', zIndex: '100' } } }>
                     <Box sx={ { flexGrow: 0.1 } }>
                         {/* Link wrapped around the image for clicking the logo to navigate home */ }
                         <Link to="/">

@@ -37,11 +37,11 @@ export const Navbar = () => {
                     </Box>
                     { isLargeScreen ? (
                         <Box>
-                            <Button component="a" href="/" sx={ buttonStyle }>Inicio</Button>
-                            <Button component="a" href="/about" sx={ buttonStyle }>Sobre Nosotros</Button>
-                            <Button component="a" href="/academy" sx={ buttonStyle }>Academia</Button>
-                            <Button component="a" href="/community" sx={ buttonStyle }>Comunidad</Button>
-                            <Button component="a" href="/support" sx={ buttonStyle }>Soporte</Button>
+                            <Button component={ Link } to="/" sx={ buttonStyle }>Inicio</Button>
+                            <Button component={ Link } to="/about" sx={ buttonStyle }>Sobre Nosotros</Button>
+                            <Button component={ Link } to="/academy" sx={ buttonStyle }>Academia</Button>
+                            <Button component={ Link } to="/community" sx={ buttonStyle }>Comunidad</Button>
+                            <Button component={ Link } to="/support" sx={ buttonStyle }>Soporte</Button>
                         </Box>
                     ) : (
                         <IconButton onClick={ handleDrawerToggle } sx={ { color: 'text.primary' } }>

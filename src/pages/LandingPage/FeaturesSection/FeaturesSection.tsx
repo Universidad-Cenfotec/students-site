@@ -3,7 +3,7 @@ import { CommentIcon, HeartIcon, SearchIcon } from './components';
 
 export const FeaturesSection = () => {
     return (
-        <Box sx={ { width: '100%', height: 'auto', textAlign: { xs: 'center', md: 'left' }, mb: '10rem', px: '1rem' } }>
+        <Box id="features" sx={ { width: '100%', height: 'auto', textAlign: { xs: 'center', md: 'left' }, mb: '10rem', px: '1rem' } }>
             <Typography variant="h4" sx={ { mx: { xs: 'auto', md: 12 }, my: '0.5rem', textAlign: { xs: 'center', md: 'left' }, fontSize: { xs: '1rem', sm: '1.125rem' }, fontWeight: 600, letterSpacing: '0.0625rem' } }>
                 Sitio de Estudiantes
             </Typography>

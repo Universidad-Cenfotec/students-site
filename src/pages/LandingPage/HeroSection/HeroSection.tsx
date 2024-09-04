@@ -73,6 +73,7 @@ export const HeroSection = () => {
                             variant="contained"
                             size="large"
                             color="primary"
+                            href='#features'
                             sx={ { fontSize: { xs: '1rem', sm: '1.125rem', md: '1.25rem', lg: '1.5rem' }, fontWeight: 600, margin: { xs: '0 auto', sm: '0 auto', md: '0 auto', lg: '0', xl: '0' }, } }
                         >
                             ¡Explorar!

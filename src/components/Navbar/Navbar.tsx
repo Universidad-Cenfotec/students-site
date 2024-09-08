@@ -1,7 +1,6 @@
-import { AppBar, Toolbar, Button, IconButton, useMediaQuery, useTheme, Box, Drawer, List, ListItemText, ListItemButton } from '@mui/material';
-import { Link } from 'react-router-dom';
+import { AppBar, Toolbar, Button, IconButton, useMediaQuery, useTheme, Box, Drawer, List, ListItem, ListItemText } from '@mui/material';
+import Link from 'next/link';
 import MenuIcon from '@mui/icons-material/Menu';
-import logo from '../../assets/images/logo.png';
 import { useState } from 'react';
 
 export const Navbar = () => {
@@ -28,20 +27,19 @@ export const Navbar = () => {
     return (
         <>
             <AppBar position="static" sx={ { backgroundColor: 'white', boxShadow: 'none', padding: '2rem' } }>
-                <Toolbar sx={ { justifyContent: { xs: 'space-between', lg: 'start', zIndex: '100' } } }>
+                <Toolbar sx={ { justifyContent: { xs: 'space-between', lg: 'start' }, zIndex: '100' } }>
                     <Box sx={ { flexGrow: 0.1 } }>
-                        {/* Link wrapped around the image for clicking the logo to navigate home */ }
-                        <Link to="/">
-                            <img src={ logo } alt="Logo" style={ { height: '3.5rem' } } /> {/* Convertido a rem */ }
+                        <Link href="/" passHref>
+                            <img src='/images/logo.png' alt="Logo" style={ { height: '3.5rem' } } />
                         </Link>
                     </Box>
                     { isLargeScreen ? (
                         <Box>
-                            <Button component={ Link } to="/" sx={ buttonStyle }>Inicio</Button>
-                            <Button component={ Link } to="/about" sx={ buttonStyle }>Sobre Nosotros</Button>
-                            <Button component={ Link } to="/academy" sx={ buttonStyle }>Academia</Button>
-                            <Button component={ Link } to="/community" sx={ buttonStyle }>Comunidad</Button>
-                            <Button component={ Link } to="/support" sx={ buttonStyle }>Soporte</Button>
+                            <Link href="/" passHref><Button sx={ buttonStyle }>Inicio</Button></Link>
+                            <Link href="/about" passHref><Button sx={ buttonStyle }>Sobre Nosotros</Button></Link>
+                            <Link href="/academy" passHref><Button sx={ buttonStyle }>Academia</Button></Link>
+                            <Link href="/community" passHref><Button sx={ buttonStyle }>Comunidad</Button></Link>
+                            <Link href="/support" passHref><Button sx={ buttonStyle }>Soporte</Button></Link>
                         </Box>
                     ) : (
                         <IconButton onClick={ handleDrawerToggle } sx={ { color: 'text.primary' } }>
@@ -52,21 +50,11 @@ export const Navbar = () => {
             </AppBar>
             <Drawer anchor="left" open={ drawerOpen } onClose={ handleDrawerToggle }>
                 <List>
-                    <ListItemButton href='/'>
-                        <ListItemText primary="Inicio" />
-                    </ListItemButton>
-                    <ListItemButton href='/about'>
-                        <ListItemText primary="Sobre Nosotros" />
-                    </ListItemButton>
-                    <ListItemButton href='/academy'>
-                        <ListItemText primary="Academia" />
-                    </ListItemButton>
-                    <ListItemButton href='/community'>
-                        <ListItemText primary="Comunidad" />
-                    </ListItemButton>
-                    <ListItemButton href='/support'>
-                        <ListItemText primary="Soporte" />
-                    </ListItemButton>
+                    <ListItem component={ Link } href='/' passHref><ListItemText primary="Inicio" /></ListItem>
+                    <ListItem component={ Link } href='/about' passHref><ListItemText primary="Sobre Nosotros" /></ListItem>
+                    <ListItem component={ Link } href='/academy' passHref><ListItemText primary="Academia" /></ListItem>
+                    <ListItem component={ Link } href='/community' passHref><ListItemText primary="Comunidad" /></ListItem>
+                    <ListItem component={ Link } href='/support' passHref><ListItemText primary="Soporte" /></ListItem>
                 </List>
             </Drawer>
         </>

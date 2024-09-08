@@ -1,0 +1,13 @@
+import SvgIcon, { SvgIconProps } from '@mui/material/SvgIcon';
+
+export const SearchIcon: React.FC<SvgIconProps> = (props) => {
+    return (
+        <SvgIcon { ...props }>
+            <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20.625 35.625C28.9093 35.625 35.625 28.9093 35.625 20.625C35.625 12.3407 28.9093 5.625 20.625 5.625C12.3407 5.625 5.625 12.3407 5.625 20.625C5.625 28.9093 12.3407 35.625 20.625 35.625Z" stroke="currentColor" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M39.375 39.375L31.2188 31.2188" stroke="currentColor" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+        </SvgIcon>
+    );
+};
+

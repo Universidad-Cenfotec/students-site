@@ -1,5 +1,9 @@
 import React from 'react';
-import { ClubsSection, FeaturesSection, GuidanceSection, HeroSection, MapSection } from './landing/sections';
+import HeroSection from './landing/sections/HeroSection';
+import FeaturesSection from './landing/sections/FeaturesSection';
+import GuidanceSection from './landing/sections/GuidanceSection';
+import ClubsSection from './landing/sections/ClubsSection';
+import MapSection from './landing/sections/MapSection';
 
 const LandingPage = () => {
     return (

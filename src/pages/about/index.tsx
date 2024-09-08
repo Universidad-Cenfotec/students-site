@@ -1,5 +1,6 @@
 import React from 'react';
-import { DiversityStatementSection, StudentAffairsSection } from './sections';
+import StudentAffairsSection from './sections/StudentAffairsSection';
+import DiversityStatementSection from './sections/DiversityStatementSection';
 
 const AboutPage = () => {
     return (

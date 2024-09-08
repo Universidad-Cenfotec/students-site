@@ -1,5 +1,8 @@
 import React from 'react';
-import { CalendarSection, EducationModelSection, GuidesSection, PlatformsSection } from './sections';
+import EducationModelSection from './sections/EducationModelSection';
+import PlatformsSection from './sections/PlatformsSection';
+import GuidesSection from './sections/GuidesSection';
+import CalendarSection from './sections/CalendarSection';
 
 const AcademyPage = () => {
     return (

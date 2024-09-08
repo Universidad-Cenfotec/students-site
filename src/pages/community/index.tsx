@@ -1,5 +1,6 @@
 import React from 'react';
-import { BlogSection, JobsSection } from './sections';
+import BlogSection from './sections/BlogSection';
+import JobsSection from './sections/JobsSection';
 
 const CommunityPage = () => {
     return (

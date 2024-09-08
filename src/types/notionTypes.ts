@@ -1,11 +1,16 @@
-// src/types/notionTypes.ts
-export interface NotionPage {
+export type NotionText = {
+    type: string;
+    text: {
+        content: string;
+        link: string | null;
+    };
+};
+
+export type NotionPage = {
     id: string;
     created_time: string;
     last_edited_time: string;
-    properties: any; // You should replace 'any' with a more specific type based on your database properties
-}
-
-export interface NotionQueryResponse {
-    results: NotionPage[];
-}
+    title: NotionText[];
+    description?: NotionText[];
+    // Add more properties based on your Notion setup
+};

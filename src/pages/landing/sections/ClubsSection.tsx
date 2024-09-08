@@ -3,14 +3,14 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { ClubCard } from '@/components/Landing/ClubsSection/components';
 
-const ClubsSection = () => {
+const ClubsSection: React.FC<any> = ({ content }) => {
     return (
         <Box sx={ { width: '100%', height: 'auto', textAlign: { xs: 'center', md: 'left' }, my: '10rem', px: { xs: '2rem', md: '6rem' } } }>
             <Typography variant="h4" sx={ { mx: 'auto', my: '0.5rem', textAlign: { xs: 'center', md: 'left' }, fontSize: { xs: '1rem', sm: '1.125rem' }, fontWeight: 600, letterSpacing: '0.0625rem' } }>
-                Sitio de Estudiantes
+                { content[35].heading_3.rich_text[0].plain_text }
             </Typography>
             <Typography variant="h2" sx={ { mx: 'auto', textAlign: { xs: 'center', md: 'left' }, color: 'primary.main', fontSize: { xs: '2rem', sm: '3rem' }, fontWeight: 600 } }>
-                ¿Ya conoces nuestros clubes?
+                { content[36].heading_1.rich_text[0].plain_text }
             </Typography>
             <Grid container sx={ { my: '4rem', mx: 'auto', height: 'auto', minHeight: '34rem' } }>
                 <Swiper

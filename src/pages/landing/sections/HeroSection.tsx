@@ -1,14 +1,12 @@
 import { useEffect, useState } from 'react';
 import { Box, Typography, Button, useMediaQuery, useTheme } from '@mui/material';
 import { HeroBackground } from '@/components/Landing/HeroSection/components';
-import { NotionPage } from '@/types/notionTypes';
-import { getSectionContent } from '@/services/notionService';
 
-const HeroSection = () => {
+const HeroSection: React.FC<any> = ({ content }) => {
     const theme = useTheme();
-    const [content, setContent] = useState<NotionPage | null>(null);
-    const databaseId = "526df7dc8ff943aeb550d024010f6be5";
     const isLargeScreen = useMediaQuery(theme.breakpoints.up('lg'));
+
+    console.log(content);
 
     const [rightStyle, setRightStyle] = useState<string | number>(0); // Initialize with a default value.
 
@@ -23,24 +21,6 @@ const HeroSection = () => {
         window.addEventListener('resize', handleResize);
 
         return () => window.removeEventListener('resize', handleResize);
-    }, []);
-
-    useEffect(() => {
-        const fetchContent = async () => {
-            try {
-                const data = await getSectionContent(databaseId, {
-                    property: 'Tag',
-                    text: {
-                        equals: 'HeroSection'
-                    }
-                });
-                if (data.length > 0) setContent(data[0]);
-            } catch (error) {
-                console.error("Error fetching Hero Section from Notion:", error);
-            }
-        };
-
-        fetchContent();
     }, []);
 
     return (
@@ -72,7 +52,7 @@ const HeroSection = () => {
                         width="85%"
                         sx={ { textAlign: { xs: 'center', lg: 'left' }, margin: { xs: '0 auto', sm: '0 auto', md: '0 auto', lg: '0', xl: '0' } } }
                     >
-                        Explora la Experiencia <Box component="span" sx={ { color: 'primary.main', fontSize: { xs: '4.75rem', sm: '6.25rem', md: '7.5rem', lg: '7.9375rem' }, lineHeight: 1 } }>CENFOTEC</Box>
+                        { content[0].heading_2.rich_text[0].plain_text } <Box component="span" sx={ { color: 'primary.main', fontSize: { xs: '4.75rem', sm: '6.25rem', md: '7.5rem', lg: '7.9375rem' }, lineHeight: 1 } }>{ content[1].heading_1.rich_text[0].plain_text }</Box>
                     </Typography>
                     <Typography
                         variant="body1"
@@ -81,7 +61,7 @@ const HeroSection = () => {
                         paragraph
                         sx={ { textAlign: { xs: 'center', lg: 'left' }, width: { md: '100%', lg: '75%' }, mt: '1rem', } }
                     >
-                        Abre las puertas a un mundo de conocimiento y vanguardia en <Box component="span" sx={ { color: 'primary.main', fontFamily: '"DIN Alternate", sans-serif' } }>CENFOTEC</Box>. Sumérgete en un ambiente donde la pasión se convierte en excelencia y donde cada paso te acerca a tus metas profesionales.
+                        { content[2].paragraph.rich_text[0].plain_text } <Box component="span" sx={ { color: 'primary.main', fontFamily: '"DIN Alternate", sans-serif' } }>{ content[3].paragraph.rich_text[0].plain_text }</Box>{ content[4].paragraph.rich_text[0].plain_text }
                     </Typography>
                     <Box
                         sx={ {
@@ -97,7 +77,7 @@ const HeroSection = () => {
                             href='#features'
                             sx={ { fontSize: { xs: '1rem', sm: '1.125rem', md: '1.25rem', lg: '1.5rem' }, fontWeight: 600, margin: { xs: '0 auto', sm: '0 auto', md: '0 auto', lg: '0', xl: '0' }, } }
                         >
-                            ¡Explorar!
+                            { content[5].paragraph.rich_text[0].plain_text }
                         </Button>
                     </Box>
                 </Box>

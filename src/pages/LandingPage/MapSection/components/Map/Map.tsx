@@ -1,35 +1,46 @@
+import { useEffect, useRef } from 'react';
+import mapboxgl from 'mapbox-gl';
+import 'mapbox-gl/dist/mapbox-gl.css';
 import { Box } from '@mui/material';
-import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
-
-const containerStyle = {
-    width: '100%',
-    height: '400px'  // Set height or make responsive as necessary
-};
-
-const center = {
-    lat: 9.931461169627944,    // Latitude for the initial center of the map
-    lng: -84.06417588219469  // Longitude for the initial center of the map
-};
 
 export const Map = () => {
-    const googleMapsApiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
+    const mapContainerRef = useRef<HTMLDivElement | null>(null);
+
+    useEffect(() => {
+        if (mapContainerRef.current) {
+            mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_ACCESS_TOKEN;
+
+            const map = new mapboxgl.Map({
+                container: mapContainerRef.current,
+                style: 'mapbox://styles/mapbox/streets-v11',
+                center: [-84.0643, 9.9312],
+                zoom: 17
+            });
+
+            const marker = new mapboxgl.Marker({ color: "red" })
+                .setLngLat([-84.0643, 9.9312])
+                .addTo(map);
+
+            const markerElement = marker.getElement();
+            markerElement.style.cursor = 'pointer';
+
+            markerElement.addEventListener('click', () => {
+                window.open(`https://www.waze.com/live-map/directions/universidad-cenfotec-av.-central-bo.-la-california,-san-jose?navigate=yes&to=place.w.180813923.1808401377.26684785`, '_blank');
+            });
+
+            return () => {
+                map.remove();
+            };
+        }
+    }, []);
 
     return (
-        <Box sx={ { width: '100%', boxShadow: '0px 30px 60px rgba(71, 74, 87, 0.25)' } }>
-
-            <LoadScript
-                googleMapsApiKey={ googleMapsApiKey }
-            >
-                <GoogleMap
-                    mapContainerStyle={ containerStyle }
-                    center={ center }
-                    zoom={ 18 }
-                >
-                    {/* Marker component for showing a specific location */ }
-                    <Marker position={ center } />
-                    {/* Additional markers or map features here */ }
-                </GoogleMap>
-            </LoadScript>
+        <Box sx={ { width: '100%', boxShadow: '0px 30px 60px rgba(71, 74, 87, 0.25)', borderRadius: '20px' } }>
+            <div
+                ref={ mapContainerRef }
+                style={ { width: '100%', height: '400px', borderRadius: '20px' } }
+                className="map-container"
+            />
         </Box>
     );
 };

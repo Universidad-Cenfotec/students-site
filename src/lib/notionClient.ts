@@ -20,7 +20,7 @@ export const getPageContent = async (pageId: string) => {
     try {
         const blocksResponse = await notion.blocks.children.list({
             block_id: pageId,
-            page_size: 50  // Adjust page size as necessary
+            page_size: 100  // Adjust page size as necessary
         });
         return blocksResponse.results;
     } catch (error) {

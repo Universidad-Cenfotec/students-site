@@ -1,16 +1,24 @@
 import { Box, Button, Card, CardContent, Grid, Typography } from '@mui/material';
 import { AwardIcon, FileIcon, MonitorIcon } from '@/components/Academy/CalendarSection/components';
+import { SectionProps } from '@/types/notionTypes';
 
-const CalendarSection = () => {
+const CalendarSection: React.FC<SectionProps> = ({ content }) => {
+
     const academicCalendarGraphic = 'https://res.cloudinary.com/glovooker/image/upload/v1722969249/students-site/academic-calendar-graphic.png';
+    const safeGetText = (index: number, type: string) => {
+        if (content && index < content.length && content[index][type]) {
+            return content[index][type].rich_text[0]?.plain_text || 'Loading...';
+        }
+        return 'Loading...';
+    };
 
     return (
         <Box sx={ { width: '100%', height: 'auto', textAlign: { xs: 'center', md: 'left' }, my: '2rem', px: { xs: '2rem', md: '6rem' } } }>
             <Typography variant="h4" sx={ { mx: 'auto', my: '0.5rem', textAlign: { xs: 'center', md: 'left' }, fontSize: { xs: '1rem', sm: '1.125rem' }, fontWeight: 600, letterSpacing: '0.0625rem' } }>
-                Academia
+                { safeGetText(42, 'heading_3') }
             </Typography>
             <Typography variant="h2" sx={ { mx: 'auto', mb: '4rem', textAlign: { xs: 'center', md: 'left' }, color: 'primary.main', fontSize: { xs: '2rem', sm: '3rem' }, fontWeight: 600 } }>
-                Conoce nuestras plataformas
+                { safeGetText(43, 'heading_1') }
             </Typography>
             <Box
                 sx={ {
@@ -27,13 +35,13 @@ const CalendarSection = () => {
                 </Box>
                 <Box sx={ { width: { xs: '100%', lg: '40%' }, textAlign: 'left' } }>
                     <Typography variant="h3" sx={ { color: 'text.main', fontSize: { xs: '1.5rem', sm: '2rem' }, fontWeight: 600 } }>
-                        Calendario
+                        { safeGetText(44, 'heading_3') }
                     </Typography>
                     <Typography variant="h3" sx={ { color: 'secondary.main', fontSize: { xs: '1.5rem', sm: '2rem' }, fontWeight: 600 } }>
-                        Académico
+                        { safeGetText(45, 'heading_3') }
                     </Typography>
                     <Typography variant="body1" sx={ { mx: { xs: 'auto', lg: 0 }, my: '2rem', lineHeight: 2 } }>
-                        <Box component="span" sx={ { color: 'primary.main', lineHeight: 1 } }>Universidad</Box> <Box component="span" sx={ { color: 'primary.main', fontFamily: '"DIN Alternate", sans-serif' } }>CENFOTEC</Box> ofrece un Calendario Académico anual para carreras cuatrimestrales y técnicos por microcursos. Cada enlace lleva al documento en PDF descargable. Además, cada rubro dirige a enlaces con más información o formularios según el trámite necesario.
+                        <Box component="span" sx={ { color: 'primary.main', lineHeight: 1 } }>{ safeGetText(46, 'paragraph') }</Box><Box component="span" sx={ { color: 'primary.main', fontFamily: '"DIN Alternate", sans-serif' } }>{ safeGetText(47, 'paragraph') }</Box>{ safeGetText(48, 'paragraph') }
                     </Typography>
                     <Button
                         variant='contained'
@@ -50,7 +58,7 @@ const CalendarSection = () => {
                         } }
 
                     >
-                        Calendario Cuatrimestral 2024
+                        { safeGetText(49, 'paragraph') }
                     </Button>
                     <Button
                         variant="outlined"
@@ -68,7 +76,7 @@ const CalendarSection = () => {
                         } }
 
                     >
-                        Calendario Microcursos 2024
+                        { safeGetText(50, 'paragraph') }
                     </Button>
                 </Box>
             </Box>
@@ -96,7 +104,7 @@ const CalendarSection = () => {
                                 <FileIcon style={ { fontSize: '2.8125rem', color: 'white' } } />
                             </Button>
                             <Typography variant="h3" sx={ { fontSize: '1.5rem', fontWeight: 600, color: 'secondary.main', maxWidth: '12.5rem', mx: 'auto', my: '1.5rem' } }>
-                                Reglamento Académico
+                                { safeGetText(51, 'heading_3') }
                             </Typography>
                         </CardContent>
                     </Card>
@@ -123,7 +131,7 @@ const CalendarSection = () => {
                                 <AwardIcon style={ { fontSize: '2.8125rem', color: 'white' } } />
                             </Button>
                             <Typography variant="h3" sx={ { fontSize: '1.5rem', fontWeight: 600, color: 'secondary.main', maxWidth: '15.5rem', mx: 'auto', my: '1.5rem' } }>
-                                Reglamento Régimen Estudiantil
+                                { safeGetText(52, 'heading_3') }
                             </Typography>
                         </CardContent>
                     </Card>
@@ -150,7 +158,7 @@ const CalendarSection = () => {
                                 <MonitorIcon style={ { fontSize: '2.8125rem', color: 'white' } } />
                             </Button>
                             <Typography variant="h3" sx={ { fontSize: '1.5rem', fontWeight: 600, color: 'secondary.main', maxWidth: '18.5rem', mx: 'auto', my: '1.25rem' } }>
-                                Lineamientos Sesiones Sincrónicas y Presenciales
+                                { safeGetText(53, 'heading_3') }
                             </Typography>
                         </CardContent>
                     </Card>

@@ -1,20 +1,29 @@
 import { Box, Card, CardContent, Grid, Typography } from '@mui/material';
 import { LifeBuoyIcon, MapIcon, BriefcaseIcon } from '@/components/About/StudentAffairsSection/components';
+import { SectionProps } from '@/types/notionTypes';
 
-const StudentAffairsSection = () => {
+const StudentAffairsSection: React.FC<SectionProps> = ({ content }) => {
+
     const logoUrl = 'https://res.cloudinary.com/glovooker/image/upload/v1719730516/students-site/student-affairs-lg.png';
+    const safeGetText = (index: number, type: string) => {
+        if (content && index < content.length && content[index][type]) {
+            return content[index][type].rich_text[0]?.plain_text || 'Loading...';
+        }
+        return 'Loading...';
+    };
+
     return (
         <Box sx={ { width: '100%', height: 'auto', textAlign: { xs: 'center', md: 'left' }, my: '4rem', px: { xs: '2rem', md: '6rem' } } }>
             <Grid container sx={ { my: '4rem', px: { xs: '2rem', lg: 0 }, flexDirection: { xs: 'column-reverse', lg: 'row' } } } spacing={ 4 }>
                 <Grid item xs={ 12 } lg={ 6 } sx={ { textAlign: { xs: 'center', lg: 'left' }, px: { xs: '1rem', lg: '3.5rem' } } }>
                     <Typography variant="h3" sx={ { color: 'text.main', fontSize: { xs: '1.5rem', sm: '2rem' }, fontWeight: 600 } }>
-                        Nuestro Departamento de
+                        { safeGetText(0, 'heading_3') }
                     </Typography>
                     <Typography variant="h3" sx={ { color: 'secondary.main', fontSize: { xs: '1.5rem', sm: '2rem' }, fontWeight: 600 } }>
-                        Bienestar Estudiantil
+                        { safeGetText(1, 'heading_3') }
                     </Typography>
                     <Typography variant="body1" sx={ { mx: { xs: 'auto', lg: 0 }, my: '2rem', lineHeight: 2, maxWidth: '36rem' } }>
-                        Somos el departamento dedicado a acompañar a los estudiantes en su vida académica, ofreciendo servicios de seguimiento, apoyo psicoeducativo, becas, cultura, deporte y bolsa de empleo. Trabajamos en coordinación con las escuelas y otros departamentos para asegurar el <Box component="span" sx={ { color: 'primary.main', fontWeight: 450 } }>bienestar integral</Box> del alumno.
+                        { safeGetText(2, 'paragraph') } <Box component="span" sx={ { color: 'primary.main', fontWeight: 450 } }>{ safeGetText(3, 'paragraph') }</Box> { safeGetText(4, 'paragraph') }
                     </Typography>
                 </Grid>
                 <Grid item xs={ 12 } lg={ 6 }>
@@ -41,10 +50,10 @@ const StudentAffairsSection = () => {
                                 <BriefcaseIcon style={ { fontSize: '2.8125rem', color: 'white' } } />
                             </Box>
                             <Typography variant="h3" sx={ { fontSize: '1.5rem', fontWeight: 600, color: 'secondary.main', maxWidth: '9.5rem', mx: 'auto', my: '1.5rem' } }>
-                                Bolsa de Trabajo
+                                { safeGetText(5, 'heading_3') }
                             </Typography>
                             <Typography variant="body1" sx={ { lineHeight: 2, maxWidth: '17rem', mx: 'auto' } }>
-                                Conectamos empresas con los mejores perfiles tecnológicos y damos seguimiento a la colocación laboral de nuestros estudiantes.
+                                { safeGetText(6, 'paragraph') }
                             </Typography>
                         </CardContent>
                     </Card>
@@ -68,10 +77,10 @@ const StudentAffairsSection = () => {
                                 <LifeBuoyIcon style={ { fontSize: '2.8125rem', color: 'white' } } />
                             </Box>
                             <Typography variant="h3" sx={ { fontSize: '1.5rem', fontWeight: 600, color: 'secondary.main', maxWidth: '13.5rem', mx: 'auto', my: '1.5rem' } }>
-                                Apoyo Psicológico y Psicoeducativo
+                                { safeGetText(7, 'heading_3') }
                             </Typography>
                             <Typography variant="body1" sx={ { lineHeight: 2, maxWidth: '16rem', mx: 'auto' } }>
-                                Ofrecemos orientación y herramientas para mejorar el desempeño académico de los estudiantes.
+                                { safeGetText(8, 'paragraph') }
                             </Typography>
                         </CardContent>
                     </Card>
@@ -95,10 +104,10 @@ const StudentAffairsSection = () => {
                                 <MapIcon style={ { fontSize: '2.8125rem', color: 'white' } } />
                             </Box>
                             <Typography variant="h3" sx={ { fontSize: '1.5rem', fontWeight: 600, color: 'secondary.main', maxWidth: '12.5rem', mx: 'auto', my: '1.25rem' } }>
-                                Orientación Vocacional
+                                { safeGetText(9, 'heading_3') }
                             </Typography>
                             <Typography variant="body1" sx={ { lineHeight: 2, maxWidth: '17rem', mx: 'auto' } }>
-                                Contamos con profesionales que ofrecen orientación vocacional para guiarte en tu desarrollo académico y profesional.
+                                { safeGetText(10, 'paragraph') }
                             </Typography>
                         </CardContent>
                     </Card>

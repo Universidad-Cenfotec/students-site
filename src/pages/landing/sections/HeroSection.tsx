@@ -1,12 +1,18 @@
 import { useEffect, useState } from 'react';
 import { Box, Typography, Button, useMediaQuery, useTheme } from '@mui/material';
 import { HeroBackground } from '@/components/Landing/HeroSection/components';
+import { SectionProps } from '@/types/notionTypes';
 
-const HeroSection: React.FC<any> = ({ content }) => {
+const HeroSection: React.FC<SectionProps> = ({ content }) => {
     const theme = useTheme();
     const isLargeScreen = useMediaQuery(theme.breakpoints.up('lg'));
 
-    console.log(content);
+    const safeGetText = (index: number, type: string) => {
+        if (content && index < content.length && content[index][type]) {
+            return content[index][type].rich_text[0]?.plain_text || 'Loading...';
+        }
+        return 'Loading...';
+    };
 
     const [rightStyle, setRightStyle] = useState<string | number>(0); // Initialize with a default value.
 
@@ -52,7 +58,7 @@ const HeroSection: React.FC<any> = ({ content }) => {
                         width="85%"
                         sx={ { textAlign: { xs: 'center', lg: 'left' }, margin: { xs: '0 auto', sm: '0 auto', md: '0 auto', lg: '0', xl: '0' } } }
                     >
-                        { content[0].heading_2.rich_text[0].plain_text } <Box component="span" sx={ { color: 'primary.main', fontSize: { xs: '4.75rem', sm: '6.25rem', md: '7.5rem', lg: '7.9375rem' }, lineHeight: 1 } }>{ content[1].heading_1.rich_text[0].plain_text }</Box>
+                        { safeGetText(0, 'heading_2') } <Box component="span" sx={ { color: 'primary.main', fontSize: { xs: '4.75rem', sm: '6.25rem', md: '7.5rem', lg: '7.9375rem' }, lineHeight: 1 } }>{ safeGetText(1, 'heading_1') }</Box>
                     </Typography>
                     <Typography
                         variant="body1"
@@ -61,7 +67,7 @@ const HeroSection: React.FC<any> = ({ content }) => {
                         paragraph
                         sx={ { textAlign: { xs: 'center', lg: 'left' }, width: { md: '100%', lg: '75%' }, mt: '1rem', } }
                     >
-                        { content[2].paragraph.rich_text[0].plain_text } <Box component="span" sx={ { color: 'primary.main', fontFamily: '"DIN Alternate", sans-serif' } }>{ content[3].paragraph.rich_text[0].plain_text }</Box>{ content[4].paragraph.rich_text[0].plain_text }
+                        { safeGetText(2, 'paragraph') } <Box component="span" sx={ { color: 'primary.main', fontFamily: '"DIN Alternate", sans-serif' } }>{ safeGetText(3, 'paragraph') }</Box>{ safeGetText(4, 'paragraph') }
                     </Typography>
                     <Box
                         sx={ {
@@ -77,7 +83,7 @@ const HeroSection: React.FC<any> = ({ content }) => {
                             href='#features'
                             sx={ { fontSize: { xs: '1rem', sm: '1.125rem', md: '1.25rem', lg: '1.5rem' }, fontWeight: 600, margin: { xs: '0 auto', sm: '0 auto', md: '0 auto', lg: '0', xl: '0' }, } }
                         >
-                            { content[5].paragraph.rich_text[0].plain_text }
+                            { safeGetText(5, 'paragraph') }
                         </Button>
                     </Box>
                 </Box>

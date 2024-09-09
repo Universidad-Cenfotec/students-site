@@ -1,14 +1,23 @@
 import { Grid, Card, CardContent, Typography, Box } from '@mui/material';
 import { CommentIcon, HeartIcon, SearchIcon } from '@/components/Landing/FeaturesSection/components';
+import { SectionProps } from '@/types/notionTypes';
 
-const FeaturesSection: React.FC<any> = ({ content }) => {
+const FeaturesSection: React.FC<SectionProps> = ({ content }) => {
+
+    const safeGetText = (index: number, type: string) => {
+        if (content && index < content.length && content[index][type]) {
+            return content[index][type].rich_text[0]?.plain_text || 'Loading...';
+        }
+        return 'Loading...';
+    };
+
     return (
         <Box id="features" sx={ { width: '100%', height: 'auto', textAlign: { xs: 'center', md: 'left' }, mb: '10rem', px: '1rem' } }>
             <Typography variant="h4" sx={ { mx: { xs: 'auto', md: 12 }, my: '0.5rem', textAlign: { xs: 'center', md: 'left' }, fontSize: { xs: '1rem', sm: '1.125rem' }, fontWeight: 600, letterSpacing: '0.0625rem' } }>
-                { content[7].heading_3.rich_text[0].plain_text }
+                { safeGetText(7, 'heading_3') }
             </Typography>
             <Typography variant="h2" sx={ { mx: { xs: 'auto', md: 12 }, textAlign: { xs: 'center', md: 'left' }, color: 'primary.main', fontSize: { xs: '2.5rem', sm: '3rem' }, fontWeight: 600 } }>
-                { content[8].heading_1.rich_text[0].plain_text }
+                { safeGetText(8, 'heading_1') }
             </Typography>
             <Grid container sx={ { textAlign: 'center', my: '2rem' } } spacing={ 4 }>
                 {/* Feature 1 */ }
@@ -30,10 +39,10 @@ const FeaturesSection: React.FC<any> = ({ content }) => {
                                 <SearchIcon style={ { fontSize: '2.8125rem', color: 'white' } } />
                             </Box>
                             <Typography variant="h3" sx={ { fontSize: '1.5rem', fontWeight: 600, color: 'secondary.main', maxWidth: '12.5rem', mx: 'auto', my: '1.5rem' } }>
-                                { content[9].heading_3.rich_text[0].plain_text }
+                                { safeGetText(9, 'heading_3') }
                             </Typography>
                             <Typography variant="body1" sx={ { lineHeight: 2, maxWidth: '16rem', mx: 'auto' } }>
-                                { content[10].paragraph.rich_text[0].plain_text }
+                                { safeGetText(10, 'paragraph') }
                             </Typography>
                         </CardContent>
                     </Card>
@@ -57,10 +66,10 @@ const FeaturesSection: React.FC<any> = ({ content }) => {
                                 <CommentIcon style={ { fontSize: '2.8125rem', color: 'white' } } />
                             </Box>
                             <Typography variant="h3" sx={ { fontSize: '1.5rem', fontWeight: 600, color: 'secondary.main', maxWidth: '12.5rem', mx: 'auto', my: '1.5rem' } }>
-                                { content[11].heading_3.rich_text[0].plain_text }
+                                { safeGetText(11, 'heading_3') }
                             </Typography>
                             <Typography variant="body1" sx={ { lineHeight: 2, maxWidth: '16rem', mx: 'auto' } }>
-                                { content[12].paragraph.rich_text[0].plain_text }
+                                { safeGetText(12, 'paragraph') }
                             </Typography>
                         </CardContent>
                     </Card>
@@ -84,10 +93,10 @@ const FeaturesSection: React.FC<any> = ({ content }) => {
                                 <HeartIcon style={ { fontSize: '2.8125rem', color: 'white' } } />
                             </Box>
                             <Typography variant="h3" sx={ { fontSize: '1.5rem', fontWeight: 600, color: 'secondary.main', maxWidth: '12.5rem', mx: 'auto', my: '1.25rem' } }>
-                                { content[13].heading_3.rich_text[0].plain_text }
+                                { safeGetText(13, 'heading_3') }
                             </Typography>
                             <Typography variant="body1" sx={ { lineHeight: 2, maxWidth: '16rem', mx: 'auto' } }>
-                                { content[14].paragraph.rich_text[0].plain_text }
+                                { safeGetText(14, 'paragraph') }
                             </Typography>
                         </CardContent>
                     </Card>

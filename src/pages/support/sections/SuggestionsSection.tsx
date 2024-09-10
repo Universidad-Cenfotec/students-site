@@ -3,8 +3,9 @@ import { SectionProps } from '@/types/notionTypes';
 import { Box, Typography } from '@mui/material';
 
 const SuggestionsSection: React.FC<SectionProps> = ({ content }) => {
-
     const suggestionsGraphic = 'https://res.cloudinary.com/glovooker/image/upload/v1722974184/students-site/suggestions-graphic.png';
+    const formUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSfRb3A782bjkJr0ZJiuR_E1LXemMcmM6JPJnc7XJ_yYF1i2xQ/viewform?embedded=true';
+
     const safeGetText = (index: number, type: string) => {
         if (content && index < content.length && content[index][type]) {
             return content[index][type].rich_text[0]?.plain_text || 'Loading...';
@@ -34,10 +35,13 @@ const SuggestionsSection: React.FC<SectionProps> = ({ content }) => {
                     <img src={ suggestionsGraphic } alt="Suggestions Graphic" style={ { width: '100%' } } />
                 </Box>
                 <Box sx={ { width: { xs: '100%', lg: '100%' }, textAlign: 'left' } }>
-
                     <Typography variant="body1" sx={ { textAlign: 'left', mx: { xs: 'auto', lg: 0 }, my: '4rem', lineHeight: 2 } }>
-                        { safeGetText(9, 'paragraph') }<Box component="span" sx={ { color: 'primary.main', lineHeight: 1 } }>{ safeGetText(10, 'paragraph') }</Box><Box component="span" sx={ { color: 'primary.main', fontFamily: '"DIN Alternate", sans-serif' } }>{ safeGetText(11, 'paragraph') }</Box>{ safeGetText(12, 'paragraph') }
+                        { safeGetText(9, 'paragraph') }
+                        <Box component="span" sx={ { color: 'primary.main', lineHeight: 1 } }>{ safeGetText(10, 'paragraph') }</Box>
+                        <Box component="span" sx={ { color: 'primary.main', fontFamily: '"DIN Alternate", sans-serif' } }>{ safeGetText(11, 'paragraph') }</Box>
+                        { safeGetText(12, 'paragraph') }
                     </Typography>
+                    <iframe src={ formUrl } width="100%" height="500" frameBorder="0" marginHeight={ 0 } marginWidth={ 0 }>Loading…</iframe>
                 </Box>
             </Box>
         </Box>

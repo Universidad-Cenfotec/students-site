@@ -7,7 +7,7 @@ export default function CommunityPage ({ communityContent }: any) {
     return (
         <>
             <JobsSection content={ communityContent } />
-            <BlogSection content={ communityContent } />
+            {/* <BlogSection content={ communityContent } /> */ }
         </>
     );
 };

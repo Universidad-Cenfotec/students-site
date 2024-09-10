@@ -30,11 +30,11 @@ const GuidesSection: React.FC<SectionProps> = ({ content }) => {
             link: 'https://www.google.com/url?q=https%3A%2F%2Fslack.com%2Fintl%2Fes-cr%2Fhelp%2Farticles%2F360059928654-C%25C3%25B3mo-usar-Slack--tu-gu%25C3%25ADa-de-inicio-r%25C3%25A1pido&sa=D&sntz=1&usg=AOvVaw19EOtADWBoqlBi_X8jxUkv',
             imageUrl: 'https://res.cloudinary.com/glovooker/image/upload/v1722920098/students-site/logo-slack.png',
         },
-        {
-            title: 'Notion',
-            link: '',
-            imageUrl: 'https://res.cloudinary.com/glovooker/image/upload/v1722920098/students-site/logo-notion.png',
-        },
+        // {
+        //     title: 'Notion',
+        //     link: '',
+        //     imageUrl: 'https://res.cloudinary.com/glovooker/image/upload/v1722920098/students-site/logo-notion.png',
+        // },
         {
             title: 'Python',
             link: 'https://www.google.com/url?q=https%3A%2F%2Fpython-para-impacientes.blogspot.com%2F2017%2F02%2Finstalar-python-paso-paso.html&sa=D&sntz=1&usg=AOvVaw39ZW6LA6IACpD_SrOhVi7H',
@@ -45,11 +45,11 @@ const GuidesSection: React.FC<SectionProps> = ({ content }) => {
             link: 'https://www.google.com/url?q=https%3A%2F%2Funipython.com%2Finstalar-java-netbeans-windows-os-linux%2F&sa=D&sntz=1&usg=AOvVaw3YGBOyByLxZqskmNP3GxWX',
             imageUrl: 'https://res.cloudinary.com/glovooker/image/upload/v1722920098/students-site/logo-java.png',
         },
-        {
-            title: 'JavaScript',
-            link: '',
-            imageUrl: 'https://res.cloudinary.com/glovooker/image/upload/v1722920098/students-site/logo-javascript.png',
-        },
+        // {
+        //     title: 'JavaScript',
+        //     link: '',
+        //     imageUrl: 'https://res.cloudinary.com/glovooker/image/upload/v1722920098/students-site/logo-javascript.png',
+        // },
     ];
     const safeGetText = (index: number, type: string) => {
         if (content && index < content.length && content[index][type]) {

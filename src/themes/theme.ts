@@ -41,6 +41,7 @@ const theme = createTheme({
         // Default text font for body1
         body1: {
             fontFamily: '"CircularStd", sans-serif',
+            fontSize: '18px'
         }
     },
 

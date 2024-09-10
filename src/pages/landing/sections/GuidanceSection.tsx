@@ -38,6 +38,8 @@ const GuidanceSection: React.FC<SectionProps> = ({ content }) => {
                         variant="outlined"
                         color="secondary"
                         size="large"
+                        href='https://ucenfotec-students-kit.notion.site/Students-Kit-2a5a1bfb7f4e4bc2a57d732078c5ec36?pvs=73'
+                        target='_blank'
                         sx={ {
                             fontSize: { xs: '1rem', sm: '1.5rem' },
                             fontWeight: 600,
@@ -74,8 +76,10 @@ const GuidanceSection: React.FC<SectionProps> = ({ content }) => {
                                 border: 3,
                             }
                         } }
+                        disabled
                     >
-                        { safeGetText(33, 'paragraph') }
+                        {/* { safeGetText(33, 'paragraph') } */ }
+                        Próximamente...
                     </Button>
                 </Grid>
                 <Grid item xs={ 12 } lg={ 6 }>

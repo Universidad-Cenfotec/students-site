@@ -1,4 +1,4 @@
-import { Card, CardContent, Typography, CardMedia } from '@mui/material';
+import { Card, CardContent, Typography, CardMedia, CardActionArea } from '@mui/material';
 
 interface ClubCardProps {
     title: string;
@@ -10,6 +10,7 @@ interface ClubCardProps {
 export const ClubCard = ({ title, description, imageUrl, style }: ClubCardProps) => {
     return (
         <Card sx={ { maxWidth: 366, height: 455, borderRadius: '12px', textAlign: 'left', boxShadow: '0px 30px 60px rgba(71, 74, 87, 0.25)', cursor: 'pointer' } } style={ style }>
+            <CardActionArea href='https://cenf-zgpvh.maillist-manage.com/click/15e01f801de71b8d/15e01f801de773e7' target='_blank'>
             <CardMedia
                 component="img"
                 height="236"
@@ -24,6 +25,7 @@ export const ClubCard = ({ title, description, imageUrl, style }: ClubCardProps)
                     { description }
                 </Typography>
             </CardContent>
+            </CardActionArea>
         </Card>
     );
 };

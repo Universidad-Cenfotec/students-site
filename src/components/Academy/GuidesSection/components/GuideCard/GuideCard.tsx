@@ -20,6 +20,7 @@ export const GuideCard = ({ title, link, imageUrl, style }: ClubCardProps) => {
                     size="large"
                     color="primary"
                     href={ link }
+                    target='_blank'
                 >
                     Ver Guía
                 </Button>

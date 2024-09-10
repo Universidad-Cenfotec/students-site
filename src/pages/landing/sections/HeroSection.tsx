@@ -63,7 +63,6 @@ const HeroSection: React.FC<SectionProps> = ({ content }) => {
                     <Typography
                         variant="body1"
                         color="text"
-                        fontSize={ { sm: '1rem' } }
                         paragraph
                         sx={ { textAlign: { xs: 'center', lg: 'left' }, width: { md: '100%', lg: '75%' }, mt: '1rem', } }
                     >

@@ -19,7 +19,7 @@ export const Navbar = () => {
         paddingLeft: '0.5rem',
         paddingRight: '0.5rem',
         fontWeight: 300,
-        fontSize: '0.85rem',
+        fontSize: '1rem',
         margin: '0 0.5rem',
         color: 'text.primary',
     };

@@ -145,7 +145,7 @@ const PlatformsSection: React.FC<SectionProps> = ({ content }) => {
                         Correo Institucional
                     </Typography>
                     <Typography variant="body1" sx={ { mx: { xs: 'auto', lg: 0 }, my: '2rem', lineHeight: 2 } }>
-                        Como estudiante de la Universidad CENFOTEC, usted tendrá acceso a una cuenta institucional de correo. Esta será esencial para el contacto con el profesorado, estudiantes, personal administrativo y visualización de materiales en sus cursos. Si aún no tiene acceso al correo de la Universidad, puede hacer su solicitud a la siguiente dirección: tic@ucenfotec.ac.cr
+                        Como estudiante de la Universidad CENFOTEC, tendrás acceso a una cuenta institucional de correo. Esta será esencial para el contacto con el profesorado, estudiantes, personal administrativo y visualización de materiales en tus cursos. Si no tienes acceso, crea un tiquete al departamento de TIC en el Centro de Asistencia.
                     </Typography>
                     <Button
                         variant='contained'
@@ -357,7 +357,7 @@ const PlatformsSection: React.FC<SectionProps> = ({ content }) => {
                         Biblioteca Ignacio Trejos Zelaya
                     </Typography>
                     <Typography variant="body1" sx={ { mx: { xs: 'auto', lg: 0 }, my: '2rem', lineHeight: 2 } }>
-                        El Centro de Asistencia es el principal medio de comunicación con los departamentos de la Universidad a través de tiquetes de soporte. Puede iniciar sesión con su correo institucional (@ucenfotec) usando la opción 'Google' o crear un usuario manualmente. Al ingresar, podrá crear tiquetes desde 'Agregar Tiquete' y seleccionar el departamento adecuado. Recibirá respuestas por correo electrónico y un mensaje de cierre una vez resuelto el caso.
+                        La Biblioteca Ignacio Trejos Zelaya, es un centro de información en computación e informática de la Universidad Cenfotec, con un acervo bibliográfico en su mayoría digital.
                     </Typography>
                     <Button
                         variant='contained'

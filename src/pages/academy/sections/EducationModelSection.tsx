@@ -36,7 +36,7 @@ const EducationModelSection: React.FC<SectionProps> = ({ content }) => {
                     </Typography>
                 </Box>
                 <Box sx={ { width: { xs: '100%', lg: '45%' } } }>
-                    <img src={ educationModelGraphic } alt="Education Model Graphic" style={ { width: '100%' } } />
+                    <img src={ educationModelGraphic } alt="Education Model Graphic" style={ { width: '100%', maxWidth: '30rem' } } />
                 </Box>
             </Box>
 
@@ -133,7 +133,7 @@ const EducationModelSection: React.FC<SectionProps> = ({ content }) => {
                     </Typography>
                 </Box>
                 <Box sx={ { width: { xs: '100%', lg: '45%' } } }>
-                    <img src={ xperiencedMethodologyGraphic } alt="XperiencEd Methodology Graphic" style={ { width: '100%' } } />
+                    <img src={ xperiencedMethodologyGraphic } alt="XperiencEd Methodology Graphic" style={ { width: '100%', maxWidth: '30rem' } } />
                 </Box>
             </Box>
         </Box >

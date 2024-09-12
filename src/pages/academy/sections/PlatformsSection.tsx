@@ -29,14 +29,14 @@ const PlatformsSection: React.FC<SectionProps> = ({ content }) => {
             <Box
                 sx={ {
                     display: 'flex',
-                    flexDirection: { xs: 'column', lg: 'row' },
+                    flexDirection: { xs: 'column-reverse', lg: 'row' },
                     alignItems: 'center',
                     justifyContent: 'space-between',
                     mx: 'auto',
                     mb: '6rem',
                 } }
             >
-                <Box sx={ { width: { xs: '100%', lg: '40%' }, textAlign: 'left' } }>
+                <Box sx={ { width: { xs: '100%', lg: '40%' }, textAlign: 'left', my: '2rem' } }>
                     <Typography variant="h3" sx={ { color: 'text.main', fontSize: { xs: '1.5rem', sm: '2rem' }, fontWeight: 600 } }>
                         { safeGetText(31, 'heading_3') }
                     </Typography>
@@ -66,7 +66,7 @@ const PlatformsSection: React.FC<SectionProps> = ({ content }) => {
                     </Button>
                 </Box>
                 <Box sx={ { width: { xs: '100%', lg: '50%' } } }>
-                    <img src={ platformsVideoPlaceholderGraphic } alt="Platforms Video Placeholder Graphic" style={ { width: '100%' } } />
+                    <img src={ platformsVideoPlaceholderGraphic } alt="Platforms Video Placeholder Graphic" style={ { width: '100%', maxWidth: '30rem' } } />
                 </Box>
             </Box>
 
@@ -81,7 +81,7 @@ const PlatformsSection: React.FC<SectionProps> = ({ content }) => {
                 } }
             >
                 <Box sx={ { width: { xs: '100%', lg: '20%' } } }>
-                    <img src={ assistanceCenterLogo } alt="Assistance Center Logo" style={ { width: '100%' } } />
+                    <img src={ assistanceCenterLogo } alt="Assistance Center Logo" style={ { width: '100%', maxWidth: '15rem' } } />
                 </Box>
                 <Box sx={ { width: { xs: '100%', lg: '75%' }, textAlign: 'left' } }>
                     <Typography variant="h3" sx={ { color: 'secondary.main', fontSize: { xs: '1.5rem', sm: '2rem' }, fontWeight: 600 } }>
@@ -100,7 +100,8 @@ const PlatformsSection: React.FC<SectionProps> = ({ content }) => {
                             fontSize: { xs: '1rem', sm: '1.5rem' },
                             fontWeight: 600,
                             px: { xs: '2rem', sm: '3rem' },
-                            mr: '2rem'
+                            mr: '2rem',
+                            mb: { xs: '1rem', sm: 0 },
                         } }
 
                     >
@@ -138,7 +139,7 @@ const PlatformsSection: React.FC<SectionProps> = ({ content }) => {
                 } }
             >
                 <Box sx={ { width: { xs: '100%', lg: '20%' } } }>
-                    <img src={ gmailLogo } alt="Gmail Logo" style={ { width: '100%' } } />
+                    <img src={ gmailLogo } alt="Gmail Logo" style={ { width: '100%', maxWidth: '15rem' } } />
                 </Box>
                 <Box sx={ { width: { xs: '100%', lg: '75%' }, textAlign: 'left' } }>
                     <Typography variant="h3" sx={ { color: 'secondary.main', fontSize: { xs: '1.5rem', sm: '2rem' }, fontWeight: 600 } }>
@@ -157,7 +158,8 @@ const PlatformsSection: React.FC<SectionProps> = ({ content }) => {
                             fontSize: { xs: '1rem', sm: '1.5rem' },
                             fontWeight: 600,
                             px: { xs: '2rem', sm: '3rem' },
-                            mr: '2rem'
+                            mr: '2rem',
+                            mb: { xs: '1rem', sm: 0 },
                         } }
 
                     >
@@ -195,7 +197,7 @@ const PlatformsSection: React.FC<SectionProps> = ({ content }) => {
                 } }
             >
                 <Box sx={ { width: { xs: '100%', lg: '20%' } } }>
-                    <img src={ selfserviceLogo } alt="Self Service Logo" style={ { width: '100%' } } />
+                    <img src={ selfserviceLogo } alt="Self Service Logo" style={ { width: '100%', maxWidth: '15rem' } } />
                 </Box>
                 <Box sx={ { width: { xs: '100%', lg: '75%' }, textAlign: 'left' } }>
                     <Typography variant="h3" sx={ { color: 'secondary.main', fontSize: { xs: '1.5rem', sm: '2rem' }, fontWeight: 600 } }>
@@ -214,7 +216,8 @@ const PlatformsSection: React.FC<SectionProps> = ({ content }) => {
                             fontSize: { xs: '1rem', sm: '1.5rem' },
                             fontWeight: 600,
                             px: { xs: '2rem', sm: '3rem' },
-                            mr: '2rem'
+                            mr: '2rem',
+                            mb: { xs: '1rem', sm: 0 },
                         } }
 
                     >
@@ -252,7 +255,7 @@ const PlatformsSection: React.FC<SectionProps> = ({ content }) => {
                 } }
             >
                 <Box sx={ { width: { xs: '100%', lg: '20%' } } }>
-                    <img src={ meetLogo } alt="Meet Logo" style={ { width: '100%' } } />
+                    <img src={ meetLogo } alt="Meet Logo" style={ { width: '100%', maxWidth: '15rem' } } />
                 </Box>
                 <Box sx={ { width: { xs: '100%', lg: '75%' }, textAlign: 'left' } }>
                     <Typography variant="h3" sx={ { color: 'secondary.main', fontSize: { xs: '1.5rem', sm: '2rem' }, fontWeight: 600 } }>
@@ -293,7 +296,7 @@ const PlatformsSection: React.FC<SectionProps> = ({ content }) => {
                 } }
             >
                 <Box sx={ { width: { xs: '100%', lg: '20%' } } }>
-                    <img src={ moodleLogo } alt="Moodle Logo" style={ { width: '100%' } } />
+                    <img src={ moodleLogo } alt="Moodle Logo" style={ { width: '100%', maxWidth: '15rem' } } />
                 </Box>
                 <Box sx={ { width: { xs: '100%', lg: '75%' }, textAlign: 'left' } }>
                     <Typography variant="h3" sx={ { color: 'secondary.main', fontSize: { xs: '1.5rem', sm: '2rem' }, fontWeight: 600 } }>
@@ -312,7 +315,8 @@ const PlatformsSection: React.FC<SectionProps> = ({ content }) => {
                             fontSize: { xs: '1rem', sm: '1.5rem' },
                             fontWeight: 600,
                             px: { xs: '2rem', sm: '3rem' },
-                            mr: '2rem'
+                            mr: '2rem',
+                            mb: { xs: '1rem', sm: 0 },
                         } }
 
                     >
@@ -350,7 +354,7 @@ const PlatformsSection: React.FC<SectionProps> = ({ content }) => {
                 } }
             >
                 <Box sx={ { width: { xs: '100%', lg: '20%' } } }>
-                    <img src={ zelayaLibraryLogo } alt="Ignacio Trejos Zelaya Library Logo" style={ { width: '100%' } } />
+                    <img src={ zelayaLibraryLogo } alt="Ignacio Trejos Zelaya Library Logo" style={ { width: '100%', maxWidth: '15rem' } } />
                 </Box>
                 <Box sx={ { width: { xs: '100%', lg: '75%' }, textAlign: 'left' } }>
                     <Typography variant="h3" sx={ { color: 'secondary.main', fontSize: { xs: '1.5rem', sm: '2rem' }, fontWeight: 600 } }>
@@ -369,7 +373,8 @@ const PlatformsSection: React.FC<SectionProps> = ({ content }) => {
                             fontSize: { xs: '1rem', sm: '1.5rem' },
                             fontWeight: 600,
                             px: { xs: '2rem', sm: '3rem' },
-                            mr: '2rem'
+                            mr: '2rem',
+                            mb: { xs: '1rem', sm: 0 },
                         } }
 
                     >

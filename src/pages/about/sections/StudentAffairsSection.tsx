@@ -13,9 +13,9 @@ const StudentAffairsSection: React.FC<SectionProps> = ({ content }) => {
     };
 
     return (
-        <Box sx={ { width: '100%', height: 'auto', textAlign: { xs: 'center', md: 'left' }, my: '4rem', px: { xs: '2rem', md: '6rem' } } }>
-            <Grid container sx={ { my: '4rem', px: { xs: '2rem', lg: 0 }, flexDirection: { xs: 'column-reverse', lg: 'row' } } } spacing={ 4 }>
-                <Grid item xs={ 12 } lg={ 6 } sx={ { textAlign: { xs: 'center', lg: 'left' }, px: { xs: '1rem', lg: '3.5rem' } } }>
+        <Box sx={ { width: '100%', height: 'auto', textAlign: { xs: 'center', md: 'left' }, my: '4rem', mx: 'autos', px: { xs: '2rem', md: '6rem' } } }>
+            <Grid container sx={ { width: '100%', my: '4rem', mx: 'auto', flexDirection: { xs: 'column-reverse', lg: 'row' } } }>
+                <Grid item xs={ 12 } lg={ 6 } sx={ { textAlign: { xs: 'center', lg: 'left' }, px: { xs: '0rem', lg: '3.5rem' } } }>
                     <Typography variant="h3" sx={ { color: 'text.main', fontSize: { xs: '1.5rem', sm: '2rem' }, fontWeight: 600 } }>
                         { safeGetText(0, 'heading_3') }
                     </Typography>
@@ -26,8 +26,8 @@ const StudentAffairsSection: React.FC<SectionProps> = ({ content }) => {
                         { safeGetText(2, 'paragraph') } <Box component="span" sx={ { color: 'primary.main', fontWeight: 450 } }>{ safeGetText(3, 'paragraph') }</Box> { safeGetText(4, 'paragraph') }
                     </Typography>
                 </Grid>
-                <Grid item xs={ 12 } lg={ 6 }>
-                    <img src={ logoUrl } alt="Student Affairs Logo" style={ { width: '35rem' } } />
+                <Grid item xs={ 12 } lg={ 6 } sx={ { mb: { xs: '2rem', lg: 0 } } }>
+                    <img src={ logoUrl } alt="Student Affairs Logo" width={ '100%' } style={ { maxWidth: '30rem' } } />
                 </Grid>
             </Grid>
             <Grid container sx={ { textAlign: 'center', my: '2rem' } } spacing={ 4 }>

@@ -14,8 +14,8 @@ const ClubsSection: React.FC<SectionProps> = ({ content }) => {
     };
 
     return (
-        <Box sx={ { width: '100%', height: 'auto', textAlign: { xs: 'center', md: 'left' }, my: '10rem', px: { xs: '2rem', md: '6rem' } } }>
-            <Typography variant="h4" sx={ { mx: 'auto', my: '0.5rem', textAlign: { xs: 'center', md: 'left' }, fontSize: { xs: '1rem', sm: '1.125rem' }, fontWeight: 600, letterSpacing: '0.0625rem' } }>
+        <Box sx={ { width: '100%', height: 'auto', textAlign: { xs: 'center', md: 'left' }, my: '8rem', px: { xs: '0rem', md: '6rem' } } }>
+            <Typography variant="h4" sx={ { mx: 'auto', my: '0.5rem', textAlign: { xs: 'center', md: 'left' }, fontSize: { xs: '0.825rem', sm: '1.125rem' }, fontWeight: 600, letterSpacing: '0.0625rem' } }>
                 { safeGetText(35, 'heading_3') }
             </Typography>
             <Typography variant="h2" sx={ { mx: 'auto', textAlign: { xs: 'center', md: 'left' }, color: 'primary.main', fontSize: { xs: '2rem', sm: '3rem' }, fontWeight: 600 } }>
@@ -26,13 +26,13 @@ const ClubsSection: React.FC<SectionProps> = ({ content }) => {
                     slidesPerView={ 1 }
                     spaceBetween={ 10 }
                     breakpoints={ {
-                        900: { slidesPerView: 2, spaceBetween: 16 },
-                        1200: { slidesPerView: 2, spaceBetween: 16 },
+                        600: { slidesPerView: 2, spaceBetween: 16 },
+                        1200: { slidesPerView: 3, spaceBetween: 16 },
                         1500: { slidesPerView: 3, spaceBetween: 16 },
                     } }
                     watchSlidesProgress
                     loop={ true }
-                    style={ { paddingRight: 50, paddingLeft: 50, margin: '0 auto' } }
+                    style={ { paddingRight: 50, paddingLeft: 50, paddingBottom: 100, margin: '0 auto' } }
                 >
                     <SwiperSlide>
                         { ({ isVisible }) => (

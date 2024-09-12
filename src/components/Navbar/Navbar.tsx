@@ -50,11 +50,11 @@ export const Navbar = () => {
             </AppBar>
             <Drawer anchor="left" open={ drawerOpen } onClose={ handleDrawerToggle }>
                 <List>
-                    <ListItem component={ Link } href='/' passHref><ListItemText primary="Inicio" /></ListItem>
-                    <ListItem component={ Link } href='/about' passHref><ListItemText primary="Sobre Nosotros" /></ListItem>
-                    <ListItem component={ Link } href='/academy' passHref><ListItemText primary="Academia" /></ListItem>
-                    <ListItem component={ Link } href='/community' passHref><ListItemText primary="Comunidad" /></ListItem>
-                    <ListItem component={ Link } href='/support' passHref><ListItemText primary="Soporte" /></ListItem>
+                    <ListItem component={ Link } href='/' sx={ buttonStyle } onClick={ handleDrawerToggle } passHref><ListItemText primary="Inicio" /></ListItem>
+                    <ListItem component={ Link } href='/about' sx={ buttonStyle } onClick={ handleDrawerToggle } passHref><ListItemText primary="Sobre Nosotros" /></ListItem>
+                    <ListItem component={ Link } href='/academy' sx={ buttonStyle } onClick={ handleDrawerToggle } passHref><ListItemText primary="Academia" /></ListItem>
+                    <ListItem component={ Link } href='/community' sx={ buttonStyle } onClick={ handleDrawerToggle } passHref><ListItemText primary="Comunidad" /></ListItem>
+                    <ListItem component={ Link } href='/support' sx={ buttonStyle } onClick={ handleDrawerToggle } passHref><ListItemText primary="Soporte" /></ListItem>
                 </List>
             </Drawer>
         </>

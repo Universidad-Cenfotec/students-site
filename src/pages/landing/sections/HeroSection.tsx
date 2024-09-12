@@ -58,7 +58,7 @@ const HeroSection: React.FC<SectionProps> = ({ content }) => {
                         width="85%"
                         sx={ { textAlign: { xs: 'center', lg: 'left' }, margin: { xs: '0 auto', sm: '0 auto', md: '0 auto', lg: '0', xl: '0' } } }
                     >
-                        { safeGetText(0, 'heading_2') } <Box component="span" sx={ { color: 'primary.main', fontSize: { xs: '4.75rem', sm: '6.25rem', md: '7.5rem', lg: '7.9375rem' }, lineHeight: 1 } }>{ safeGetText(1, 'heading_1') }</Box>
+                        { safeGetText(0, 'heading_2') } <Box component="span" sx={ { color: 'primary.main', fontSize: { xs: '3.75rem', sm: '6.25rem', md: '7.5rem', lg: '7.9375rem' }, lineHeight: 1 } }>{ safeGetText(1, 'heading_1') }</Box>
                     </Typography>
                     <Typography
                         variant="body1"

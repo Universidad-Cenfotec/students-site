@@ -28,12 +28,11 @@ const DiversityStatementSection: React.FC<SectionProps> = ({ content }) => {
                     justifyContent: 'center',
                     mx: 'auto',
                     my: '2rem',
-                    px: { xs: '2rem', lg: 0 },
+                    width: '100%',
                 } }
-                spacing={ 4 }
             >
                 <Grid item xs={ 12 }>
-                    <img src={ graphicUrl } alt="Diversity Statement Graphic" style={ { width: '35rem' } } />
+                    <img src={ graphicUrl } alt="Diversity Statement Graphic" width={ '100%' } height={ '100%' } style={ { maxWidth: '30rem' } } />
                 </Grid>
                 <Grid item xs={ 12 } sx={ { textAlign: 'left', px: { xs: '1rem', lg: '3.5rem' } } }>
                     <Typography variant="body1" sx={ { mx: { xs: 'auto', lg: 0 }, my: '2rem', lineHeight: 2 } }>

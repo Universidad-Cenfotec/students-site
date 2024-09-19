@@ -9,6 +9,10 @@ const SupportServicesSection: React.FC<SectionProps> = ({ content }) => {
     const sexualHarassment3 = 'https://res.cloudinary.com/glovooker/image/upload/v1726679901/students-site/sexual-harassment-3.jpg';
     const sexualHarassment4 = 'https://res.cloudinary.com/glovooker/image/upload/v1726679901/students-site/sexual-harassment-4.jpg';
     const sexualHarassment5 = 'https://res.cloudinary.com/glovooker/image/upload/v1726679901/students-site/sexual-harassment-5.jpg';
+
+    const caic1 = 'https://res.cloudinary.com/glovooker/image/upload/v1726720206/students-site/caic-1.jpg';
+    const studyClub1 = 'https://res.cloudinary.com/glovooker/image/upload/v1726679901/students-site/study-club-1.jpg';
+
     const safeGetText = (index: number, type: string) => {
         if (content && index < content.length && content[index][type]) {
             return content[index][type].rich_text[0]?.plain_text || 'Loading...';
@@ -135,6 +139,60 @@ const SupportServicesSection: React.FC<SectionProps> = ({ content }) => {
                     >
                         { safeGetText(37, 'paragraph') }
                     </Button>
+                </Grid>
+            </Grid>
+            <Grid container sx={ { width: { xs: '100%', xl: '70%' }, my: '4rem', mx: 'auto', flexDirection: { xs: 'column' }, alignItems: 'center' } }>
+                <Grid container sx={ { width: { xs: '100%', lg: '100%' }, my: '4rem', mx: 'auto', flexDirection: { xs: 'column', xl: 'row' } } }>
+                    <Grid item xs={ 12 } xl={ 6 } sx={ { mb: { xs: '4rem', xl: 0 }, textAlign: { xs: 'center', xl: 'left' }, px: { xs: '0rem', xl: '3.5rem' }, display: 'flex', flexDirection: 'column', alignItems: 'center' } }>
+                        <Typography variant="h3" sx={ { color: 'secondary.main', fontSize: { xs: '1.5rem', sm: '2rem' }, fontWeight: 600, mb: '1rem' } }>
+                            { safeGetText(38, 'heading_3') }
+                        </Typography>
+                        <Button
+                            variant="outlined"
+                            color="secondary"
+                            size="large"
+                            href='https://forms.zohopublic.com/pbrenes/form/FormulariodesolicituddeapoyoseducativosCentrodeApo/formperma/wy922Tnm9sVL-eefC9q4XC3rIgzvfiRtaXAkHpDzU3I'
+                            target='_blank'
+                            sx={ {
+                                fontSize: { xs: '1rem', sm: '1.5rem' },
+                                fontWeight: 600,
+                                px: { xs: '2rem', sm: '3rem' },
+                                border: 3, '&:hover': {
+                                    border: 3,
+                                },
+                                mb: '2rem'
+                            } }
+
+                        >
+                            { safeGetText(39, 'paragraph') }
+                        </Button>
+                        <img src={ caic1 } alt="CAIC Flyer" width={ '100%' } style={ { maxWidth: '40rem' } } />
+                    </Grid>
+                    <Grid item xs={ 12 } xl={ 6 } sx={ { mb: { xs: '4rem', xl: 0 }, textAlign: { xs: 'center', xl: 'left' }, px: { xs: '0rem', xl: '3.5rem' }, display: 'flex', flexDirection: 'column', alignItems: 'center' } }>
+                        <Typography variant="h3" sx={ { color: 'secondary.main', fontSize: { xs: '1.5rem', sm: '2rem' }, fontWeight: 600, mb: '1rem' } }>
+                            { safeGetText(40, 'heading_3') }
+                        </Typography>
+                        <Button
+                            variant="outlined"
+                            color="secondary"
+                            size="large"
+                            href='http://meet.google.com/pok-mrox-urm'
+                            target='_blank'
+                            sx={ {
+                                fontSize: { xs: '1rem', sm: '1.5rem' },
+                                fontWeight: 600,
+                                px: { xs: '2rem', sm: '3rem' },
+                                border: 3, '&:hover': {
+                                    border: 3,
+                                },
+                                mb: '2rem'
+                            } }
+
+                        >
+                            { safeGetText(41, 'paragraph') }
+                        </Button>
+                        <img src={ studyClub1 } alt="Study Club Flyer" width={ '100%' } style={ { maxWidth: '40rem' } } />
+                    </Grid>
                 </Grid>
             </Grid>
         </Box>

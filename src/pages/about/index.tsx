@@ -1,6 +1,7 @@
 import React from 'react';
 import StudentAffairsSection from './sections/StudentAffairsSection';
 import DiversityStatementSection from './sections/DiversityStatementSection';
+import SupportServicesSection from './sections/SupportServicesSection';
 import { getPageContent, getSectionContent } from '@/lib/notionClient';
 
 export default function AboutPage ({ aboutContent }: any) {
@@ -8,6 +9,7 @@ export default function AboutPage ({ aboutContent }: any) {
         <>
             <StudentAffairsSection content={ aboutContent } />
             <DiversityStatementSection content={ aboutContent } />
+            <SupportServicesSection content={ aboutContent } />
         </>
     );
 };

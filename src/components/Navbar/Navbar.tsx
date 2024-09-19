@@ -5,7 +5,7 @@ import { useState } from 'react';
 
 export const Navbar = () => {
     const theme = useTheme();
-    const isLargeScreen = useMediaQuery(theme.breakpoints.up('sm'));
+    const isLargeScreen = useMediaQuery(theme.breakpoints.up('md'));
     const [drawerOpen, setDrawerOpen] = useState(false);
 
     const handleDrawerToggle = () => {

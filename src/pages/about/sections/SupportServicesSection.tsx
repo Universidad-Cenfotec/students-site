@@ -97,7 +97,7 @@ const SupportServicesSection: React.FC<SectionProps> = ({ content }) => {
                         variant="outlined"
                         color="secondary"
                         size="large"
-                        href='https://drive.google.com/file/d/1ySZKwbAuQ4In1e7R8eUxAKDmmYPq5nkh/view'
+                        href='https://docs.google.com/presentation/d/1Nae4tDkDTnd-skxCQv6cV2CVNQPZVEs1/edit#slide=id.p1'
                         target='_blank'
                         sx={ {
                             fontSize: { xs: '1rem', sm: '1.5rem' },
@@ -125,7 +125,7 @@ const SupportServicesSection: React.FC<SectionProps> = ({ content }) => {
                         variant="outlined"
                         color="secondary"
                         size="large"
-                        href='https://drive.google.com/file/d/1ySZKwbAuQ4In1e7R8eUxAKDmmYPq5nkh/view'
+                        href='https://forms.zohopublic.com/pbrenes/form/Formulariodedenunciaporacososexual/formperma/DxuvWLkNh89w4ijmj6XrTvLZD7JDDZLvTVrZg5CvRPw?zf_lang=es'
                         target='_blank'
                         sx={ {
                             fontSize: { xs: '1rem', sm: '1.5rem' },

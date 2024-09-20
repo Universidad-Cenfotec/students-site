@@ -37,6 +37,16 @@ const ClubsSection: React.FC<SectionProps> = ({ content }) => {
                     <SwiperSlide>
                         { ({ isVisible }) => (
                             <ClubCard
+                                title="Club del Estudiadero"
+                                description="Un espacio de colaboración y aprendizaje donde estudiantes avanzados te brindan apoyo en lo que requieras. ¡Únete si necesitas apoyo en tus estudios!"
+                                imageUrl="https://res.cloudinary.com/glovooker/image/upload/v1715972808/students-site/estudiadero.png"
+                                style={ { display: isVisible ? 'block' : 'none' } }
+                            />
+                        ) }
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        { ({ isVisible }) => (
+                            <ClubCard
                                 title="Club de Ajedrez"
                                 description="Un punto de encuentro para entusiastas del ajedrez que buscan afinar su pensamiento estratégico y competir en un entorno de respeto mutuo y mejora continua."
                                 imageUrl="https://res.cloudinary.com/glovooker/image/upload/v1715972808/students-site/ajedrez.png"

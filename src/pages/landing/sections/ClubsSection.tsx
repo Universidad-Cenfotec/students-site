@@ -16,10 +16,10 @@ const ClubsSection: React.FC<SectionProps> = ({ content }) => {
     return (
         <Box sx={ { width: '100%', height: 'auto', textAlign: { xs: 'center', md: 'left' }, my: '8rem', px: { xs: '0rem', md: '6rem' } } }>
             <Typography variant="h4" sx={ { mx: 'auto', my: '0.5rem', textAlign: { xs: 'center', md: 'left' }, fontSize: { xs: '0.825rem', sm: '1.125rem' }, fontWeight: 600, letterSpacing: '0.0625rem' } }>
-                { safeGetText(35, 'heading_3') }
+                { safeGetText(42, 'heading_3') }
             </Typography>
             <Typography variant="h2" sx={ { mx: 'auto', textAlign: { xs: 'center', md: 'left' }, color: 'primary.main', fontSize: { xs: '2rem', sm: '3rem' }, fontWeight: 600 } }>
-                { safeGetText(36, 'heading_1') }
+                { safeGetText(43, 'heading_1') }
             </Typography>
             <Grid container sx={ { my: '4rem', mx: 'auto', height: 'auto', minHeight: '34rem' } }>
                 <Swiper

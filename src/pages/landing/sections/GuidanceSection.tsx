@@ -5,6 +5,7 @@ import { SectionProps } from '@/types/notionTypes';
 
 const GuidanceSection: React.FC<SectionProps> = ({ content }) => {
 
+    const electionsGraphic = 'https://res.cloudinary.com/glovooker/image/upload/v1726848070/students-site/elections.png';
     const safeGetText = (index: number, type: string) => {
         if (content && index < content.length && content[index][type]) {
             return content[index][type].rich_text[0]?.plain_text || 'Loading...';
@@ -84,6 +85,40 @@ const GuidanceSection: React.FC<SectionProps> = ({ content }) => {
                 </Grid>
                 <Grid item xs={ 12 } lg={ 6 }>
                     <BlogGraphic sx={ { width: { xs: '100%', lg: '85%' }, height: 'auto' } } />
+                </Grid>
+            </Grid>
+            <Grid container sx={ { my: '2rem', px: { xs: '2rem', lg: 0 } } } spacing={ 4 }>
+                <Grid item xs={ 12 } lg={ 6 }>
+                    <Box sx={ { width: { xs: '100%', lg: '85%' }, height: 'auto' } }>
+                        <img src={ electionsGraphic } alt="Elecciones" style={ { width: '100%', height: 'auto' } } />
+                    </Box>
+                </Grid>
+                <Grid item xs={ 12 } lg={ 6 } sx={ { textAlign: { xs: 'center', lg: 'left' }, px: { xs: '1rem', lg: '3.5rem' } } }>
+                    <Typography variant="h3" sx={ { color: 'text.main', fontSize: { xs: '1.5rem', sm: '2rem' }, fontWeight: 600 } }>
+                        { safeGetText(34, 'heading_3') }
+                    </Typography>
+                    <Typography variant="h3" sx={ { color: 'secondary.main', fontSize: { xs: '1.5rem', sm: '2rem' }, fontWeight: 600 } }>
+                        { safeGetText(35, 'heading_3') }
+                    </Typography>
+                    <Typography variant="body1" sx={ { mx: { xs: 'auto', lg: 0 }, my: '2rem', lineHeight: 2, maxWidth: '36rem' } }>
+                        { safeGetText(36, 'paragraph') }<Box component="span" sx={ { color: 'primary.main', fontWeight: 450 } }>{ safeGetText(37, 'paragraph') } </Box><Box component="span" sx={ { color: 'primary.main', fontFamily: '"DIN Alternate", sans-serif' } }>{ safeGetText(38, 'paragraph') }</Box>{ safeGetText(39, 'paragraph') }
+                    </Typography>
+                    <Button
+                        variant="outlined"
+                        color="secondary"
+                        size="large"
+                        href='/community/student-council'
+                        sx={ {
+                            fontSize: { xs: '1rem', sm: '1.5rem' },
+                            fontWeight: 600,
+                            px: { xs: '2rem', sm: '3rem' },
+                            border: 3, '&:hover': {
+                                border: 3,
+                            }
+                        } }
+                    >
+                        { safeGetText(40, 'paragraph') }
+                    </Button>
                 </Grid>
             </Grid>
         </Box>

@@ -10,7 +10,7 @@ interface ClubCardProps {
 export const ClubCard = ({ title, description, imageUrl, style }: ClubCardProps) => {
     return (
         <Card sx={ { maxWidth: 366, height: 'auto', borderRadius: '12px', textAlign: 'left', boxShadow: '0px 30px 60px rgba(71, 74, 87, 0.25)', cursor: 'pointer' } } style={ style }>
-            <CardActionArea href='https://cenf-zgpvh.maillist-manage.com/click/15e01f801de71b8d/15e01f801de773e7' target='_blank'>
+            <CardActionArea href='https://forms.zoho.com/pbrenes/form/Formularioparasolicituddeinscripcinaclubes/formperma/EKRpXyjTDcWKAfKjf67llWSS3hDlOGGrM_lsVKwaPUI?zf_lang=es' target='_blank'>
             <CardMedia
                 component="img"
                 height="236"

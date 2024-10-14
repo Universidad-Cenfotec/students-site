@@ -1,4 +1,4 @@
-import { Box, Card, CardContent, Grid, Typography } from '@mui/material';
+import { Box, Button, Card, CardContent, Grid, Typography } from '@mui/material';
 import { LifeBuoyIcon, MapIcon, BriefcaseIcon } from '@/components/About/StudentAffairsSection/components';
 import { SectionProps } from '@/types/notionTypes';
 
@@ -35,9 +35,12 @@ const StudentAffairsSection: React.FC<SectionProps> = ({ content }) => {
                 <Grid item xs={ 12 } md={ 4 }>
                     <Card sx={ { maxWidth: '100%', mx: 'auto', boxShadow: 0 } }>
                         <CardContent>
-                            <Box
+                            <Button
+                                variant='contained'
+                                color='primary'
+                                href='https://ucenfotec.ac.cr/bolsatrabajo/'
+                                target='_blank'
                                 sx={ {
-                                    backgroundColor: 'primary.main',
                                     width: '6.375rem',
                                     height: '6.375rem',
                                     borderRadius: '1.625rem',
@@ -48,7 +51,7 @@ const StudentAffairsSection: React.FC<SectionProps> = ({ content }) => {
                                 } }
                             >
                                 <BriefcaseIcon style={ { fontSize: '2.8125rem', color: 'white' } } />
-                            </Box>
+                            </Button>
                             <Typography variant="h3" sx={ { fontSize: '1.5rem', fontWeight: 600, color: 'secondary.main', maxWidth: '9.5rem', mx: 'auto', my: '1.5rem' } }>
                                 { safeGetText(5, 'heading_3') }
                             </Typography>
@@ -62,9 +65,11 @@ const StudentAffairsSection: React.FC<SectionProps> = ({ content }) => {
                 <Grid item xs={ 12 } md={ 4 }>
                     <Card sx={ { maxWidth: '100%', mx: 'auto', boxShadow: 0 } }>
                         <CardContent>
-                            <Box
+                            <Button
+                                variant='contained'
+                                color='primary'
+                                href='#support-services'
                                 sx={ {
-                                    backgroundColor: 'primary.main',
                                     width: '6.375rem',
                                     height: '6.375rem',
                                     borderRadius: '1.625rem',
@@ -75,7 +80,7 @@ const StudentAffairsSection: React.FC<SectionProps> = ({ content }) => {
                                 } }
                             >
                                 <LifeBuoyIcon style={ { fontSize: '2.8125rem', color: 'white' } } />
-                            </Box>
+                            </Button>
                             <Typography variant="h3" sx={ { fontSize: '1.5rem', fontWeight: 600, color: 'secondary.main', maxWidth: '13.5rem', mx: 'auto', my: '1.5rem' } }>
                                 { safeGetText(7, 'heading_3') }
                             </Typography>
@@ -89,9 +94,11 @@ const StudentAffairsSection: React.FC<SectionProps> = ({ content }) => {
                 <Grid item xs={ 12 } md={ 4 }>
                     <Card sx={ { maxWidth: '100%', mx: 'auto', boxShadow: 0 } }>
                         <CardContent>
-                            <Box
+                            <Button
+                                variant='contained'
+                                color='primary'
+                                href='#support-services'
                                 sx={ {
-                                    backgroundColor: 'primary.main',
                                     width: '6.375rem',
                                     height: '6.375rem',
                                     borderRadius: '1.625rem',
@@ -102,7 +109,7 @@ const StudentAffairsSection: React.FC<SectionProps> = ({ content }) => {
                                 } }
                             >
                                 <MapIcon style={ { fontSize: '2.8125rem', color: 'white' } } />
-                            </Box>
+                            </Button>
                             <Typography variant="h3" sx={ { fontSize: '1.5rem', fontWeight: 600, color: 'secondary.main', maxWidth: '12.5rem', mx: 'auto', my: '1.25rem' } }>
                                 { safeGetText(9, 'heading_3') }
                             </Typography>

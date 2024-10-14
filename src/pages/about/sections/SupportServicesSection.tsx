@@ -21,7 +21,7 @@ const SupportServicesSection: React.FC<SectionProps> = ({ content }) => {
     };
 
     return (
-        <Box sx={ { width: '100%', height: 'auto', textAlign: { xs: 'center', md: 'left' }, my: '4rem', mx: 'autos', px: { xs: '2rem', md: '6rem' } } }>
+        <Box id='support-services' sx={ { width: '100%', height: 'auto', textAlign: { xs: 'center', md: 'left' }, my: '4rem', mx: 'autos', px: { xs: '2rem', md: '6rem' } } }>
             <Typography variant="h4" sx={ { mx: 'auto', my: '0.5rem', textAlign: { xs: 'center', md: 'left' }, fontSize: { xs: '1rem', sm: '1.125rem' }, fontWeight: 600, letterSpacing: '0.0625rem' } }>
                 { safeGetText(20, 'heading_3') }
             </Typography>

@@ -1,4 +1,4 @@
-import { Grid, Card, CardContent, Typography, Box } from '@mui/material';
+import { Grid, Card, CardContent, Typography, Box, Button } from '@mui/material';
 import { CommentIcon, HeartIcon, SearchIcon } from '@/components/Landing/FeaturesSection/components';
 import { SectionProps } from '@/types/notionTypes';
 
@@ -24,9 +24,11 @@ const FeaturesSection: React.FC<SectionProps> = ({ content }) => {
                 <Grid item xs={ 12 } md={ 4 }>
                     <Card sx={ { maxWidth: '100%', mx: 'auto', boxShadow: 0 } }>
                         <CardContent>
-                            <Box
+                            <Button
+                                variant='contained'
+                                color='primary'
+                                href='/academy'
                                 sx={ {
-                                    backgroundColor: 'primary.main',
                                     width: '6.375rem',
                                     height: '6.375rem',
                                     borderRadius: '1.625rem',
@@ -37,7 +39,7 @@ const FeaturesSection: React.FC<SectionProps> = ({ content }) => {
                                 } }
                             >
                                 <SearchIcon style={ { fontSize: '2.8125rem', color: 'white' } } />
-                            </Box>
+                            </Button>
                             <Typography variant="h3" sx={ { fontSize: '1.5rem', fontWeight: 600, color: 'secondary.main', maxWidth: '12.5rem', mx: 'auto', my: '1.5rem' } }>
                                 { safeGetText(9, 'heading_3') }
                             </Typography>
@@ -51,9 +53,11 @@ const FeaturesSection: React.FC<SectionProps> = ({ content }) => {
                 <Grid item xs={ 12 } md={ 4 }>
                     <Card sx={ { maxWidth: '100%', mx: 'auto', boxShadow: 0 } }>
                         <CardContent>
-                            <Box
+                            <Button
+                                variant='contained'
+                                color='primary'
+                                href='/community'
                                 sx={ {
-                                    backgroundColor: 'primary.main',
                                     width: '6.375rem',
                                     height: '6.375rem',
                                     borderRadius: '1.625rem',
@@ -64,7 +68,7 @@ const FeaturesSection: React.FC<SectionProps> = ({ content }) => {
                                 } }
                             >
                                 <CommentIcon style={ { fontSize: '2.8125rem', color: 'white' } } />
-                            </Box>
+                            </Button>
                             <Typography variant="h3" sx={ { fontSize: '1.5rem', fontWeight: 600, color: 'secondary.main', maxWidth: '12.5rem', mx: 'auto', my: '1.5rem' } }>
                                 { safeGetText(11, 'heading_3') }
                             </Typography>
@@ -78,9 +82,11 @@ const FeaturesSection: React.FC<SectionProps> = ({ content }) => {
                 <Grid item xs={ 12 } md={ 4 }>
                     <Card sx={ { maxWidth: '100%', mx: 'auto', boxShadow: 0 } }>
                         <CardContent>
-                            <Box
+                            <Button
+                                variant='contained'
+                                color='primary'
+                                href='/about'
                                 sx={ {
-                                    backgroundColor: 'primary.main',
                                     width: '6.375rem',
                                     height: '6.375rem',
                                     borderRadius: '1.625rem',
@@ -91,7 +97,7 @@ const FeaturesSection: React.FC<SectionProps> = ({ content }) => {
                                 } }
                             >
                                 <HeartIcon style={ { fontSize: '2.8125rem', color: 'white' } } />
-                            </Box>
+                            </Button>
                             <Typography variant="h3" sx={ { fontSize: '1.5rem', fontWeight: 600, color: 'secondary.main', maxWidth: '12.5rem', mx: 'auto', my: '1.25rem' } }>
                                 { safeGetText(13, 'heading_3') }
                             </Typography>

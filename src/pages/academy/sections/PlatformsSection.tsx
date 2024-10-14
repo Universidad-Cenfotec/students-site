@@ -50,7 +50,7 @@ const PlatformsSection: React.FC<SectionProps> = ({ content }) => {
                         variant="outlined"
                         color="secondary"
                         size="large"
-                        href='https://drive.google.com/file/d/1-kz6CV0hwLHa-ClJZVvDKJBgNC4k3sm0/view?usp=sharing'
+                        href='https://drive.google.com/file/d/1Sa7iCv-jPC60Gp3tIdz9KFvlIl-Xm1OQ/view?usp=sharing'
                         target='_blank'
                         sx={ {
                             fontSize: { xs: '1rem', sm: '1.5rem' },

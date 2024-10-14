@@ -1,7 +1,7 @@
 import { SectionProps } from '@/types/notionTypes';
 import { Box, Button, Typography } from '@mui/material';
 
-const JobsSection: React.FC<SectionProps> = ({ content }) => {
+const LatestSection: React.FC<SectionProps> = ({ content }) => {
 
     const jobsGraphic = 'https://res.cloudinary.com/glovooker/image/upload/v1722971999/students-site/jobs-graphic.png';
     const safeGetText = (index: number, type: string) => {
@@ -17,51 +17,40 @@ const JobsSection: React.FC<SectionProps> = ({ content }) => {
                 { safeGetText(0, 'heading_3') }
             </Typography>
             <Typography variant="h2" sx={ { mx: 'auto', mb: '4rem', textAlign: { xs: 'center', md: 'left' }, color: 'primary.main', fontSize: { xs: '2rem', sm: '3rem' }, fontWeight: 600 } }>
-                { safeGetText(1, 'heading_1') }
+                Lo más reciente en nuestras noticias
             </Typography>
             <Box
                 sx={ {
                     display: 'flex',
-                    flexDirection: { xs: 'column', lg: 'row-reverse' },
+                    flexDirection: { xs: 'column', lg: 'row' },
                     alignItems: 'center',
                     justifyContent: 'space-between',
                     mx: 'auto',
                     mb: '6rem',
+                    height: '50vh'
                 } }
             >
-                <Box sx={ { width: { xs: '100%', lg: '45%' } } }>
-                    <img src={ jobsGraphic } alt="Jobs Graphic" style={ { width: '80%' } } />
+                <Box sx={ { width: { xs: '100%', lg: '55%' }, height: '100%', borderRadius: '0.5rem' } }>
+                    <iframe
+                        style={ { width: '100%', height: '100%' } }
+                        src={ 'https://www.youtube.com/embed/8_sZJtCdGS8?si=9ieD0pU_ocmqv02e' }
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                        title="Embedded youtube"
+                    ></iframe>
                 </Box>
-                <Box sx={ { width: { xs: '100%', lg: '45%' }, textAlign: 'left' } }>
-                    <Typography variant="h3" sx={ { color: 'text.main', fontSize: { xs: '1.5rem', sm: '2rem' }, fontWeight: 600 } }>
-                        { safeGetText(2, 'heading_3') }
-                    </Typography>
+                <Box sx={ { width: { xs: '100%', lg: '40%' }, textAlign: 'left' } }>
                     <Typography variant="h3" sx={ { color: 'secondary.main', fontSize: { xs: '1.5rem', sm: '2rem' }, fontWeight: 600 } }>
-                        { safeGetText(3, 'heading_3') }
+                        Conoce a Jeremy Villegas
                     </Typography>
                     <Typography variant="body1" sx={ { maxWidth: '75%', mx: { xs: 'auto', lg: 0 }, my: '2rem', lineHeight: 2 } }>
-                        <Box component="span" sx={ { color: 'primary.main', lineHeight: 1 } }>{ safeGetText(4, 'paragraph') }</Box><Box component="span" sx={ { color: 'primary.main', fontFamily: '"DIN Alternate", sans-serif' } }>{ safeGetText(5, 'paragraph') }</Box>{ safeGetText(6, 'paragraph') }
+                        Un joven talentoso que combina su pasión por la tecnología con su habilidad en el ajedrez. Estudiante destacado de Ingeniería de Software en <Box component="span" sx={ { color: 'primary.main', lineHeight: 1 } }>{ safeGetText(4, 'paragraph') }</Box><Box component="span" sx={ { color: 'primary.main', fontFamily: '"DIN Alternate", sans-serif' } }>{ safeGetText(5, 'paragraph') }</Box>, Jeremy es un campeón universitario de ajedrez y ha representado a su país en diversas competencias.
                     </Typography>
-                    <Button
-                        variant='contained'
-                        color="primary"
-                        size="large"
-                        href='https://ucenfotec.ac.cr/bolsatrabajo/'
-                        target='_blank'
-                        sx={ {
-                            fontSize: { xs: '1rem', sm: '1.5rem' },
-                            fontWeight: 600,
-                            px: { xs: '2rem', sm: '3rem' },
-                            mr: '2rem',
-                        } }
-
-                    >
-                        { safeGetText(7, 'paragraph') }
-                    </Button>
                 </Box>
             </Box>
         </Box>
     );
 };
 
-export default JobsSection;
+export default LatestSection;

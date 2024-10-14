@@ -1,11 +1,13 @@
 import React from 'react';
 import BlogSection from './sections/BlogSection';
 import JobsSection from './sections/JobsSection';
+import LatestSection from './sections/LatestSection';
 import { getPageContent, getSectionContent } from '@/lib/notionClient';
 
 export default function CommunityPage ({ communityContent }: any) {
     return (
         <>
+            <LatestSection content={ communityContent } />
             <JobsSection content={ communityContent } />
             {/* <BlogSection content={ communityContent } /> */ }
         </>

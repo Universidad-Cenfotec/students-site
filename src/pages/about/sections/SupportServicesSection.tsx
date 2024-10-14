@@ -147,6 +147,7 @@ const SupportServicesSection: React.FC<SectionProps> = ({ content }) => {
                         <Typography variant="h3" sx={ { color: 'secondary.main', fontSize: { xs: '1.5rem', sm: '2rem' }, fontWeight: 600, mb: '1rem' } }>
                             { safeGetText(38, 'heading_3') }
                         </Typography>
+                        <img src={ caic1 } alt="CAIC Flyer" width={ '100%' } style={ { maxWidth: '40rem' } } />
                         <Button
                             variant="outlined"
                             color="secondary"
@@ -160,18 +161,18 @@ const SupportServicesSection: React.FC<SectionProps> = ({ content }) => {
                                 border: 3, '&:hover': {
                                     border: 3,
                                 },
-                                mb: '2rem'
+                                mt: '2rem'
                             } }
 
                         >
                             { safeGetText(39, 'paragraph') }
                         </Button>
-                        <img src={ caic1 } alt="CAIC Flyer" width={ '100%' } style={ { maxWidth: '40rem' } } />
                     </Grid>
                     <Grid item xs={ 12 } xl={ 6 } sx={ { mb: { xs: '4rem', xl: 0 }, textAlign: { xs: 'center', xl: 'left' }, px: { xs: '0rem', xl: '3.5rem' }, display: 'flex', flexDirection: 'column', alignItems: 'center' } }>
                         <Typography variant="h3" sx={ { color: 'secondary.main', fontSize: { xs: '1.5rem', sm: '2rem' }, fontWeight: 600, mb: '1rem' } }>
                             { safeGetText(40, 'heading_3') }
                         </Typography>
+                        <img src={ studyClub1 } alt="Study Club Flyer" width={ '100%' } style={ { maxWidth: '40rem' } } />
                         <Button
                             variant="outlined"
                             color="secondary"
@@ -185,13 +186,12 @@ const SupportServicesSection: React.FC<SectionProps> = ({ content }) => {
                                 border: 3, '&:hover': {
                                     border: 3,
                                 },
-                                mb: '2rem'
+                                mt: '2rem'
                             } }
 
                         >
                             { safeGetText(41, 'paragraph') }
                         </Button>
-                        <img src={ studyClub1 } alt="Study Club Flyer" width={ '100%' } style={ { maxWidth: '40rem' } } />
                     </Grid>
                 </Grid>
             </Grid>

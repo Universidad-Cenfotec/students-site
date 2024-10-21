@@ -28,3 +28,23 @@ export const getPageContent = async (pageId: string) => {
         throw error;
     }
 };
+
+export const getAllEntries = async (databaseId: string) => {
+    let entries: any[] = [];
+    let startCursor = undefined;
+
+    try {
+        do {
+            const response = await notion.databases.query({
+                database_id: databaseId,
+                start_cursor: startCursor,
+            });
+            entries = entries.concat(response.results);
+            startCursor = response.next_cursor;
+        } while (startCursor);
+        return entries;
+    } catch (error) {
+        console.error("Error fetching all entries from Notion:", error);
+        throw error;
+    }
+};

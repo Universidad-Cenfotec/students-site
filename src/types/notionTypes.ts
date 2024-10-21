@@ -40,6 +40,18 @@ export interface Block {
     [key: string]: any; // Flexible index signature for nested properties
 }
 
+export interface Blog {
+    title: string;
+    description: string;
+    imageUrl: string;
+    [key: string]: any;
+}
+export interface BlogContent {
+    title?: string;
+    [key: string]: any;
+}
+
 export interface SectionProps {
     content: Block[];
+    blogPosts?: Blog[];
 }

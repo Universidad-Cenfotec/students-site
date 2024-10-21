@@ -69,6 +69,7 @@ const GuidanceSection: React.FC<SectionProps> = ({ content }) => {
                         variant="outlined"
                         color="secondary"
                         size="large"
+                        href="/community"
                         sx={ {
                             fontSize: { xs: '1rem', sm: '1.5rem' },
                             fontWeight: 600,
@@ -77,10 +78,8 @@ const GuidanceSection: React.FC<SectionProps> = ({ content }) => {
                                 border: 3,
                             }
                         } }
-                        disabled
                     >
-                        {/* { safeGetText(33, 'paragraph') } */ }
-                        Próximamente...
+                        { safeGetText(33, 'paragraph') }
                     </Button>
                 </Grid>
                 <Grid item xs={ 12 } lg={ 6 }>

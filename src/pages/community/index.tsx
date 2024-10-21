@@ -2,14 +2,14 @@ import React from 'react';
 import BlogSection from './sections/BlogSection';
 import JobsSection from './sections/JobsSection';
 import LatestSection from './sections/LatestSection';
-import { getPageContent, getSectionContent } from '@/lib/notionClient';
+import { getAllEntries, getPageContent, getSectionContent } from '@/lib/notionClient';
 
-export default function CommunityPage ({ communityContent }: any) {
+export default function CommunityPage ({ communityContent, blogPosts }: any) {
     return (
         <>
             <LatestSection content={ communityContent } />
             <JobsSection content={ communityContent } />
-            {/* <BlogSection content={ communityContent } /> */ }
+            <BlogSection content={ communityContent } blogPosts={ blogPosts } />
         </>
     );
 };
@@ -17,34 +17,32 @@ export default function CommunityPage ({ communityContent }: any) {
 export async function getServerSideProps () {
     try {
         // Fetch the metadata to get the page ID
-        const pageMetadata = await getSectionContent('526df7dc8ff943aeb550d024010f6be5', {
+        const communityMetadata = await getSectionContent('526df7dc8ff943aeb550d024010f6be5', {
             property: "Title",
             rich_text: {
                 contains: "Comunidad",
             },
         });
 
-        if (!pageMetadata || pageMetadata.length === 0) {
-            return {
-                notFound: true,
-            };
-        }
+        const communityContentBlocks = communityMetadata && communityMetadata.length > 0
+            ? await getPageContent(communityMetadata[0].id)
+            : [];
 
-        // Fetch all content blocks from the page
-        const communityContentBlocks = await getPageContent(pageMetadata[0].id);
+        const blogPosts = await getAllEntries('12669888b29680908635ce2c6cec8580');
 
         return {
             props: {
                 communityContent: communityContentBlocks,
+                blogPosts: blogPosts,
             },
         };
     } catch (error) {
-        console.error('Failed to fetch community page content:', error);
+        console.error('Failed to fetch page content:', error);
         return {
             props: {
                 communityContent: null,
+                blogPosts: [],
             },
         };
     }
 }
-

@@ -1,11 +1,10 @@
 // src/pages/_app.tsx
 import { AppProps } from 'next/app';
 import Head from 'next/head';
-import { ThemeProvider } from '@mui/material/styles';
-import CssBaseline from '@mui/material/CssBaseline';
-import '../styles/globals.css';
-import { Footer, Navbar } from '@/components';
+import { ThemeProvider, CssBaseline, Box } from '@mui/material';
 import theme from '@/themes/theme';
+import { Footer, Navbar } from '@/components';
+import '../styles/globals.css';
 
 function StudentsSite ({ Component, pageProps }: AppProps) {
     return (
@@ -16,11 +15,24 @@ function StudentsSite ({ Component, pageProps }: AppProps) {
             </Head>
             <ThemeProvider theme={ theme }>
                 <CssBaseline />
-                <Navbar />
-                <main>
-                    <Component { ...pageProps } />
-                </main>
-                <Footer />
+                <Box sx={ {
+                    display: 'flex',
+                    flexDirection: 'column',
+                    minHeight: '100vh',  // Ensures the container is at least as tall as the viewport
+                } }>
+                    <Box sx={ {
+                        position: 'sticky',
+                        top: 0,  // Keeps the navbar at the top of the viewport
+                        zIndex: 1100,  // Ensures the navbar stays on top of other content
+                        width: '100%',
+                    } }>
+                        <Navbar />
+                    </Box>
+                    <Box component="main" sx={ { flexGrow: 1 } }>
+                        <Component { ...pageProps } />
+                    </Box>
+                    <Footer />
+                </Box>
             </ThemeProvider>
         </>
     );

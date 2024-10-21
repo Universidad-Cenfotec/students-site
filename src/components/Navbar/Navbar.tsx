@@ -26,7 +26,7 @@ export const Navbar = () => {
 
     return (
         <>
-            <AppBar position="static" sx={ { backgroundColor: 'white', boxShadow: 'none', padding: '2rem' } }>
+            <AppBar position="static" sx={ { backgroundColor: 'white', boxShadow: 'none', paddingY: '1.5rem', paddingX: '2rem', height: '6rem' } }>
                 <Toolbar sx={ { justifyContent: { xs: 'space-between', lg: 'start' }, zIndex: '100' } }>
                     <Box sx={ { flexGrow: 0.1 } }>
                         <Link href="/" passHref>

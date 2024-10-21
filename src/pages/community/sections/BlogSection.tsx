@@ -36,7 +36,7 @@ const BlogSection: React.FC<SectionProps> = ({ content, blogPosts }) => {
                     maxWidth: '100%'
                 } }
             >
-                { blogPosts!.map((blog, index) => {
+                { blogPosts?.map((blog, index) => {
 
                     blog.id = blog.properties.ID.unique_id.number;
                     blog.title = blog.properties.Title.title[0].plain_text;

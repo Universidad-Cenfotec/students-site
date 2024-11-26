@@ -9,7 +9,7 @@ export default function StudentCouncilPage ({ studentCouncilContent }: any) {
     return (
         <>
             <StudentCouncilSection content={ studentCouncilContent } />
-            <CalendarSection content={ studentCouncilContent } />
+            {/* <CalendarSection content={ studentCouncilContent } /> */ }
         </>
     );
 };

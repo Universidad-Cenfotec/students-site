@@ -86,7 +86,7 @@ const GuidanceSection: React.FC<SectionProps> = ({ content }) => {
                     <BlogGraphic sx={ { width: { xs: '100%', lg: '85%' }, height: 'auto' } } />
                 </Grid>
             </Grid>
-            <Grid container sx={ { my: '2rem', px: { xs: '2rem', lg: 0 } } } spacing={ 4 }>
+            {/* <Grid container sx={ { my: '2rem', px: { xs: '2rem', lg: 0 } } } spacing={ 4 }>
                 <Grid item xs={ 12 } lg={ 6 }>
                     <Box sx={ { width: { xs: '100%', lg: '85%' }, height: 'auto' } }>
                         <img src={ electionsGraphic } alt="Elecciones" style={ { width: '100%', height: 'auto' } } />
@@ -119,7 +119,7 @@ const GuidanceSection: React.FC<SectionProps> = ({ content }) => {
                         { safeGetText(40, 'paragraph') }
                     </Button>
                 </Grid>
-            </Grid>
+            </Grid> */}
         </Box>
     );
 };

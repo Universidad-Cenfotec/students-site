@@ -16,10 +16,10 @@ const SuggestionsSection: React.FC<SectionProps> = ({ content }) => {
     return (
         <Box sx={ { width: '100%', height: 'auto', textAlign: { xs: 'center', md: 'left' }, my: '2rem', px: { xs: '2rem', md: '6rem' } } }>
             <Typography variant="h4" sx={ { mx: 'auto', my: '0.5rem', textAlign: { xs: 'center', md: 'left' }, fontSize: { xs: '1rem', sm: '1.125rem' }, fontWeight: 600, letterSpacing: '0.0625rem' } }>
-                { safeGetText(7, 'heading_3') }
+                { safeGetText(40, 'heading_3') }
             </Typography>
             <Typography variant="h2" sx={ { mx: 'auto', mb: '4rem', textAlign: { xs: 'center', md: 'left' }, color: 'primary.main', fontSize: { xs: '2rem', sm: '3rem' }, fontWeight: 600 } }>
-                { safeGetText(8, 'heading_1') }
+                { safeGetText(41, 'heading_1') }
             </Typography>
             <Box
                 sx={ {
@@ -36,10 +36,10 @@ const SuggestionsSection: React.FC<SectionProps> = ({ content }) => {
                 </Box>
                 <Box sx={ { width: { xs: '100%', lg: '100%' }, textAlign: 'left' } }>
                     <Typography variant="body1" sx={ { textAlign: 'left', mx: { xs: 'auto', lg: 0 }, my: '4rem', lineHeight: 2 } }>
-                        { safeGetText(9, 'paragraph') }
-                        <Box component="span" sx={ { color: 'primary.main', lineHeight: 1 } }>{ safeGetText(10, 'paragraph') }</Box>
-                        <Box component="span" sx={ { color: 'primary.main', fontFamily: '"DIN Alternate", sans-serif' } }>{ safeGetText(11, 'paragraph') }</Box>
-                        { safeGetText(12, 'paragraph') }
+                        { safeGetText(42, 'paragraph') }
+                        <Box component="span" sx={ { color: 'primary.main', lineHeight: 1 } }>{ safeGetText(43, 'paragraph') }</Box>
+                        <Box component="span" sx={ { color: 'primary.main', fontFamily: '"DIN Alternate", sans-serif' } }>{ safeGetText(44, 'paragraph') }</Box>
+                        { safeGetText(45, 'paragraph') }
                     </Typography>
                     <iframe src={ formUrl } width="100%" height="500" frameBorder="0" marginHeight={ 0 } marginWidth={ 0 }>Loading…</iframe>
                 </Box>

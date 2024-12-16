@@ -2,11 +2,13 @@ import React from 'react';
 import AssistanceSection from './sections/AssistanceSection';
 import SuggestionsSection from './sections/SuggestionsSection';
 import { getPageContent, getSectionContent } from '@/lib/notionClient';
+import SchoolsSection from './sections/SchoolsSection';
 
 export default function SupportPage ({ supportContent }: any) {
     return (
         <>
             <AssistanceSection content={ supportContent } />
+            <SchoolsSection content={ supportContent } />
             <SuggestionsSection content={ supportContent } />
         </>
     );

@@ -47,7 +47,7 @@ const CalendarSection: React.FC<SectionProps> = ({ content }) => {
                         variant='contained'
                         color="primary"
                         size="large"
-                        href='https://drive.google.com/file/d/1c2j1q91GQ-EsOAGxMsUEABS6P-0XwHtb/view'
+                        href='https://drive.google.com/file/d/1DFy1BvYuhT87F7ncY9GNyK7dwrUjJCSv/view'
                         target='_blank'
                         sx={ {
                             fontSize: { xs: '1rem', sm: '1.5rem' },
@@ -64,7 +64,7 @@ const CalendarSection: React.FC<SectionProps> = ({ content }) => {
                         variant="outlined"
                         color="secondary"
                         size="large"
-                        href='https://drive.google.com/file/d/1gHvBLD2Y_fAu7EvUZugyKGesDtFXmLVt/view'
+                        href='https://drive.google.com/file/d/1DkA73ljlo5HCEn3FJc0FJHjc5uu2Ml63/view'
                         target='_blank'
                         sx={ {
                             fontSize: { xs: '1rem', sm: '1.5rem' },

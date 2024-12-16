@@ -1,8 +1,7 @@
-import { Box, Button, Card, CardContent, Grid, Typography } from '@mui/material';
-import { AwardIcon, FileIcon, MonitorIcon } from '@/components/Academy/CalendarSection/components';
+import { Box, Button, Typography } from '@mui/material';
 import { SectionProps } from '@/types/notionTypes';
 
-const CalendarSection: React.FC<SectionProps> = ({ content }) => {
+const ElectionsSection: React.FC<SectionProps> = ({ content }) => {
 
     const electionsFlyer = 'https://res.cloudinary.com/glovooker/image/upload/v1722969249/students-site/elections-flyer.png';
     const safeGetText = (index: number, type: string) => {
@@ -89,4 +88,4 @@ const CalendarSection: React.FC<SectionProps> = ({ content }) => {
     );
 };
 
-export default CalendarSection;
+export default ElectionsSection;

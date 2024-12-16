@@ -4,7 +4,6 @@ import { Box, List, ListItem, Typography } from '@mui/material';
 const StudentCouncilSection: React.FC<SectionProps> = ({ content }) => {
 
     const studentCouncilGraphic = 'https://res.cloudinary.com/glovooker/image/upload/v1722830884/students-site/student-council.png';
-    const xperiencedMethodologyGraphic = 'https://res.cloudinary.com/glovooker/image/upload/v1722835186/students-site/xperienced-methodology.png';
     const safeGetText = (index: number, type: string) => {
         if (content && index < content.length && content[index][type]) {
             return content[index][type].rich_text[0]?.plain_text || 'Loading...';

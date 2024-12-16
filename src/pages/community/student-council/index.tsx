@@ -1,15 +1,15 @@
 import React from 'react';
-import StudentCouncilSection from './sections/StudentCouncilSection';
-import PlatformsSection from './sections/PlatformsSection';
-import GuidesSection from './sections/GuidesSection';
-import CalendarSection from './sections/CalendarSection';
 import { getPageContent, getSectionContent } from '@/lib/notionClient';
+import StudentCouncilSection from './sections/StudentCouncilSection';
+import CurrentCouncilSection from './sections/CurrentCouncilSection';
+// import ElectionsSection from './sections/ElectionsSection';
 
 export default function StudentCouncilPage ({ studentCouncilContent }: any) {
     return (
         <>
             <StudentCouncilSection content={ studentCouncilContent } />
-            {/* <CalendarSection content={ studentCouncilContent } /> */ }
+            <CurrentCouncilSection content={ studentCouncilContent } />
+            {/* <ElectionsSection content={ studentCouncilContent } /> */ }
         </>
     );
 };

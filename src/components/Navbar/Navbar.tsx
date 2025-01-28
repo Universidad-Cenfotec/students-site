@@ -9,10 +9,10 @@ import { useState } from 'react';
 
 export const Navbar = () => {
     const theme = useTheme();
-    const isLargeScreen = useMediaQuery(theme.breakpoints.up('md')); // For desktop
-    const [drawerOpen, setDrawerOpen] = useState(false); // For mobile drawer
-    const [hoveredMenu, setHoveredMenu] = useState(false); // For desktop hover menu
-    const [sublistOpen, setSublistOpen] = useState(false); // For mobile drawer submenu
+    const isLargeScreen = useMediaQuery(theme.breakpoints.up('md'));
+    const [drawerOpen, setDrawerOpen] = useState(false);
+    const [hoveredMenu, setHoveredMenu] = useState(false);
+    const [sublistOpen, setSublistOpen] = useState(false);
 
     const handleDrawerOpen = () => {
         setDrawerOpen(true);
@@ -56,7 +56,7 @@ export const Navbar = () => {
                         </Link>
                     </Box>
                     { isLargeScreen ? (
-                        // Navbar for large screens
+
                         <Box>
                             <Link href="/" passHref><Button sx={ buttonStyle }>Inicio</Button></Link>
                             <Link href="/about" passHref><Button sx={ buttonStyle }>Sobre Nosotros</Button></Link>
@@ -119,7 +119,6 @@ export const Navbar = () => {
                             <Link href="/support" passHref><Button sx={ buttonStyle }>Soporte</Button></Link>
                         </Box>
                     ) : (
-                            // Drawer for mobile
                             <IconButton onClick={ handleDrawerOpen } sx={ { color: 'text.primary' } }>
                             <MenuIcon />
                         </IconButton>

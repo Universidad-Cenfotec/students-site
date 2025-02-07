@@ -1,5 +1,5 @@
 {
-  "compilerOptions": {
+    "compilerOptions": {
     "lib": [
         "dom",
         "dom.iterable",
@@ -16,20 +16,24 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
+    "target": "ES2017",
+    "types": [
+        "node",
+        "payload"
+    ], // ✅ Add this line
     "paths": {
-    "@/*": [
-        "./src/*"
-    ],
-    "@payload-config": [
-        "./payload.config.ts"
+        "@/*": [
+            "./src/*"
+        ],
+        "@payload-config": [
+            "./payload.config.ts"
+        ]
+    },
+    "plugins": [
+        {
+            "name": "next"
+        }
     ]
-},
-    "target": "ES2017"
 },
 "include": [
     "next-env.d.ts",
@@ -37,7 +41,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts"
 ],
-"exclude": [
-    "node_modules"
-]
+    "exclude": [
+        "node_modules"
+    ]
 }

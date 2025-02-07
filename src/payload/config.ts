@@ -4,16 +4,16 @@ import { mongooseAdapter } from '@payloadcms/db-mongodb';
 import { buildConfig } from 'payload';
 
 // Import collections
-import Users from '@/payload/collections/users';  // ✅ Ensure Users is imported
-import Blogs from '@/payload/collections/blogs';
-import Media from '@/payload/collections/media';
+import Users from './collections/users';
+import Blogs from './collections/blogs';
+import Media from './collections/media';
 
 // Import custom endpoints
-import blogPostEndpoint from '@/payload/endpoints/blogs';
+import blogPostEndpoint from './endpoints/blogs';
 
 export default buildConfig({
     editor: lexicalEditor(),
-    collections: [Users, Blogs, Media],  // ✅ Ensure Users is included
+    collections: [Users, Blogs, Media],
     admin: {
         user: "users",
     },

@@ -2,19 +2,11 @@
 
 import { useEffect, useState } from 'react';
 import { Box, Typography, Button, useMediaQuery, useTheme } from '@mui/material';
-import { HeroBackground } from '@/components/Landing/HeroSection/HeroBackground';
-import { SectionProps } from '@/types/notionTypes';
+import { HeroBackground } from '@/components/Landing/components/HeroBackground';
 
-const HeroSection: React.FC<SectionProps> = ({ content }) => {
+const HeroSection: React.FC = () => {
     const theme = useTheme();
     const isLargeScreen = useMediaQuery(theme.breakpoints.up('lg'));
-
-    const safeGetText = (index: number, type: string) => {
-        if (content && index < content.length && content[index][type]) {
-            return content[index][type].rich_text[0]?.plain_text || 'Loading...';
-        }
-        return 'Loading...';
-    };
 
     const [rightStyle, setRightStyle] = useState<string | number>(0); // Initialize with a default value.
 
@@ -60,7 +52,7 @@ const HeroSection: React.FC<SectionProps> = ({ content }) => {
                         width="85%"
                         sx={ { textAlign: { xs: 'center', lg: 'left' }, margin: { xs: '0 auto', sm: '0 auto', md: '0 auto', lg: '0', xl: '0' } } }
                     >
-                        { safeGetText(0, 'heading_2') } <Box component="span" sx={ { color: 'primary.main', fontSize: { xs: '3.75rem', sm: '6.25rem', md: '7.5rem', lg: '7.9375rem' }, lineHeight: 1 } }>{ safeGetText(1, 'heading_1') }</Box>
+                        Explora la Experiencia <Box component="span" sx={ { color: 'primary.main', fontSize: { xs: '3.75rem', sm: '6.25rem', md: '7.5rem', lg: '7.9375rem' }, lineHeight: 1 } }>CENFOTEC</Box>
                     </Typography>
                     <Typography
                         variant="body1"
@@ -68,7 +60,7 @@ const HeroSection: React.FC<SectionProps> = ({ content }) => {
                         paragraph
                         sx={ { textAlign: { xs: 'center', lg: 'left' }, width: { md: '100%', lg: '75%' }, mt: '1rem', } }
                     >
-                        { safeGetText(2, 'paragraph') } <Box component="span" sx={ { color: 'primary.main', fontFamily: '"DIN Alternate", sans-serif' } }>{ safeGetText(3, 'paragraph') }</Box>{ safeGetText(4, 'paragraph') }
+                        Abre las puertas a un mundo de conocimiento y vanguardia en <Box component="span" sx={ { color: 'primary.main', fontFamily: '"DIN Alternate", sans-serif' } }>CENFOTEC</Box>. Sumérgete en un ambiente donde la pasión se convierte en excelencia y donde cada paso te acerca a tus metas profesionales.
                     </Typography>
                     <Box
                         sx={ {
@@ -84,7 +76,7 @@ const HeroSection: React.FC<SectionProps> = ({ content }) => {
                             href='#features'
                             sx={ { fontSize: { xs: '1rem', sm: '1.125rem', md: '1.25rem', lg: '1.5rem' }, fontWeight: 600, margin: { xs: '0 auto', sm: '0 auto', md: '0 auto', lg: '0', xl: '0' }, } }
                         >
-                            { safeGetText(5, 'paragraph') }
+                            ¡Explorar!
                         </Button>
                     </Box>
                 </Box>

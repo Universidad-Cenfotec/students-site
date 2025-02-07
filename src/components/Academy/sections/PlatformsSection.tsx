@@ -1,8 +1,7 @@
-import { SectionProps } from '@/types/notionTypes';
 import { Box, Button, Typography } from '@mui/material';
 import React from 'react';
 
-const PlatformsSection: React.FC<SectionProps> = ({ content }) => {
+const PlatformsSection: React.FC = () => {
 
     const platformsVideoPlaceholderGraphic = 'https://res.cloudinary.com/glovooker/image/upload/v1722883320/students-site/platforms-video-placeholder.png';
     const assistanceCenterLogo = 'https://res.cloudinary.com/glovooker/image/upload/v1722883926/students-site/logo-centro-asistencia.png';
@@ -11,20 +10,14 @@ const PlatformsSection: React.FC<SectionProps> = ({ content }) => {
     const meetLogo = 'https://res.cloudinary.com/glovooker/image/upload/v1722883926/students-site/logo-meet.png';
     const moodleLogo = 'https://res.cloudinary.com/glovooker/image/upload/v1722883927/students-site/logo-moodle.png';
     const zelayaLibraryLogo = 'https://res.cloudinary.com/glovooker/image/upload/v1722883926/students-site/logo-biblioteca-ignacio-trejos-zelaya.png';
-    const safeGetText = (index: number, type: string) => {
-        if (content && index < content.length && content[index][type]) {
-            return content[index][type].rich_text[0]?.plain_text || 'Loading...';
-        }
-        return 'Loading...';
-    };
 
     return (
         <Box sx={ { width: '100%', height: 'auto', textAlign: { xs: 'center', md: 'left' }, my: '2rem', px: { xs: '2rem', md: '6rem' } } }>
             <Typography variant="h4" sx={ { mx: 'auto', my: '0.5rem', textAlign: { xs: 'center', md: 'left' }, fontSize: { xs: '1rem', sm: '1.125rem' }, fontWeight: 600, letterSpacing: '0.0625rem' } }>
-                { safeGetText(29, 'heading_3') }
+                Academia
             </Typography>
             <Typography variant="h2" sx={ { mx: 'auto', mb: '4rem', textAlign: { xs: 'center', md: 'left' }, color: 'primary.main', fontSize: { xs: '2rem', sm: '3rem' }, fontWeight: 600 } }>
-                { safeGetText(30, 'heading_1') }
+                Conoce nuestras plataformas
             </Typography>
             <Box
                 sx={ {
@@ -38,13 +31,13 @@ const PlatformsSection: React.FC<SectionProps> = ({ content }) => {
             >
                 <Box sx={ { width: { xs: '100%', lg: '40%' }, textAlign: 'left', my: '2rem' } }>
                     <Typography variant="h3" sx={ { color: 'text.main', fontSize: { xs: '1.5rem', sm: '2rem' }, fontWeight: 600 } }>
-                        { safeGetText(31, 'heading_3') }
+                        Video Informativo Sobre el
                     </Typography>
                     <Typography variant="h3" sx={ { color: 'secondary.main', fontSize: { xs: '1.5rem', sm: '2rem' }, fontWeight: 600 } }>
-                        { safeGetText(32, 'heading_3') }
+                        Uso de las Plataformas
                     </Typography>
                     <Typography variant="body1" sx={ { mx: { xs: 'auto', lg: 0 }, my: '2rem', lineHeight: 2 } }>
-                        { safeGetText(33, 'paragraph') }<Box component="span" sx={ { color: 'primary.main', lineHeight: 1 } }>{ safeGetText(34, 'paragraph') }</Box><Box component="span" sx={ { color: 'primary.main', fontFamily: '"DIN Alternate", sans-serif' } }>{ safeGetText(35, 'paragraph') }</Box>{ safeGetText(36, 'paragraph') }
+                        A continuación, se muestran las diferentes plataformas que utiliza la universidad para el manejo de los diferentes cursos. Como estudiante de la <Box component="span" sx={ { color: 'primary.main', lineHeight: 1 } }>Universidad</Box> <Box component="span" sx={ { color: 'primary.main', fontFamily: '"DIN Alternate", sans-serif' } }>CENFOTEC</Box>, tendrás acceso a diferentes plataformas, a continuación encontrará un video informativo explicando cada una de ellas:
                     </Typography>
                     <Button
                         variant="outlined"
@@ -62,7 +55,7 @@ const PlatformsSection: React.FC<SectionProps> = ({ content }) => {
                         } }
 
                     >
-                        { safeGetText(37, 'paragraph') }
+                        Video Informativo
                     </Button>
                 </Box>
                 <Box sx={ { width: { xs: '100%', lg: '50%' } } }>

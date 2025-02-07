@@ -1,4 +1,3 @@
-import { SectionProps } from '@/types/notionTypes';
 import { Box, List, ListItem, Typography } from '@mui/material';
 
 const EducationModelSection: React.FC = () => {

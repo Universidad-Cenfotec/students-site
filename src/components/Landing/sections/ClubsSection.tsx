@@ -3,25 +3,17 @@
 import { Box, Grid, Typography } from '@mui/material';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import { ClubCard } from '@/components/Landing/ClubsSection/ClubCard';
-import { SectionProps } from '@/types/notionTypes';
+import { ClubCard } from '@/components/Landing/components/ClubCard';
 
-const ClubsSection: React.FC<SectionProps> = ({ content }) => {
-
-    const safeGetText = (index: number, type: string) => {
-        if (content && index < content.length && content[index][type]) {
-            return content[index][type].rich_text[0]?.plain_text || 'Loading...';
-        }
-        return 'Loading...';
-    };
+const ClubsSection: React.FC = () => {
 
     return (
         <Box sx={ { width: '100%', height: 'auto', textAlign: { xs: 'center', md: 'left' }, my: '8rem', px: { xs: '0rem', md: '6rem' } } }>
             <Typography variant="h4" sx={ { mx: 'auto', my: '0.5rem', textAlign: { xs: 'center', md: 'left' }, fontSize: { xs: '0.825rem', sm: '1.125rem' }, fontWeight: 600, letterSpacing: '0.0625rem' } }>
-                { safeGetText(42, 'heading_3') }
+                Sitio de Estudiantes
             </Typography>
             <Typography variant="h2" sx={ { mx: 'auto', textAlign: { xs: 'center', md: 'left' }, color: 'primary.main', fontSize: { xs: '2rem', sm: '3rem' }, fontWeight: 600 } }>
-                { safeGetText(43, 'heading_1') }
+                ¿Ya conoces nuestros clubes?
             </Typography>
             <Grid container sx={ { my: '4rem', mx: 'auto', height: 'auto', minHeight: '34rem' } }>
                 <Swiper

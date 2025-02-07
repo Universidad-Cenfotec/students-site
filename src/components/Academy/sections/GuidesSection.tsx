@@ -1,8 +1,7 @@
 import { Box, Typography } from '@mui/material';
-import { SectionProps } from '@/types/notionTypes';
-import { GuideCard } from '../components/GuidesSection';
+import { GuideCard } from '../components/GuideCard';
 
-const GuidesSection: React.FC<SectionProps> = ({ content }) => {
+const GuidesSection: React.FC = () => {
 
     const guides = [
         {
@@ -51,20 +50,14 @@ const GuidesSection: React.FC<SectionProps> = ({ content }) => {
         //     imageUrl: 'https://res.cloudinary.com/glovooker/image/upload/v1722920098/students-site/logo-javascript.png',
         // },
     ];
-    const safeGetText = (index: number, type: string) => {
-        if (content && index < content.length && content[index][type]) {
-            return content[index][type].rich_text[0]?.plain_text || 'Loading...';
-        }
-        return 'Loading...';
-    };
 
     return (
         <Box sx={ { width: '100%', height: 'auto', textAlign: { xs: 'center', md: 'left' }, my: '2rem', px: { xs: '2rem', md: '6rem' } } }>
             <Typography variant="h4" sx={ { mx: 'auto', my: '0.5rem', textAlign: { xs: 'center', md: 'left' }, fontSize: { xs: '1rem', sm: '1.125rem' }, fontWeight: 600, letterSpacing: '0.0625rem' } }>
-                { safeGetText(39, 'heading_3') }
+                Academia
             </Typography>
             <Typography variant="h2" sx={ { mx: 'auto', textAlign: { xs: 'center', md: 'left' }, color: 'primary.main', fontSize: { xs: '2rem', sm: '3rem' }, fontWeight: 600 } }>
-                { safeGetText(40, 'heading_1') }
+                Explora nuestras guías y manuales
             </Typography>
             <Box
                 sx={ {

@@ -1,16 +1,9 @@
 import React from 'react';
-import { SectionProps } from '@/types/notionTypes';
 import { Box, Button, Typography } from '@mui/material';
 
-const AssistanceSection: React.FC<SectionProps> = ({ content }) => {
+const AssistanceSection: React.FC = () => {
 
     const assistanceGraphic = 'https://res.cloudinary.com/glovooker/image/upload/v1722973898/students-site/assitance-graphic.png';
-    const safeGetText = (index: number, type: string) => {
-        if (content && index < content.length && content[index][type]) {
-            return content[index][type].rich_text[0]?.plain_text || 'Loading...';
-        }
-        return 'Loading...';
-    };
 
     return (
         <Box sx={ { width: '100%', height: 'auto', textAlign: { xs: 'center', md: 'left' }, my: '2rem', px: { xs: '2rem', md: '6rem' } } }>
@@ -29,13 +22,13 @@ const AssistanceSection: React.FC<SectionProps> = ({ content }) => {
                 </Box>
                 <Box sx={ { width: { xs: '100%', lg: '45%' }, textAlign: 'left' } }>
                     <Typography variant="h3" sx={ { color: 'text.main', fontSize: { xs: '1.5rem', sm: '2rem' }, fontWeight: 600 } }>
-                        { safeGetText(0, 'heading_3') }
+                        Visita Nuestro
                     </Typography>
                     <Typography variant="h3" sx={ { color: 'secondary.main', fontSize: { xs: '1.5rem', sm: '2rem' }, fontWeight: 600 } }>
-                        { safeGetText(1, 'heading_3') }
+                        Centro de Asistencia
                     </Typography>
                     <Typography variant="body1" sx={ { maxWidth: '80%', mx: { xs: 'auto', lg: 0 }, my: '2rem', lineHeight: 2 } }>
-                        { safeGetText(2, 'paragraph') }<Box component="span" sx={ { color: 'primary.main', lineHeight: 1 } }>{ safeGetText(3, 'paragraph') }</Box>{ safeGetText(4, 'paragraph') }
+                        El <Box component="span" sx={ { color: 'primary.main', lineHeight: 1 } }>Centro de Asistencia</Box> es el principal medio de comunicación, por el cual podrá ponerse en contacto con cualquiera de los departamentos de la Universidad a través de un tiquete de soporte.
                     </Typography>
                     <Button
                         variant='contained'
@@ -51,7 +44,7 @@ const AssistanceSection: React.FC<SectionProps> = ({ content }) => {
                         } }
 
                     >
-                        { safeGetText(5, 'paragraph') }
+                        Abrir Tiquete
                     </Button>
                 </Box>
             </Box>

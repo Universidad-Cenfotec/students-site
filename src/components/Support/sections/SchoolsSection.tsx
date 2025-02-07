@@ -1,63 +1,54 @@
-import { SectionProps } from '@/types/notionTypes';
 import { Box, Grid, Typography } from '@mui/material';
-import React from 'react';
 
-const SchoolsSection: React.FC<SectionProps> = ({ content }) => {
-    const safeGetText = (index: number, type: string) => {
-        if (content && index < content.length && content[index][type]) {
-            return content[index][type].rich_text[0]?.plain_text || 'Loading...';
-        }
-        return 'Loading...';
-    };
-
+const SchoolsSection: React.FC = () => {
     const logos = [
         {
             src: 'https://res.cloudinary.com/glovooker/image/upload/v1734327318/students-site/Cybersecurity-Color.png',
-            heading: safeGetText(9, 'heading_3'),
-            email: safeGetText(10, 'paragraph'),
-            director: safeGetText(11, 'paragraph'),
-            assistant: safeGetText(12, 'paragraph'),
-            phone: safeGetText(13, 'paragraph'),
+            heading: 'Escuela de Ciberseguridad',
+            email: 'ecib@ucenfotec.ac.cr',
+            director: 'Miguel Pérez Montero',
+            assistant: 'Stacy Brenes Gamboa',
+            phone: '6184-3874',
         },
         {
             src: 'https://res.cloudinary.com/glovooker/image/upload/v1734327318/students-site/Intelligent-Systems-Color.png',
-            heading: safeGetText(14, 'heading_3'),
-            email: safeGetText(15, 'paragraph'),
-            director: safeGetText(16, 'paragraph'),
-            assistant: safeGetText(17, 'paragraph'),
-            phone: safeGetText(18, 'paragraph'),
+            heading: 'Escuela de Sistemas Inteligentes',
+            email: 'esint@ucenfotec.ac.cr',
+            director: 'Tomás de Camino Beck',
+            assistant: 'Gabriela Urbina Hernández',
+            phone: '6294-6231',
         },
         {
             src: 'https://res.cloudinary.com/glovooker/image/upload/v1734327319/students-site/Information-Systems-Color.png',
-            heading: safeGetText(19, 'heading_3'),
-            email: safeGetText(20, 'paragraph'),
-            director: safeGetText(21, 'paragraph'),
-            assistant: safeGetText(22, 'paragraph'),
-            phone: safeGetText(23, 'paragraph'),
+            heading: 'Escuela de Sistemas de Información',
+            email: 'esinf@ucenfotec.ac.cr',
+            director: 'María Isabel Losilla Barrientos',
+            assistant: 'Michelle Montero Quesada',
+            phone: '6391-2374',
         },
         {
             src: 'https://res.cloudinary.com/glovooker/image/upload/v1734327318/students-site/Information-Technology-Color.png',
-            heading: safeGetText(24, 'heading_3'),
-            email: safeGetText(25, 'paragraph'),
-            director: safeGetText(26, 'paragraph'),
-            assistant: safeGetText(27, 'paragraph'),
-            phone: safeGetText(28, 'paragraph'),
+            heading: 'Escuela de Tecnologías de Información',
+            email: 'eti@ucenfotec.ac.cr',
+            director: 'Jason Ulloa Hernández',
+            assistant: 'Rocío Sandí Corrales',
+            phone: '6184-3721',
         },
         {
             src: 'https://res.cloudinary.com/glovooker/image/upload/v1734327318/students-site/Software-Engineering-Color.png',
-            heading: safeGetText(29, 'heading_3'),
-            email: safeGetText(30, 'paragraph'),
-            director: safeGetText(31, 'paragraph'),
-            assistant: safeGetText(32, 'paragraph'),
-            phone: safeGetText(33, 'paragraph'),
+            heading: 'Escuela de Ingeniería del Software',
+            email: 'esoft@ucenfotec.ac.cr',
+            director: 'Sergio Oviedo Seas',
+            assistant: 'Ingrid Mora Segura / Mariana Calderón Tovar',
+            phone: '6391-2632 / 5702-1643',
         },
         {
             src: 'https://res.cloudinary.com/glovooker/image/upload/v1734327318/students-site/Computing-Fundamentals-Color.png',
-            heading: safeGetText(34, 'heading_3'),
-            email: safeGetText(35, 'paragraph'),
-            director: safeGetText(36, 'paragraph'),
-            assistant: safeGetText(37, 'paragraph'),
-            phone: safeGetText(38, 'paragraph'),
+            heading: 'Escuela de Fundamentos',
+            email: 'efun@ucenfotec.ac.cr',
+            director: 'Christian Sibaja Fernández',
+            assistant: 'Álvaro Ospina Beltrán',
+            phone: '6097-2749',
         },
     ];
 
@@ -74,7 +65,7 @@ const SchoolsSection: React.FC<SectionProps> = ({ content }) => {
                     letterSpacing: '0.0625rem',
                 } }
             >
-                { safeGetText(7, 'heading_3') }
+                Soporte
             </Typography>
             <Typography
                 variant="h2"
@@ -87,7 +78,7 @@ const SchoolsSection: React.FC<SectionProps> = ({ content }) => {
                     fontWeight: 600,
                 } }
             >
-                { safeGetText(8, 'heading_1') }
+                Contactos de las Escuelas
             </Typography>
 
             <Grid container spacing={ 4 }>

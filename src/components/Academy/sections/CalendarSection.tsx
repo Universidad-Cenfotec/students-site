@@ -8,10 +8,10 @@ const CalendarSection: React.FC = () => {
     return (
         <Box sx={ { width: '100%', height: 'auto', textAlign: { xs: 'center', md: 'left' }, my: '2rem', px: { xs: '2rem', md: '6rem' } } }>
             <Typography variant="h4" sx={ { mx: 'auto', my: '0.5rem', textAlign: { xs: 'center', md: 'left' }, fontSize: { xs: '1rem', sm: '1.125rem' }, fontWeight: 600, letterSpacing: '0.0625rem' } }>
-                { safeGetText(42, 'heading_3') }
+                Academia
             </Typography>
             <Typography variant="h2" sx={ { mx: 'auto', mb: '4rem', textAlign: { xs: 'center', md: 'left' }, color: 'primary.main', fontSize: { xs: '2rem', sm: '3rem' }, fontWeight: 600 } }>
-                { safeGetText(43, 'heading_1') }
+                Accede al calendario y a los reglamentos
             </Typography>
             <Box
                 sx={ {
@@ -28,13 +28,13 @@ const CalendarSection: React.FC = () => {
                 </Box>
                 <Box sx={ { width: { xs: '100%', lg: '40%' }, textAlign: 'left' } }>
                     <Typography variant="h3" sx={ { color: 'text.main', fontSize: { xs: '1.5rem', sm: '2rem' }, fontWeight: 600 } }>
-                        { safeGetText(44, 'heading_3') }
+                        Calendario
                     </Typography>
                     <Typography variant="h3" sx={ { color: 'secondary.main', fontSize: { xs: '1.5rem', sm: '2rem' }, fontWeight: 600 } }>
-                        { safeGetText(45, 'heading_3') }
+                        Académico
                     </Typography>
                     <Typography variant="body1" sx={ { mx: { xs: 'auto', lg: 0 }, my: '2rem', lineHeight: 2 } }>
-                        <Box component="span" sx={ { color: 'primary.main', lineHeight: 1 } }>{ safeGetText(46, 'paragraph') }</Box><Box component="span" sx={ { color: 'primary.main', fontFamily: '"DIN Alternate", sans-serif' } }>{ safeGetText(47, 'paragraph') }</Box>{ safeGetText(48, 'paragraph') }
+                        <Box component="span" sx={ { color: 'primary.main', lineHeight: 1 } }>Universidad</Box> <Box component="span" sx={ { color: 'primary.main', fontFamily: '"DIN Alternate", sans-serif' } }>CENFOTEC</Box> ofrece un Calendario Académico anual para carreras cuatrimestrales y técnicos por microcursos. Cada enlace lleva al documento en PDF descargable. Además, cada rubro dirige a enlaces con más información o formularios según el trámite necesario.
                     </Typography>
                     <Button
                         variant='contained'
@@ -51,7 +51,7 @@ const CalendarSection: React.FC = () => {
                         } }
 
                     >
-                        { safeGetText(49, 'paragraph') }
+                        Calendario Cuatrimestral 2025
                     </Button>
                     <Button
                         variant="outlined"
@@ -69,7 +69,7 @@ const CalendarSection: React.FC = () => {
                         } }
 
                     >
-                        { safeGetText(50, 'paragraph') }
+                        Calendario Microciclo 2025
                     </Button>
                 </Box>
             </Box>
@@ -97,7 +97,7 @@ const CalendarSection: React.FC = () => {
                                 <FileIcon style={ { fontSize: '2.8125rem', color: 'white' } } />
                             </Button>
                             <Typography variant="h3" sx={ { fontSize: '1.5rem', fontWeight: 600, color: 'secondary.main', maxWidth: '12.5rem', mx: 'auto', my: '1.5rem' } }>
-                                { safeGetText(51, 'heading_3') }
+                                Reglamento Académico
                             </Typography>
                         </CardContent>
                     </Card>
@@ -124,7 +124,7 @@ const CalendarSection: React.FC = () => {
                                 <AwardIcon style={ { fontSize: '2.8125rem', color: 'white' } } />
                             </Button>
                             <Typography variant="h3" sx={ { fontSize: '1.5rem', fontWeight: 600, color: 'secondary.main', maxWidth: '15.5rem', mx: 'auto', my: '1.5rem' } }>
-                                { safeGetText(52, 'heading_3') }
+                                Reglamento Régimen Estudiantil
                             </Typography>
                         </CardContent>
                     </Card>
@@ -151,7 +151,7 @@ const CalendarSection: React.FC = () => {
                                 <MonitorIcon style={ { fontSize: '2.8125rem', color: 'white' } } />
                             </Button>
                             <Typography variant="h3" sx={ { fontSize: '1.5rem', fontWeight: 600, color: 'secondary.main', maxWidth: '18.5rem', mx: 'auto', my: '1.25rem' } }>
-                                { safeGetText(53, 'heading_3') }
+                                Lineamientos Sesiones Sincrónicas y Presenciales
                             </Typography>
                         </CardContent>
                     </Card>

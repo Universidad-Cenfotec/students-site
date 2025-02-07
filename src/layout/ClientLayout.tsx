@@ -2,8 +2,8 @@
 
 import { Box, CssBaseline } from "@mui/material";
 import ThemeProvider from "@/ui/themes/ThemeProvider";
-import { Navbar } from './Navbar';
-import { Footer } from './Footer';
+import { Navbar } from '@/components/Landing/components/Navbar';
+import { Footer } from '@/components/Landing/components/Footer';
 
 export default function ClientLayout ({ children }: { children: React.ReactNode; }) {
     return (

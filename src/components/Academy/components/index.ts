@@ -1,3 +1,3 @@
-export { FileIcon } from './CalendarSection/FileIcon';
-export { AwardIcon } from './CalendarSection/AwardIcon';
-export { MonitorIcon } from './CalendarSection/MonitorIcon';
+export { FileIcon } from './Icons/FileIcon';
+export { AwardIcon } from './Icons/AwardIcon';
+export { MonitorIcon } from './Icons/MonitorIcon';

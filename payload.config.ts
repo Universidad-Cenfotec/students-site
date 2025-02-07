@@ -8,16 +8,12 @@ import Users from '@/payload/collections/users';  // ✅ Ensure Users is importe
 import Blogs from '@/payload/collections/blogs';
 import Media from '@/payload/collections/media';
 
-// Import custom endpoints
-import blogPostEndpoint from '@/payload/endpoints/blogs';
-
 export default buildConfig({
     editor: lexicalEditor(),
     collections: [Users, Blogs, Media],  // ✅ Ensure Users is included
     admin: {
         user: "users",
     },
-    endpoints: [blogPostEndpoint],
     secret: process.env.PAYLOAD_SECRET || '',
     db: mongooseAdapter({
         url: process.env.DATABASE_URI || '',

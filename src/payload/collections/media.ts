@@ -2,9 +2,11 @@ import type { CollectionConfig } from 'payload';
 
 const Media: CollectionConfig = {
     slug: 'media',
-    labels: { singular: 'Media', plural: 'Media' },
+    labels: {
+        singular: 'Media',
+        plural: 'Media',
+    },
     upload: {
-        staticDir: 'media',
         mimeTypes: ['image/*'],
     },
     admin: {

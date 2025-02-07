@@ -2,18 +2,33 @@ import sharp from 'sharp';
 import { lexicalEditor } from '@payloadcms/richtext-lexical';
 import { mongooseAdapter } from '@payloadcms/db-mongodb';
 import { buildConfig } from 'payload';
+import { cloudinaryStorage } from 'payload-cloudinary';
 
-// Import collections
-import Users from '@/payload/collections/users';  // ✅ Ensure Users is imported
+import Users from '@/payload/collections/users';
 import Blogs from '@/payload/collections/blogs';
 import Media from '@/payload/collections/media';
 
 export default buildConfig({
     editor: lexicalEditor(),
-    collections: [Users, Blogs, Media],  // ✅ Ensure Users is included
+    collections: [Users, Blogs, Media],
     admin: {
-        user: "users",
+        user: 'users',
     },
+    plugins: [
+        cloudinaryStorage({
+            config: {
+                cloud_name: process.env.CLOUDINARY_CLOUD_NAME || '',
+                api_key: process.env.CLOUDINARY_API_KEY || '',
+                api_secret: process.env.CLOUDINARY_API_SECRET || '',
+            },
+            collections: {
+                media: true,
+            },
+            folder: 'students-site',
+            disableLocalStorage: true,
+            enabled: true,
+        }),
+    ],
     secret: process.env.PAYLOAD_SECRET || '',
     db: mongooseAdapter({
         url: process.env.DATABASE_URI || '',

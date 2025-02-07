@@ -1,4 +1,4 @@
-"use client"; // ✅ This is a Client Component
+"use client";
 
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";

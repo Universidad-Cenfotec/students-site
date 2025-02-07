@@ -5,7 +5,7 @@ import JobsSection from "../../../components/Community/sections/JobsSection";
 import BlogSection from "../../../components/Community/sections/BlogSection";
 
 async function fetchBlogs (): Promise<BlogResponse> {
-    const res = await fetch("http://localhost:3000/api/blogs", { cache: "no-store" });
+    const res = await fetch(process.env.SERVER_API + "api/blogs", { cache: "no-store" });
     if (!res.ok) throw new Error("Failed to fetch blog posts");
     return res.json();
 }

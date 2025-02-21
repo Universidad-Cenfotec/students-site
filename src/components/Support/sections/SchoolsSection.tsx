@@ -39,8 +39,8 @@ const SchoolsSection: React.FC = () => {
             heading: 'Escuela de Ingeniería del Software',
             email: 'esoft@ucenfotec.ac.cr',
             director: 'Sergio Oviedo Seas',
-            assistant: 'Ingrid Mora Segura / Mariana Calderón Tovar',
-            phone: '6391-2632 / 5702-1643',
+            assistant: 'Ingrid Mora Segura',
+            phone: '6391-2632',
         },
         {
             src: 'https://res.cloudinary.com/glovooker/image/upload/v1734327318/students-site/Computing-Fundamentals-Color.png',

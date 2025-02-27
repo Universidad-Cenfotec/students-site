@@ -9,7 +9,7 @@ const SupportServicesSection: React.FC = () => {
     const sexualHarassment5 = 'https://res.cloudinary.com/glovooker/image/upload/v1726679901/students-site/sexual-harassment-5.jpg';
 
     const caic1 = 'https://res.cloudinary.com/glovooker/image/upload/v1726720206/students-site/caic-1.jpg';
-    const studyClub1 = 'https://res.cloudinary.com/glovooker/image/upload/v1726679901/students-site/study-club-1.jpg';
+    const studyClub1 = 'https://res.cloudinary.com/glovooker/image/upload/v1740619505/students-site/Estudiadero-Cuatrimestre-1-WhatsApp.png';
 
     return (
         <Box id='support-services' sx={ { width: '100%', height: 'auto', textAlign: { xs: 'center', md: 'left' }, my: '4rem', mx: 'autos', px: { xs: '2rem', md: '6rem' } } }>

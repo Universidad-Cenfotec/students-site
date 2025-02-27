@@ -6,7 +6,6 @@ const SupportServicesSection: React.FC = () => {
     const sexualHarassment2 = 'https://res.cloudinary.com/glovooker/image/upload/v1726679901/students-site/sexual-harassment-2.jpg';
     const sexualHarassment3 = 'https://res.cloudinary.com/glovooker/image/upload/v1726679901/students-site/sexual-harassment-3.jpg';
     const sexualHarassment4 = 'https://res.cloudinary.com/glovooker/image/upload/v1726679901/students-site/sexual-harassment-4.jpg';
-    const sexualHarassment5 = 'https://res.cloudinary.com/glovooker/image/upload/v1726679901/students-site/sexual-harassment-5.jpg';
 
     const caic1 = 'https://res.cloudinary.com/glovooker/image/upload/v1726720206/students-site/caic-1.jpg';
     const studyClub1 = 'https://res.cloudinary.com/glovooker/image/upload/v1740619505/students-site/Estudiadero-Cuatrimestre-1-WhatsApp.png';
@@ -106,7 +105,6 @@ const SupportServicesSection: React.FC = () => {
                 <Grid item sx={ { width: '100%', mt: { xs: '2rem' }, display: 'flex', justifyContent: 'space-around', alignItems: 'center', flexDirection: { xs: 'column', lg: 'row' } } }>
                     <img src={ sexualHarassment3 } alt="Sexual Harassment Campaign Graphic 3" width={ '100%' } style={ { maxWidth: '20rem' } } />
                     <img src={ sexualHarassment4 } alt="Sexual Harassment Campaign Graphic 4" width={ '100%' } style={ { maxWidth: '20rem' } } />
-                    <img src={ sexualHarassment5 } alt="Sexual Harassment Campaign Graphic 5" width={ '100%' } style={ { maxWidth: '20rem' } } />
                 </Grid>
                 <Grid item sx={ { textAlign: { xs: 'center' }, px: { xs: '0rem', lg: '3.5rem' } } }>
                     <Typography variant="body1" sx={ { mx: { xs: 'auto', lg: 0 }, my: '2rem', lineHeight: 2, maxWidth: '50rem' } }>

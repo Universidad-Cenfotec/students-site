@@ -2,7 +2,7 @@
 
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
-import { Box, Typography, Paper, CircularProgress } from "@mui/material";
+import { Box, Typography, Paper, CircularProgress, Button } from "@mui/material";
 import ClientLayout from "@/layout/ClientLayout"; // Adjust import as needed
 import BlogContent from "@/components/Community/components/BlogContent";
 // Reusable rich text renderer (you can rename if you prefer)
@@ -87,13 +87,25 @@ export default function ClubPage () {
                         </Typography>
 
                         {/* Show a date or some other metadata if you have it in clubs */ }
-                        <Typography variant="subtitle1" sx={ { opacity: 0.8 } }>
-                            { new Date(club.createdAt || Date.now()).toLocaleDateString("en-US", {
-                                month: "long",
-                                day: "numeric",
-                                year: "numeric",
-                            }) }
-                        </Typography>
+                        <Button
+                            variant="contained"
+                            color="primary"
+                            size="large"
+                            href='https://forms.zoho.com/pbrenes/form/Formularioparasolicituddeinscripcinaclubes/formperma/EKRpXyjTDcWKAfKjf67llWSS3hDlOGGrM_lsVKwaPUI?zf_lang=es'
+                            target='_blank'
+                            sx={ {
+                                fontSize: { xs: '1rem', sm: '1.5rem' },
+                                fontWeight: 600,
+                                px: { xs: '2rem', sm: '3rem' },
+                                border: 3, '&:hover': {
+                                    border: 3,
+                                },
+                                mt: '2rem'
+                            } }
+
+                        >
+                            ¡Inscríbete a este Club!
+                        </Button>
                     </Box>
                 </Box>
             ) }

@@ -33,7 +33,7 @@ const SupportServicesSection: React.FC = () => {
                         variant="outlined"
                         color="secondary"
                         size="large"
-                        href='https://drive.google.com/file/d/1ySZKwbAuQ4In1e7R8eUxAKDmmYPq5nkh/view'
+                        href='https://centrodeasistencia.ucenfotec.ac.cr/portal/es/kb/articles/reglamento-contra-el-hostigamiento-sexual'
                         target='_blank'
                         sx={ {
                             fontSize: { xs: '1rem', sm: '1.5rem' },
@@ -87,7 +87,7 @@ const SupportServicesSection: React.FC = () => {
                         variant="outlined"
                         color="secondary"
                         size="large"
-                        href='https://docs.google.com/presentation/d/1Nae4tDkDTnd-skxCQv6cV2CVNQPZVEs1/edit#slide=id.p1'
+                        href='https://centrodeasistencia.ucenfotec.ac.cr/portal/es/kb/articles/reglamento-contra-el-hostigamiento-sexual'
                         target='_blank'
                         sx={ {
                             fontSize: { xs: '1rem', sm: '1.5rem' },

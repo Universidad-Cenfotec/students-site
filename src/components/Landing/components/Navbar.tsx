@@ -115,6 +115,20 @@ export const Navbar = () => {
                                                 Consejo Estudiantil
                                             </Button>
                                         </Link>
+                                        <Link href="/community/clubs" passHref>
+                                            <Button
+                                                sx={ {
+                                                    ...buttonStyle,
+                                                    justifyContent: 'flex-start',
+                                                    textAlign: 'left',
+                                                    width: '90%',
+                                                    paddingX: 2,
+                                                    marginBottom: 1,
+                                                } }
+                                            >
+                                                Clubes
+                                            </Button>
+                                        </Link>
                                     </Box>
                                 ) }
                             </Box>
@@ -152,6 +166,9 @@ export const Navbar = () => {
                         <List component="div" disablePadding>
                             <ListItem component={ Link } href="/community" sx={ { ...buttonStyle, pl: 4 } } onClick={ handleDrawerClose } passHref>
                                 <ListItemText primary="Blog" />
+                            </ListItem>
+                            <ListItem component={ Link } href="/community/clubs" sx={ { ...buttonStyle, pl: 4 } } onClick={ handleDrawerClose } passHref>
+                                <ListItemText primary="Clubes" />
                             </ListItem>
                             <ListItem component={ Link } href="/community/student-council" sx={ { ...buttonStyle, pl: 4 } } onClick={ handleDrawerClose } passHref>
                                 <ListItemText primary="Consejo Estudiantil" />

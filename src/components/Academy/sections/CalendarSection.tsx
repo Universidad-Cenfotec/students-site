@@ -40,7 +40,7 @@ const CalendarSection: React.FC = () => {
                         variant='contained'
                         color="primary"
                         size="large"
-                        href='https://drive.google.com/file/d/1DFy1BvYuhT87F7ncY9GNyK7dwrUjJCSv/view'
+                        href='https://centrodeasistencia.ucenfotec.ac.cr/portal/es/kb/articles/c%C3%B3mo-puedo-ver-el-calendario-acad%C3%A9mico-ucenfotec'
                         target='_blank'
                         sx={ {
                             fontSize: { xs: '1rem', sm: '1.5rem' },
@@ -51,25 +51,7 @@ const CalendarSection: React.FC = () => {
                         } }
 
                     >
-                        Calendario Cuatrimestral 2025
-                    </Button>
-                    <Button
-                        variant="outlined"
-                        color="secondary"
-                        size="large"
-                        href='https://drive.google.com/file/d/1DkA73ljlo5HCEn3FJc0FJHjc5uu2Ml63/view'
-                        target='_blank'
-                        sx={ {
-                            fontSize: { xs: '1rem', sm: '1.5rem' },
-                            fontWeight: 600,
-                            px: { xs: '2rem', sm: '3rem' },
-                            border: 3, '&:hover': {
-                                border: 3,
-                            }
-                        } }
-
-                    >
-                        Calendario Microciclo 2025
+                        Acceso al Calendario Académico
                     </Button>
                 </Box>
             </Box>
@@ -82,7 +64,7 @@ const CalendarSection: React.FC = () => {
                             <Button
                                 variant='contained'
                                 color='primary'
-                                href='https://drive.google.com/file/d/1QNx6Y_BXkMUj5sDilTqwOH9-YfJ7a7gD/view?usp=sharing'
+                                href='https://centrodeasistencia.ucenfotec.ac.cr/portal/es/kb/articles/reglamento-acad%C3%A9mico'
                                 target='_blank'
                                 sx={ {
                                     width: '6.375rem',
@@ -109,7 +91,7 @@ const CalendarSection: React.FC = () => {
                             <Button
                                 variant='contained'
                                 color='primary'
-                                href='https://drive.google.com/file/d/1oN7w7m5o_zNGIf2L3ySEY1oTleDVuQAm/view?usp=sharing'
+                                href='https://centrodeasistencia.ucenfotec.ac.cr/portal/es/kb/articles/reglamento-de-r%C3%A9gimen-estudiantil'
                                 target='_blank'
                                 sx={ {
                                     width: '6.375rem',
@@ -130,6 +112,7 @@ const CalendarSection: React.FC = () => {
                     </Card>
                 </Grid>
                 {/* Feature 3 */ }
+                {/* TODO: PENDIENTE EN BASE DE CONOCIMIENTOS */ }
                 <Grid item xs={ 12 } md={ 4 }>
                     <Card sx={ { maxWidth: '100%', mx: 'auto', boxShadow: 0 } }>
                         <CardContent>

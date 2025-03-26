@@ -6,8 +6,8 @@ export interface BlogImage {
 }
 
 export interface BlogContent {
-    type: string; // Example: "paragraph", "heading", "image", etc.
-    children: { text: string; }[]; // Lexical RichText format
+    type: string;
+    children: { text: string; }[];
 }
 
 export interface BlogPost {
@@ -19,7 +19,7 @@ export interface BlogPost {
         url: string;
         alt?: string;
     };
-    content: any; // Adjust type if needed
+    content: any;
     status: "published" | "draft" | "archived";
     createdAt: string;
     updatedAt: string;

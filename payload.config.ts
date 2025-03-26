@@ -7,10 +7,11 @@ import { cloudinaryStorage } from 'payload-cloudinary';
 import Users from '@/payload/collections/users';
 import Blogs from '@/payload/collections/blogs';
 import Media from '@/payload/collections/media';
+import Clubs from '@/payload/collections/clubs';
 
 export default buildConfig({
     editor: lexicalEditor(),
-    collections: [Users, Blogs, Media],
+    collections: [Users, Blogs, Media, Clubs],
     admin: {
         user: 'users',
     },

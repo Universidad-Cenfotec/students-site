@@ -5,6 +5,19 @@ export interface ClubMedia {
     url: string;
 }
 
+export interface PersonInCharge {
+    name: string;
+    title?: string;
+    email?: string;
+    photo?: ClubMedia;
+    bio?: string;
+}
+
+export interface GalleryItem {
+    image: ClubMedia;
+    caption?: string;
+}
+
 export interface Club {
     id: string;
     clubId: string;
@@ -16,6 +29,11 @@ export interface Club {
     status: 'active' | 'inactive';
     createdAt: string;
     updatedAt: string;
+    // New fields
+    hasPersonInCharge?: boolean;
+    personInCharge?: PersonInCharge;
+    hasGallery?: boolean;
+    gallery?: GalleryItem[];
 }
 
 export interface ClubsResponse {

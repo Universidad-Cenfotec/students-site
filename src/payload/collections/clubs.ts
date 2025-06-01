@@ -1,7 +1,6 @@
 import type { CollectionConfig } from 'payload';
 import { lexicalEditor } from '@payloadcms/richtext-lexical';
 
-
 const Clubs: CollectionConfig = {
     slug: 'clubs',
     labels: {
@@ -59,6 +58,91 @@ const Clubs: CollectionConfig = {
             type: 'richText',
             editor: lexicalEditor(),
             required: false,
+        },
+        // New fields for person in charge
+        {
+            name: 'hasPersonInCharge',
+            type: 'checkbox',
+            label: 'Does this club have a person in charge?',
+            defaultValue: false,
+            admin: {
+                position: 'sidebar',
+                description: 'Check if you want to display a contact person for this club',
+            },
+        },
+        {
+            name: 'personInCharge',
+            type: 'group',
+            admin: {
+                condition: (data) => Boolean(data?.hasPersonInCharge),
+                description: 'Information about the person in charge of this club',
+            },
+            fields: [
+                {
+                    name: 'name',
+                    type: 'text',
+                    label: 'Name',
+                    required: true,
+                },
+                {
+                    name: 'title',
+                    type: 'text',
+                    label: 'Title/Position',
+                    required: false,
+                },
+                {
+                    name: 'email',
+                    type: 'email',
+                    label: 'Email',
+                    required: false,
+                },
+                {
+                    name: 'photo',
+                    type: 'upload',
+                    relationTo: 'media',
+                    required: false,
+                },
+                {
+                    name: 'bio',
+                    type: 'textarea',
+                    label: 'Short Bio',
+                    required: false,
+                },
+            ],
+        },
+        // New fields for gallery
+        {
+            name: 'hasGallery',
+            type: 'checkbox',
+            label: 'Does this club have a photo gallery?',
+            defaultValue: false,
+            admin: {
+                position: 'sidebar',
+                description: 'Check if you want to display a gallery for this club',
+            },
+        },
+        {
+            name: 'gallery',
+            type: 'array',
+            label: 'Photo Gallery',
+            admin: {
+                condition: (data) => Boolean(data?.hasGallery),
+                description: 'Add photos to the club gallery',
+            },
+            fields: [
+                {
+                    name: 'image',
+                    type: 'upload',
+                    relationTo: 'media',
+                    required: true,
+                },
+                {
+                    name: 'caption',
+                    type: 'text',
+                    label: 'Caption',
+                    required: false,
+                },
+            ],
         },
         {
             name: 'status',

@@ -131,7 +131,7 @@ const SupportServicesSection: React.FC = () => {
                 </Grid>
             </Grid>
             <Grid container sx={ { width: { xs: '100%', xl: '70%' }, my: '4rem', mx: 'auto', flexDirection: { xs: 'column' }, alignItems: 'center' } }>
-                <Grid container sx={ { width: { xs: '100%', lg: '100%' }, my: '4rem', mx: 'auto', flexDirection: { xs: 'column', xl: 'row' } } }>
+                {/* <Grid container sx={ { width: { xs: '100%', lg: '100%' }, my: '4rem', mx: 'auto', flexDirection: { xs: 'column', xl: 'row' } } }> */ }
                     <Grid item xs={ 12 } xl={ 6 } sx={ { mb: { xs: '4rem', xl: 0 }, textAlign: { xs: 'center', xl: 'left' }, px: { xs: '0rem', xl: '3.5rem' }, display: 'flex', flexDirection: 'column', alignItems: 'center' } }>
                         <Typography variant="h3" sx={ { color: 'secondary.main', fontSize: { xs: '1.5rem', sm: '2rem' }, fontWeight: 600, mb: '1rem' } }>
                             Centro de Apoyo para la Inclusión (CAIC):
@@ -157,7 +157,7 @@ const SupportServicesSection: React.FC = () => {
                             Enlace para Solicitud de Apoyos
                         </Button>
                     </Grid>
-                    <Grid item xs={ 12 } xl={ 6 } sx={ { mb: { xs: '4rem', xl: 0 }, textAlign: { xs: 'center', xl: 'left' }, px: { xs: '0rem', xl: '3.5rem' }, display: 'flex', flexDirection: 'column', alignItems: 'center' } }>
+                {/* <Grid item xs={ 12 } xl={ 6 } sx={ { mb: { xs: '4rem', xl: 0 }, textAlign: { xs: 'center', xl: 'left' }, px: { xs: '0rem', xl: '3.5rem' }, display: 'flex', flexDirection: 'column', alignItems: 'center' } }>
                         <Typography variant="h3" sx={ { color: 'secondary.main', fontSize: { xs: '1.5rem', sm: '2rem' }, fontWeight: 600, mb: '1rem' } }>
                             Club del Estudiadero:
                         </Typography>
@@ -181,9 +181,9 @@ const SupportServicesSection: React.FC = () => {
                         >
                             Enlace a Google Meet
                         </Button>
-                    </Grid>
-                </Grid>
+                    </Grid> */}
             </Grid>
+            {/* </Grid> */ }
         </Box>
     );
 };

@@ -6,7 +6,7 @@ const SchoolsSection: React.FC = () => {
             src: 'https://res.cloudinary.com/glovooker/image/upload/v1734327318/students-site/Cybersecurity-Color.png',
             heading: 'Escuela de Ciberseguridad',
             email: 'ecib@ucenfotec.ac.cr',
-            director: 'Miguel Pérez Montero',
+            director: 'Edgar Zamora Gatgens',
             assistant: 'Stacy Brenes Gamboa',
             phone: '6184-3874',
         },

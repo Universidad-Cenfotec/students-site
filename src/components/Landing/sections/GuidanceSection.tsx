@@ -14,7 +14,7 @@ const GuidanceSection: React.FC = () => {
             <Typography variant="h2" sx={ { mx: 'auto', textAlign: { xs: 'center', md: 'left' }, color: 'primary.main', fontSize: { xs: '2rem', sm: '3rem' }, fontWeight: 600 } }>
                 ¿Necesitas guía?
             </Typography>
-            <Grid container sx={ { my: '2rem', px: { xs: '2rem', lg: 0 } } } spacing={ 4 }>
+            {/* <Grid container sx={ { my: '2rem', px: { xs: '2rem', lg: 0 } } } spacing={ 4 }>
                 <Grid item xs={ 12 } lg={ 6 }>
                     <StudentKitGraphic sx={ { width: { xs: '100%', lg: '85%' }, height: 'auto' } } />
                 </Grid>
@@ -46,7 +46,7 @@ const GuidanceSection: React.FC = () => {
                         Abrir Kit
                     </Button>
                 </Grid>
-            </Grid>
+            </Grid> */}
             <Grid container sx={ { my: '4rem', px: { xs: '2rem', lg: 0 }, flexDirection: { xs: 'column-reverse', lg: 'row' } } } spacing={ 4 }>
                 <Grid item xs={ 12 } lg={ 6 } sx={ { textAlign: { xs: 'center', lg: 'left' }, px: { xs: '1rem', lg: '3.5rem' } } }>
                     <Typography variant="h3" sx={ { color: 'text.main', fontSize: { xs: '1.5rem', sm: '2rem' }, fontWeight: 600 } }>

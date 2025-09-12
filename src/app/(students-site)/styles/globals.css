@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html {
     font-size: 16px;
     overflow-x: hidden;
@@ -7,4 +11,13 @@ html {
 #root {
     max-width: 100rem;
     margin: 0 auto;
+}
+
+/* Custom font imports */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Custom styles for Daisy UI theme */
+:root {
+  --font-din: 'DIN Alternate', sans-serif;
+  --font-circular: 'CircularStd', sans-serif;
 }

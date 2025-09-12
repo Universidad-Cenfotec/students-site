@@ -2,22 +2,6 @@
 
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
-import {
-    Box,
-    Typography,
-    Paper,
-    CircularProgress,
-    Button,
-    Grid,
-    Card,
-    CardMedia,
-    CardContent,
-    Avatar,
-    Divider,
-    Container,
-    useTheme,
-    useMediaQuery
-} from "@mui/material";
 import ClientLayout from "@/layout/ClientLayout";
 import BlogContent from "@/components/Community/components/BlogContent";
 import { Club } from "@/types/club";
@@ -26,8 +10,17 @@ export default function ClubPage () {
     const params = useParams();
     const [club, setClub] = useState<Club | null>(null);
     const [loading, setLoading] = useState<boolean>(true);
-    const theme = useTheme();
-    const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+    const [isMobile, setIsMobile] = useState<boolean>(false);
+
+    useEffect(() => {
+        const checkMobile = () => {
+            setIsMobile(window.innerWidth < 640);
+        };
+
+        checkMobile();
+        window.addEventListener('resize', checkMobile);
+        return () => window.removeEventListener('resize', checkMobile);
+    }, []);
 
     useEffect(() => {
         const fetchClub = async () => {
@@ -52,18 +45,18 @@ export default function ClubPage () {
     // Loading state
     if (loading) {
         return (
-            <Box sx={ { display: "flex", justifyContent: "center", alignItems: "center", height: "80vh" } }>
-                <CircularProgress />
-            </Box>
+            <div className="flex justify-center items-center h-80">
+                <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
+            </div>
         );
     }
 
     // Not found
     if (!club) {
         return (
-            <Box sx={ { textAlign: "center", mt: 6 } }>
-                <Typography variant="h5">Club not found</Typography>
-            </Box>
+            <div className="text-center mt-6">
+                <h5 className="text-xl">Club not found</h5>
+            </div>
         );
     }
 
@@ -72,270 +65,145 @@ export default function ClubPage () {
 
     return (
         <ClientLayout>
-            {/* Hero Image Section */ }
-            { heroImageUrl && (
-                <Box
-                    sx={ {
-                        position: "relative",
-                        width: "100%",
-                        height: { xs: "350px", md: "450px" },
-                        backgroundImage: `url(${ heroImageUrl })`,
-                        backgroundSize: "cover",
-                        backgroundPosition: "center",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        color: "white",
-                        textAlign: "center",
-                        "&::before": {
-                            content: '""',
-                            position: "absolute",
-                            top: 0,
-                            left: 0,
-                            width: "100%",
-                            height: "100%",
-                            background: "linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4))",
-                        },
-                    } }
-                >
-                    <Container maxWidth="lg" sx={ { position: "relative", zIndex: 2 } }>
-                        <Typography
-                            variant="h3"
-                            sx={ {
-                                fontWeight: 700,
-                                mb: 2,
-                                fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem' }
-                            } }
-                        >
-                            { club.name || "Club" }
-                        </Typography>
-
-                        { club.description && (
-                            <Typography
-                                variant="subtitle1"
-                                sx={ {
-                                    mb: 3,
-                                    maxWidth: '800px',
-                                    mx: 'auto',
-                                    fontSize: { xs: '0.9rem', sm: '1rem' },
-                                    display: { xs: 'none', sm: 'block' }
-                                } }
-                            >
-                                { club.description }
-                            </Typography>
-                        ) }
-
-                        <Button
-                            variant="contained"
-                            color="primary"
-                            size="large"
-                            href='https://forms.zoho.com/pbrenes/form/Formularioparasolicituddeinscripcinaclubes/formperma/EKRpXyjTDcWKAfKjf67llWSS3hDlOGGrM_lsVKwaPUI?zf_lang=es'
-                            target='_blank'
-                            sx={ {
-                                fontSize: { xs: '0.9rem', sm: '1.1rem', md: '1.25rem' },
-                                fontWeight: 600,
-                                px: { xs: '1.5rem', sm: '2rem', md: '3rem' },
-                                py: { xs: '0.5rem', sm: '0.75rem' },
-                                border: 3, 
-                                '&:hover': {
-                                    border: 3,
-                                    transform: 'translateY(-2px)',
-                                    boxShadow: '0 6px 10px rgba(0,0,0,0.2)',
-                                    transition: 'all 0.3s ease'
-                                },
-                                transition: 'all 0.3s ease'
-                            } }
-                        >
-                            ¡Inscríbete a este Club!
-                        </Button>
-                    </Container>
-                </Box>
-            ) }
-
-            {/* Content Container */ }
-            <Container maxWidth="lg" sx={ { mt: heroImageUrl ? { xs: -4, md: -6 } : 0, mb: 8 } }>
-                <Grid container spacing={ 3 }>
-                    {/* Sidebar - Person in Charge */ }
-                    { club.hasPersonInCharge && club.personInCharge && (
-                        <Grid item xs={ 12 } md={ 4 } lg={ 3 } order={ { xs: 2, md: 1 } }>
-                            <Paper
-                                elevation={ 0 }
-                                sx={ {
-                                    p: 3,
-                                    borderRadius: "12px",
-                                    boxShadow: "0px 4px 10px rgba(0,0,0,0.05)",
-                                    backgroundColor: "#ffffff",
-                                    position: { xs: 'static', md: 'sticky' },
-                                    top: 20
-                                } }
-                            >
-                                <Typography variant="h6" sx={ { mb: 2, fontWeight: 600, borderBottom: '2px solid #f0f0f0', pb: 1 } }>
-                                    Contacto del Club
-                                </Typography>
-                                <Box sx={ { display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' } }>
-                                    { club.personInCharge.photo?.url ? (
-                                        <Avatar
-                                            src={ club.personInCharge.photo.url }
-                                            alt={ club.personInCharge.name }
-                                            sx={ {
-                                                width: { xs: 100, md: 120 },
-                                                height: { xs: 100, md: 120 },
-                                                mb: 2,
-                                                boxShadow: '0 4px 8px rgba(0,0,0,0.1)'
-                                            } }
-                                        />
-                                    ) : (
-                                        <Avatar
-                                            sx={ {
-                                                width: { xs: 100, md: 120 },
-                                                height: { xs: 100, md: 120 },
-                                                mb: 2,
-                                                boxShadow: '0 4px 8px rgba(0,0,0,0.1)'
-                                            } }
-                                        >
-                                            { club.personInCharge.name.charAt(0) }
-                                        </Avatar>
-                                    ) }
-                                    <Typography variant="h6" sx={ { fontWeight: 600 } }>
-                                        { club.personInCharge.name }
-                                    </Typography>
-                                    { club.personInCharge.title && (
-                                        <Typography variant="subtitle2" color="text.secondary" sx={ { mb: 1 } }>
-                                            { club.personInCharge.title }
-                                        </Typography>
-                                    ) }
-                                    { club.personInCharge.email && (
-                                        <Typography variant="body2" sx={ { mt: 1, mb: 1 } }>
-                                            <a
-                                                href={ `mailto:${ club.personInCharge.email }` }
-                                                style={ {
-                                                    color: theme.palette.primary.main,
-                                                    textDecoration: 'none',
-                                                    fontWeight: 500
-                                                } }
-                                            >
-                                                { club.personInCharge.email }
-                                            </a>
-                                        </Typography>
-                                    ) }
-                                    { club.personInCharge.bio && (
-                                        <>
-                                            <Divider sx={ { width: '100%', my: 2 } } />
-                                            <Typography
-                                                variant="body2"
-                                                sx={ {
-                                                    mt: 1,
-                                                    textAlign: 'left',
-                                                    fontStyle: 'italic',
-                                                    color: 'text.secondary'
-                                                } }
-                                            >
-                                                { club.personInCharge.bio }
-                                            </Typography>
-                                        </>
-                                    ) }
-                                </Box>
-                            </Paper>
-                        </Grid>
-                    ) }
-
-                    {/* Main Content */ }
-                    <Grid
-                        item
-                        xs={ 12 }
-                        md={ club.hasPersonInCharge ? 8 : 12 }
-                        lg={ club.hasPersonInCharge ? 9 : 12 }
-                        order={ { xs: 1, md: 2 } }
+            <div className="min-h-[60vh]">
+                {/* Hero Image Section */ }
+                { heroImageUrl && (
+                    <div
+                        className="relative w-full h-80 md:h-96 bg-cover bg-center flex items-center justify-center text-white text-center"
+                        style={ {
+                            backgroundImage: `url(${ heroImageUrl })`,
+                        } }
                     >
-                        <Paper
-                            elevation={ 0 }
-                            sx={ {
-                                p: { xs: 3, sm: 4 },
-                                borderRadius: "12px",
-                                boxShadow: "0px 4px 10px rgba(0,0,0,0.05)",
-                                backgroundColor: "#ffffff",
-                            } }
-                        >
-                            {/* Club Description for Mobile */ }
-                            { club.description && heroImageUrl && (
-                                <Box sx={ { display: { xs: 'block', sm: 'none' }, mb: 3 } }>
-                                    <Typography variant="body1" sx={ { fontWeight: 500 } }>
-                                        { club.description }
-                                    </Typography>
-                                    <Divider sx={ { mt: 2 } } />
-                                </Box>
+                        <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-black/40"></div>
+                        <div className="relative z-10 max-w-4xl mx-auto px-4">
+                            <h3 className="font-bold mb-2 text-3xl sm:text-4xl md:text-5xl">
+                                { club.name || "Club" }
+                            </h3>
+
+                            { club.description && (
+                                <p className="mb-3 max-w-2xl mx-auto text-sm sm:text-base hidden sm:block">
+                                    { club.description }
+                                </p>
                             ) }
 
-                            {/* Club Content */ }
-                            <BlogContent content={ club.content } />
-                        </Paper>
+                            <a
+                                href='https://forms.zoho.com/pbrenes/form/Formularioparasolicituddeinscripcinaclubes/formperma/EKRpXyjTDcWKAfKjf67llWSS3hDlOGGrM_lsVKwaPUI?zf_lang=es'
+                                target='_blank'
+                                className="inline-block bg-primary text-white px-6 sm:px-8 md:px-12 py-2 sm:py-3 text-sm sm:text-lg md:text-xl font-semibold rounded-lg border-2 border-primary hover:border-primary hover:transform hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300"
+                            >
+                                ¡Inscríbete a este Club!
+                            </a>
+                        </div>
+                    </div>
+                ) }
 
-                        {/* Gallery Section - only shown if club has gallery */ }
-                        { club.hasGallery && club.gallery && club.gallery.length > 0 && (
-                            <Box sx={ { mt: 4 } }>
-                                <Paper
-                                    elevation={ 0 }
-                                    sx={ {
-                                        p: { xs: 3, sm: 4 },
-                                        borderRadius: "12px",
-                                        boxShadow: "0px 4px 10px rgba(0,0,0,0.05)",
-                                        backgroundColor: "#ffffff",
-                                    } }
-                                >
-                                    <Typography
-                                        variant="h5"
-                                        sx={ {
-                                            mb: 3,
-                                            fontWeight: 600,
-                                            borderBottom: '2px solid #f0f0f0',
-                                            pb: 1
-                                        } }
-                                    >
-                                        Galería de Actividades
-                                    </Typography>
-                                    <Grid container spacing={ 2 }>
-                                        { club.gallery.map((item, index) => (
-                                            <Grid item xs={ 12 } sm={ 6 } md={ 4 } key={ index }>
-                                                <Card
-                                                    sx={ {
-                                                        height: '100%',
-                                                        transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-                                                        '&:hover': {
-                                                            transform: 'translateY(-5px)',
-                                                            boxShadow: '0 8px 15px rgba(0,0,0,0.1)'
-                                                        }
-                                                    } }
+                {/* Content Container */ }
+                <div className={ `max-w-6xl mx-auto ${ heroImageUrl ? 'mt-0 md:-mt-6' : 'mt-0' } mb-8` }>
+                    <div className="flex flex-col lg:flex-row gap-6">
+                        {/* Sidebar - Person in Charge */ }
+                        { club.hasPersonInCharge && club.personInCharge && (
+                            <div className="w-full lg:w-1/4 order-2 lg:order-1">
+                                <div className="p-6 rounded-xl shadow-lg bg-white sticky top-5">
+                                    <h6 className="mb-4 font-semibold text-lg border-b-2 border-gray-100 pb-2">
+                                        Contacto del Club
+                                    </h6>
+                                    <div className="flex flex-col items-center text-center">
+                                        { club.personInCharge.photo?.url ? (
+                                            <img
+                                                src={ club.personInCharge.photo.url }
+                                                alt={ club.personInCharge.name }
+                                                className="w-24 md:w-28 h-24 md:h-28 mb-4 rounded-full shadow-md object-cover"
+                                            />
+                                        ) : (
+                                                <div className="w-24 md:w-28 h-24 md:h-28 mb-4 rounded-full shadow-md bg-primary text-white flex items-center justify-center text-2xl font-bold">
+                                                    { club.personInCharge.name.charAt(0) }
+                                            </div>
+                                        ) }
+                                        <h6 className="font-semibold text-lg">
+                                            { club.personInCharge.name }
+                                        </h6>
+                                        { club.personInCharge.title && (
+                                            <p className="text-gray-600 text-sm mb-2">
+                                                { club.personInCharge.title }
+                                            </p>
+                                        ) }
+                                        { club.personInCharge.email && (
+                                            <p className="mt-2 mb-2">
+                                                <a
+                                                    href={ `mailto:${ club.personInCharge.email }` }
+                                                    className="text-primary no-underline font-medium hover:underline"
                                                 >
-                                                    <CardMedia
-                                                        component="img"
-                                                        image={ item.image.url }
-                                                        alt={ item.caption || `Image ${ index + 1 }` }
-                                                        sx={ {
-                                                            height: { xs: 180, sm: 200 },
-                                                            objectFit: "cover"
-                                                        } }
-                                                    />
-                                                    { item.caption && (
-                                                        <CardContent sx={ { p: 2 } }>
-                                                            <Typography
-                                                                variant="body2"
-                                                                color="text.secondary"
-                                                                sx={ { fontWeight: 500 } }
-                                                            >
-                                                                { item.caption }
-                                                            </Typography>
-                                                        </CardContent>
-                                                    ) }
-                                                </Card>
-                                            </Grid>
-                                        )) }
-                                    </Grid>
-                                </Paper>
-                            </Box>
+                                                    { club.personInCharge.email }
+                                                </a>
+                                            </p>
+                                        ) }
+                                        { club.personInCharge.bio && (
+                                            <>
+                                                <hr className="w-full my-4" />
+                                                <p className="text-sm text-gray-600 text-left italic">
+                                                    { club.personInCharge.bio }
+                                                </p>
+                                            </>
+                                        ) }
+                                    </div>
+                                </div>
+                            </div>
                         ) }
-                    </Grid>
-                </Grid>
-            </Container>
+
+                        {/* Main Content */ }
+                        <div className={ `w-full ${ club.hasPersonInCharge ? 'lg:w-3/4' : 'w-full' } order-1 lg:order-2` }>
+                            <div className="p-6 sm:p-8 rounded-xl shadow-lg bg-white">
+                                {/* Club Description for Mobile */ }
+                                { club.description && heroImageUrl && (
+                                    <div className="block sm:hidden mb-6">
+                                        <p className="font-medium">
+                                            { club.description }
+                                        </p>
+                                        <hr className="mt-4" />
+                                    </div>
+                                ) }
+
+                                {/* Club Content */ }
+                                <BlogContent content={ club.content } />
+                            </div>
+
+                            {/* Gallery Section - only shown if club has gallery */ }
+                            { club.hasGallery && club.gallery && club.gallery.length > 0 && (
+                                <div className="mt-6">
+                                    <div className="p-6 sm:p-8 rounded-xl shadow-lg bg-white">
+                                        <h5 className="mb-6 font-semibold text-xl border-b-2 border-gray-100 pb-2">
+                                            Galería de Actividades
+                                        </h5>
+                                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                                            { club.gallery.map((item, index) => (
+                                                <div
+                                                    key={ index }
+                                                    className="h-full transition-transform duration-300 ease-in-out hover:-translate-y-1 hover:shadow-lg"
+                                                >
+                                                    <div className="h-full">
+                                                        <img
+                                                            src={ item.image.url }
+                                                            alt={ item.caption || `Image ${ index + 1 }` }
+                                                            className="w-full h-44 sm:h-48 object-cover rounded-t-lg"
+                                                        />
+                                                        { item.caption && (
+                                                            <div className="p-3">
+                                                                <p className="text-sm text-gray-600 font-medium">
+                                                                    { item.caption }
+                                                                </p>
+                                                            </div>
+                                                        ) }
+                                                    </div>
+                                                </div>
+                                            )) }
+                                        </div>
+                                    </div>
+                                </div>
+                            ) }
+                        </div>
+                    </div>
+                </div>
+            </div>
         </ClientLayout>
     );
 }

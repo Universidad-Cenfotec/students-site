@@ -1,9 +1,19 @@
-import SvgIcon, { SvgIconProps } from '@mui/material/SvgIcon';
+interface GraphicProps {
+    className?: string;
+    width?: number;
+    height?: number;
+}
 
-export const StudentKitGraphic: React.FC<SvgIconProps> = (props) => {
+export const StudentKitGraphic: React.FC<GraphicProps> = ({ className = "", width = 628, height = 397 }) => {
     return (
-        <SvgIcon { ...props }>
-            <svg width="628" height="397" viewBox="0 0 628 397" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg
+            width={ width }
+            height={ height }
+            viewBox="0 0 628 397"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className={ className }
+        >
                 <path fillRule="evenodd" clipRule="evenodd" d="M307.494 2.74839C357.496 5.68611 407.006 17.0778 441.024 55.0165C478.425 96.7292 507.03 153.721 491.847 208.352C477.243 260.898 419.389 278.764 372.034 303.247C323.136 328.528 270.166 374.849 222.176 347.778C174.798 321.054 192.098 249.266 180.04 194.948C167.959 140.522 122.881 84.1974 153.436 38.1203C184.697 -9.02157 252.235 -0.498163 307.494 2.74839Z" fill="#95CCFF" fillOpacity="0.58" />
                 <rect width="30.8665" height="130.341" transform="matrix(-0.888766 0.458361 0.458361 0.888766 568.218 207.479)" fill="#A3B6C4" />
                 <path d="M540.786 339.423V185H480.398V339.423H540.786Z" fill="#70ACF8" />
@@ -34,7 +44,6 @@ export const StudentKitGraphic: React.FC<SvgIconProps> = (props) => {
                         <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_4_99" result="shape" />
                     </filter>
                 </defs>
-            </svg>
-        </SvgIcon>
+        </svg>
     );
 };

@@ -1,106 +1,77 @@
-import { Grid, Card, CardContent, Typography, Box, Button } from '@mui/material';
 import { CommentIcon, HeartIcon, SearchIcon } from '@/components/Landing/components/Icons';
 
 const FeaturesSection: React.FC = () => {
-
     return (
-        <Box id="features" sx={ { width: '100%', height: 'auto', textAlign: { xs: 'center', md: 'left' }, mb: '10rem', px: '1rem' } }>
-            <Typography variant="h4" sx={ { mx: { xs: 'auto', md: 12 }, my: '0.5rem', textAlign: { xs: 'center', md: 'left' }, fontSize: { xs: '1rem', sm: '1.125rem' }, fontWeight: 600, letterSpacing: '0.0625rem' } }>
+        <div id="features" className="w-full max-w-7xl mx-auto h-auto text-center md:text-left mb-40 px-8 md:px-24">
+            <div className="badge badge-primary badge-lg mb-2 text-xs sm:text-sm font-semibold tracking-wider text-white">
                 Sitio de Estudiantes
-            </Typography>
-            <Typography variant="h2" sx={ { mx: { xs: 'auto', md: 12 }, textAlign: { xs: 'center', md: 'left' }, color: 'primary.main', fontSize: { xs: '2.5rem', sm: '3rem' }, fontWeight: 600 } }>
+            </div>
+            <h2 className="text-4xl sm:text-5xl font-semibold text-primary mb-8">
                 ¿Qué puedes hacer?
-            </Typography>
-            <Grid container sx={ { textAlign: 'center', my: '2rem' } } spacing={ 4 }>
+            </h2>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 my-8">
                 {/* Feature 1 */ }
-                <Grid item xs={ 12 } md={ 4 }>
-                    <Card sx={ { maxWidth: '100%', mx: 'auto', boxShadow: 0 } }>
-                        <CardContent>
-                            <Button
-                                variant='contained'
-                                color='primary'
+                <div className="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300">
+                    <div className="card-body items-center text-center p-8">
+                        <div className="mb-4">
+                            <a
                                 href='/academy'
-                                sx={ {
-                                    width: '6.375rem',
-                                    height: '6.375rem',
-                                    borderRadius: '1.625rem',
-                                    display: 'flex',
-                                    justifyContent: 'center',
-                                    alignItems: 'center',
-                                    mx: 'auto',
-                                } }
+                                className="btn btn-primary text-white w-24 h-24 rounded-3xl flex justify-center items-center shadow-lg hover:shadow-xl transition-all duration-300"
                             >
-                                <SearchIcon style={ { fontSize: '2.8125rem', color: 'white' } } />
-                            </Button>
-                            <Typography variant="h3" sx={ { fontSize: '1.5rem', fontWeight: 600, color: 'secondary.main', maxWidth: '12.5rem', mx: 'auto', my: '1.5rem' } }>
-                                Explorar Oportunidades
-                            </Typography>
-                            <Typography variant="body1" sx={ { lineHeight: 2, maxWidth: '16rem', mx: 'auto' } }>
-                                Encuentra una amplia gama de recursos académicos, desde guías de estudio hasta oportunidades de crecimiento profesional.
-                            </Typography>
-                        </CardContent>
-                    </Card>
-                </Grid>
+                                <SearchIcon className="text-4xl text-white" />
+                            </a>
+                        </div>
+                        <h3 className="card-title text-2xl font-semibold text-secondary mb-4">
+                            Explorar Oportunidades
+                        </h3>
+                        <p className="text-gray-600 leading-relaxed">
+                            Encuentra una amplia gama de recursos académicos, desde guías de estudio hasta oportunidades de crecimiento profesional.
+                        </p>
+                    </div>
+                </div>
+
                 {/* Feature 2 */ }
-                <Grid item xs={ 12 } md={ 4 }>
-                    <Card sx={ { maxWidth: '100%', mx: 'auto', boxShadow: 0 } }>
-                        <CardContent>
-                            <Button
-                                variant='contained'
-                                color='primary'
+                <div className="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300">
+                    <div className="card-body items-center text-center p-8">
+                        <div className="mb-4">
+                            <a
                                 href='/community'
-                                sx={ {
-                                    width: '6.375rem',
-                                    height: '6.375rem',
-                                    borderRadius: '1.625rem',
-                                    display: 'flex',
-                                    justifyContent: 'center',
-                                    alignItems: 'center',
-                                    mx: 'auto',
-                                } }
+                                className="btn btn-primary text-white w-24 h-24 rounded-3xl flex justify-center items-center shadow-lg hover:shadow-xl transition-all duration-300"
                             >
-                                <CommentIcon style={ { fontSize: '2.8125rem', color: 'white' } } />
-                            </Button>
-                            <Typography variant="h3" sx={ { fontSize: '1.5rem', fontWeight: 600, color: 'secondary.main', maxWidth: '12.5rem', mx: 'auto', my: '1.5rem' } }>
-                                Conectar con la Comunidad
-                            </Typography>
-                            <Typography variant="body1" sx={ { lineHeight: 2, maxWidth: '16rem', mx: 'auto' } }>
-                                Únete al vibrante ecosistema estudiantil, donde podrás colaborar, compartir ideas y crear conexiones valiosas.
-                            </Typography>
-                        </CardContent>
-                    </Card>
-                </Grid>
+                                <CommentIcon className="text-4xl text-white" />
+                            </a>
+                        </div>
+                        <h3 className="card-title text-2xl font-semibold text-secondary mb-4">
+                            Conectar con la Comunidad
+                        </h3>
+                        <p className="text-gray-600 leading-relaxed">
+                            Únete al vibrante ecosistema estudiantil, donde podrás colaborar, compartir ideas y crear conexiones valiosas.
+                        </p>
+                    </div>
+                </div>
+
                 {/* Feature 3 */ }
-                <Grid item xs={ 12 } md={ 4 }>
-                    <Card sx={ { maxWidth: '100%', mx: 'auto', boxShadow: 0 } }>
-                        <CardContent>
-                            <Button
-                                variant='contained'
-                                color='primary'
+                <div className="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300">
+                    <div className="card-body items-center text-center p-8">
+                        <div className="mb-4">
+                            <a
                                 href='/about'
-                                sx={ {
-                                    width: '6.375rem',
-                                    height: '6.375rem',
-                                    borderRadius: '1.625rem',
-                                    display: 'flex',
-                                    justifyContent: 'center',
-                                    alignItems: 'center',
-                                    mx: 'auto',
-                                } }
+                                className="btn btn-primary text-white w-24 h-24 rounded-3xl flex justify-center items-center shadow-lg hover:shadow-xl transition-all duration-300"
                             >
-                                <HeartIcon style={ { fontSize: '2.8125rem', color: 'white' } } />
-                            </Button>
-                            <Typography variant="h3" sx={ { fontSize: '1.5rem', fontWeight: 600, color: 'secondary.main', maxWidth: '12.5rem', mx: 'auto', my: '1.25rem' } }>
-                                Encontrar Apoyo y Asistencia
-                            </Typography>
-                            <Typography variant="body1" sx={ { lineHeight: 2, maxWidth: '16rem', mx: 'auto' } }>
-                                Accede a servicios de soporte dedicados al bienestar estudiantil, diseñados para ayudarte en cada paso de tu jornada educativa.
-                            </Typography>
-                        </CardContent>
-                    </Card>
-                </Grid>
-            </Grid>
-        </Box>
+                                <HeartIcon className="text-4xl text-white" />
+                            </a>
+                        </div>
+                        <h3 className="card-title text-2xl font-semibold text-secondary mb-4">
+                            Encontrar Apoyo y Asistencia
+                        </h3>
+                        <p className="text-gray-600 leading-relaxed">
+                            Accede a servicios de soporte dedicados al bienestar estudiantil, diseñados para ayudarte en cada paso de tu jornada educativa.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
     );
 };
 

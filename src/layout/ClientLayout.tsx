@@ -1,6 +1,5 @@
 "use client";
 
-import { Box, CssBaseline } from "@mui/material";
 import ThemeProvider from "@/ui/themes/ThemeProvider";
 import { Navbar } from '@/components/Landing/components/Navbar';
 import { Footer } from '@/components/Landing/components/Footer';
@@ -8,14 +7,13 @@ import { Footer } from '@/components/Landing/components/Footer';
 export default function ClientLayout ({ children }: { children: React.ReactNode; }) {
     return (
         <ThemeProvider>
-            <CssBaseline />
-            <Box sx={ { display: "flex", flexDirection: "column", minHeight: "100vh" } }>
-                <Box sx={ { position: "sticky", top: 0, zIndex: 1100, width: "100%" } }>
+            <div className="flex flex-col min-h-screen">
+                <div className="sticky top-0 z-50 w-full">
                     <Navbar />
-                </Box>
-                <Box component="main" sx={ { flexGrow: 1 } }>{ children }</Box>
+                </div>
+                <main className="flex-grow">{ children }</main>
                 <Footer />
-            </Box>
+            </div>
         </ThemeProvider>
     );
 }

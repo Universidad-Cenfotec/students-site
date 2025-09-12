@@ -1,119 +1,131 @@
-import { Box, Button, Card, CardContent, Grid, Typography } from '@mui/material';
 import { LifeBuoyIcon, MapIcon, BriefcaseIcon } from '@/components/About/components';
 
 const StudentAffairsSection: React.FC = () => {
-
     const logoUrl = 'https://res.cloudinary.com/glovooker/image/upload/v1719730516/students-site/student-affairs-lg.png';
 
     return (
-        <Box sx={ { width: '100%', height: 'auto', textAlign: { xs: 'center', md: 'left' }, my: '4rem', mx: 'autos', px: { xs: '2rem', md: '6rem' } } }>
-            <Grid container sx={ { width: '100%', my: '4rem', mx: 'auto', flexDirection: { xs: 'column-reverse', lg: 'row' } } }>
-                <Grid item xs={ 12 } lg={ 6 } sx={ { textAlign: { xs: 'center', lg: 'left' }, px: { xs: '0rem', lg: '3.5rem' } } }>
-                    <Typography variant="h3" sx={ { color: 'text.main', fontSize: { xs: '1.5rem', sm: '2rem' }, fontWeight: 600 } }>
-                        Nuestro Departamento de
-                    </Typography>
-                    <Typography variant="h3" sx={ { color: 'secondary.main', fontSize: { xs: '1.5rem', sm: '2rem' }, fontWeight: 600 } }>
-                        Bienestar Estudiantil
-                    </Typography>
-                    <Typography variant="body1" sx={ { mx: { xs: 'auto', lg: 0 }, my: '2rem', lineHeight: 2, maxWidth: '36rem' } }>
-                        Somos el departamento dedicado a acompañar al estudiantado en su vida académica, ofreciendo servicios de seguimiento, apoyo psicoeducativo, becas, cultura, deporte y bolsa de empleo. Trabajamos en coordinación con las Escuelas y otros departamentos para promover el <Box component="span" sx={ { color: 'primary.main', fontWeight: 450 } }>bienestar integral</Box> de cada estudiante.
-                    </Typography>
-                </Grid>
-                <Grid item xs={ 12 } lg={ 6 } sx={ { mb: { xs: '2rem', lg: 0 } } }>
-                    <img src={ logoUrl } alt="Student Affairs Logo" width={ '100%' } style={ { maxWidth: '30rem' } } />
-                </Grid>
-            </Grid>
-            <Grid container sx={ { textAlign: 'center', my: '2rem' } } spacing={ 4 }>
+        <div className="w-full max-w-7xl mx-auto h-auto text-center md:text-left my-16 px-8 md:px-24">
+            <div className="badge badge-primary badge-lg mb-2 text-xs sm:text-sm font-semibold tracking-wider text-white">
+                Sobre Nosotros
+            </div>
+            <h2 className="text-3xl sm:text-5xl font-semibold text-primary mb-8">
+                Bienestar Estudiantil
+            </h2>
+
+            <div className="card bg-base-100 shadow-xl mb-16">
+                <div className="card-body p-8 lg:p-12">
+                    <div className="flex flex-col-reverse lg:flex-row items-center gap-8">
+                        <div className="w-full lg:w-1/2 text-center lg:text-left">
+                            <h3 className="text-2xl sm:text-3xl font-semibold text-gray-600 mb-2">
+                                Nuestro Departamento de
+                            </h3>
+                            <h3 className="text-2xl sm:text-3xl font-semibold text-secondary mb-6">
+                                Bienestar Estudiantil
+                            </h3>
+                            <p className="text-gray-600 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                                Somos el departamento dedicado a acompañar al estudiantado en su vida académica, ofreciendo servicios de seguimiento, apoyo psicoeducativo, becas, cultura, deporte y bolsa de empleo. Trabajamos en coordinación con las Escuelas y otros departamentos para promover el <span className="text-primary font-semibold">bienestar integral</span> de cada estudiante.
+                            </p>
+                        </div>
+                        <div className="w-full lg:w-1/2">
+                            <img src={ logoUrl } alt="Student Affairs Logo" className="w-full max-w-lg mx-auto rounded-lg" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 my-8">
                 {/* Feature 1 */ }
-                <Grid item xs={ 12 } md={ 4 }>
-                    <Card sx={ { maxWidth: '100%', mx: 'auto', boxShadow: 0 } }>
-                        <CardContent>
-                            <Button
-                                variant='contained'
-                                color='primary'
+                <div className="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300">
+                    <div className="card-body items-center text-center p-8">
+                        <div className="mb-4">
+                            <a
                                 href='https://ucenfotec.ac.cr/bolsatrabajo/'
                                 target='_blank'
-                                sx={ {
-                                    width: '6.375rem',
-                                    height: '6.375rem',
-                                    borderRadius: '1.625rem',
-                                    display: 'flex',
-                                    justifyContent: 'center',
-                                    alignItems: 'center',
-                                    mx: 'auto',
-                                } }
+                                rel="noopener noreferrer"
+                                className="btn btn-primary text-white w-24 h-24 rounded-3xl flex justify-center items-center shadow-lg hover:shadow-xl transition-all duration-300"
                             >
-                                <BriefcaseIcon style={ { fontSize: '2.8125rem', color: 'white' } } />
-                            </Button>
-                            <Typography variant="h3" sx={ { fontSize: '1.5rem', fontWeight: 600, color: 'secondary.main', maxWidth: '9.5rem', mx: 'auto', my: '1.5rem' } }>
-                                Bolsa de Trabajo
-                            </Typography>
-                            <Typography variant="body1" sx={ { lineHeight: 2, maxWidth: '17rem', mx: 'auto' } }>
-                                Conectamos empresas con los mejores perfiles tecnológicos y damos seguimiento a la colocación laboral de nuestro estudiantado.
-                            </Typography>
-                        </CardContent>
-                    </Card>
-                </Grid>
+                                <BriefcaseIcon className="text-4xl text-white" />
+                            </a>
+                        </div>
+                        <h3 className="card-title text-2xl font-semibold text-secondary mb-4">
+                            Bolsa de Trabajo
+                        </h3>
+                        <p className="text-gray-600 leading-relaxed">
+                            Conectamos empresas con los mejores perfiles tecnológicos y damos seguimiento a la colocación laboral de nuestro estudiantado.
+                        </p>
+                        <div className="card-actions justify-end mt-4">
+                            <a
+                                href='https://ucenfotec.ac.cr/bolsatrabajo/'
+                                target='_blank'
+                                rel="noopener noreferrer"
+                                className="btn btn-outline btn-primary btn-sm hover:text-white"
+                            >
+                                Visitar
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={ 2 } d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
                 {/* Feature 2 */ }
-                <Grid item xs={ 12 } md={ 4 }>
-                    <Card sx={ { maxWidth: '100%', mx: 'auto', boxShadow: 0 } }>
-                        <CardContent>
-                            <Button
-                                variant='contained'
-                                color='primary'
+                <div className="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300">
+                    <div className="card-body items-center text-center p-8">
+                        <div className="mb-4">
+                            <a
                                 href='#support-services'
-                                sx={ {
-                                    width: '6.375rem',
-                                    height: '6.375rem',
-                                    borderRadius: '1.625rem',
-                                    display: 'flex',
-                                    justifyContent: 'center',
-                                    alignItems: 'center',
-                                    mx: 'auto',
-                                } }
+                                className="btn btn-primary text-white w-24 h-24 rounded-3xl flex justify-center items-center shadow-lg hover:shadow-xl transition-all duration-300"
                             >
-                                <LifeBuoyIcon style={ { fontSize: '2.8125rem', color: 'white' } } />
-                            </Button>
-                            <Typography variant="h3" sx={ { fontSize: '1.5rem', fontWeight: 600, color: 'secondary.main', maxWidth: '13.5rem', mx: 'auto', my: '1.5rem' } }>
-                                Apoyo Psicológico y Psicoeducativo
-                            </Typography>
-                            <Typography variant="body1" sx={ { lineHeight: 2, maxWidth: '16rem', mx: 'auto' } }>
-                                Ofrecemos orientación y herramientas para mejorar el desempeño académico de los y las estudiantes.
-                            </Typography>
-                        </CardContent>
-                    </Card>
-                </Grid>
+                                <LifeBuoyIcon className="text-4xl text-white" />
+                            </a>
+                        </div>
+                        <h3 className="card-title text-2xl font-semibold text-secondary mb-4">
+                            Apoyo Psicológico y Psicoeducativo
+                        </h3>
+                        <p className="text-gray-600 leading-relaxed">
+                            Ofrecemos orientación y herramientas para mejorar el desempeño académico de los y las estudiantes.
+                        </p>
+                        <div className="card-actions justify-end mt-4">
+                            <a href='#support-services' className="btn btn-outline btn-primary btn-sm hover:text-white">
+                                Conocer Más
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={ 2 } d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
                 {/* Feature 3 */ }
-                <Grid item xs={ 12 } md={ 4 }>
-                    <Card sx={ { maxWidth: '100%', mx: 'auto', boxShadow: 0 } }>
-                        <CardContent>
-                            <Button
-                                variant='contained'
-                                color='primary'
+                <div className="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300">
+                    <div className="card-body items-center text-center p-8">
+                        <div className="mb-4">
+                            <a
                                 href='#support-services'
-                                sx={ {
-                                    width: '6.375rem',
-                                    height: '6.375rem',
-                                    borderRadius: '1.625rem',
-                                    display: 'flex',
-                                    justifyContent: 'center',
-                                    alignItems: 'center',
-                                    mx: 'auto',
-                                } }
+                                className="btn btn-primary text-white w-24 h-24 rounded-3xl flex justify-center items-center shadow-lg hover:shadow-xl transition-all duration-300"
                             >
-                                <MapIcon style={ { fontSize: '2.8125rem', color: 'white' } } />
-                            </Button>
-                            <Typography variant="h3" sx={ { fontSize: '1.5rem', fontWeight: 600, color: 'secondary.main', maxWidth: '12.5rem', mx: 'auto', my: '1.25rem' } }>
-                                Orientación Vocacional
-                            </Typography>
-                            <Typography variant="body1" sx={ { lineHeight: 2, maxWidth: '17rem', mx: 'auto' } }>
-                                Contamos con profesionales que ofrecen orientación vocacional para guiarte en tu desarrollo académico y profesional.
-                            </Typography>
-                        </CardContent>
-                    </Card>
-                </Grid>
-            </Grid>
-        </Box>
+                                <MapIcon className="text-4xl text-white" />
+                            </a>
+                        </div>
+                        <h3 className="card-title text-2xl font-semibold text-secondary mb-4">
+                            Orientación Vocacional
+                        </h3>
+                        <p className="text-gray-600 leading-relaxed">
+                            Contamos con profesionales que ofrecen orientación vocacional para guiarte en tu desarrollo académico y profesional.
+                        </p>
+                        <div className="card-actions justify-end mt-4">
+                            <a href='#support-services' className="btn btn-outline btn-primary btn-sm hover:text-white">
+                                Conocer Más
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={ 2 } d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     );
 };
 

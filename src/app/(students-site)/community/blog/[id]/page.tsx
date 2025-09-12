@@ -2,12 +2,11 @@
 
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
-import { Box, Typography, Paper, CircularProgress } from "@mui/material";
 import ClientLayout from "../../../../../layout/ClientLayout";
 import BlogContent from "../../../../../components/Community/components/BlogContent";
 
 export default function BlogPost () {
-    const params = useParams(); // ✅ Get ID dynamically from URL
+    const params = useParams();
     const [blogPost, setBlogPost] = useState<any>(null);
     const [loading, setLoading] = useState(true);
 
@@ -29,79 +28,54 @@ export default function BlogPost () {
         fetchBlogPost();
     }, [params.id]);
 
-    if (loading)
+    if (loading) {
         return (
-            <Box sx={ { display: "flex", justifyContent: "center", alignItems: "center", height: "80vh" } }>
-                <CircularProgress />
-            </Box>
+            <div className="flex justify-center items-center h-80">
+                <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
+            </div>
         );
+    }
 
-    if (!blogPost)
+    if (!blogPost) {
         return (
-            <Box sx={ { textAlign: "center", mt: 6 } }>
-                <Typography variant="h5">Blog post not found</Typography>
-            </Box>
+            <div className="text-center mt-6">
+                <h5 className="text-xl">Blog post not found</h5>
+            </div>
         );
+    }
 
     return (
         <ClientLayout>
-            {/* Hero Image Section */ }
-            { blogPost?.image?.url && (
-                <Box
-                    sx={ {
-                        position: "relative",
-                        width: "100%",
-                        height: "450px",
-                        backgroundImage: `url(${ blogPost.image.url })`,
-                        backgroundSize: "cover",
-                        backgroundPosition: "top",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        color: "white",
-                        textAlign: "center",
-                        "&::before": {
-                            content: '""',
-                            position: "absolute",
-                            top: 0,
-                            left: 0,
-                            width: "100%",
-                            height: "100%",
-                            background: "rgba(0, 0, 0, 0.5)", // Dark overlay for readability
-                        },
-                    } }
-                >
-                    <Box sx={ { position: "relative", zIndex: 2 } }>
-                        <Typography variant="h3" sx={ { fontWeight: "bold", mb: 1 } }>
-                            { blogPost?.title || "Blog Post" }
-                        </Typography>
+            <div className="min-h-[60vh]">
+                {/* Hero Image Section */ }
+                { blogPost?.image?.url && (
+                    <div
+                        className="relative w-full h-96 bg-cover bg-center flex items-center justify-center text-white text-center"
+                        style={ {
+                            backgroundImage: `url(${ blogPost.image.url })`,
+                        } }
+                    >
+                        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+                        <div className="relative z-10">
+                            <h3 className="font-bold mb-1 text-3xl">
+                                { blogPost?.title || "Blog Post" }
+                            </h3>
+                            <p className="opacity-80">
+                                { new Date(blogPost?.publishedDate || Date.now()).toLocaleDateString("en-US", {
+                                    month: "long",
+                                    day: "numeric",
+                                    year: "numeric",
+                                }) }
+                            </p>
+                        </div>
+                    </div>
+                ) }
 
-                        <Typography variant="subtitle1" sx={ { opacity: 0.8 } }>
-                            { new Date(blogPost?.publishedDate || Date.now()).toLocaleDateString("en-US", {
-                                month: "long",
-                                day: "numeric",
-                                year: "numeric",
-                            }) }
-                        </Typography>
-                    </Box>
-                </Box>
-            ) }
-
-            {/* Blog Content Section */ }
-            <Paper
-                elevation={ 0 }
-                sx={ {
-                    maxWidth: "900px",
-                    mx: "auto",
-                    p: "4rem",
-                    mt: "-50px", // Overlapping effect with hero image
-                    borderRadius: "12px",
-                    boxShadow: "0px 4px 10px rgba(0,0,0,0.05)",
-                    backgroundColor: "#ffffff",
-                } }
-            >
-                <BlogContent content={ blogPost?.content } />
-            </Paper>
+                {/* Blog Content Section */ }
+                <div className="max-w-4xl mx-auto p-16 -mt-12 rounded-xl shadow-lg bg-white">
+                    <BlogContent content={ blogPost?.content } />
+                </div>
+            </div>
         </ClientLayout>
     );
 }

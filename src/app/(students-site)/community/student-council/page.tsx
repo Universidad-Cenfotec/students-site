@@ -9,7 +9,7 @@ export default function StudentCouncilPage () {
         <ClientLayout>
             <StudentCouncilSection />
             <CurrentCouncilSection />
-            {/* <ElectionsSection /> */ }
+            {/* <ElectionsSection /> - HIDDEN */ }
         </ClientLayout>
     );
 };

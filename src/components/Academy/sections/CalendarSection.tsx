@@ -1,146 +1,147 @@
-import { Box, Button, Card, CardContent, Grid, Typography } from '@mui/material';
 import { AwardIcon, FileIcon, MonitorIcon } from '@/components/Academy/components';
 
 const CalendarSection: React.FC = () => {
-
     const academicCalendarGraphic = 'https://res.cloudinary.com/glovooker/image/upload/v1722969249/students-site/academic-calendar-graphic.png';
 
     return (
-        <Box sx={ { width: '100%', height: 'auto', textAlign: { xs: 'center', md: 'left' }, my: '2rem', px: { xs: '2rem', md: '6rem' } } }>
-            <Typography variant="h4" sx={ { mx: 'auto', my: '0.5rem', textAlign: { xs: 'center', md: 'left' }, fontSize: { xs: '1rem', sm: '1.125rem' }, fontWeight: 600, letterSpacing: '0.0625rem' } }>
+        <div className="w-full max-w-7xl mx-auto h-auto text-center md:text-left my-8 px-8 md:px-24">
+            <div className="badge badge-primary badge-lg mb-2 text-xs sm:text-sm font-semibold tracking-wider text-white">
                 Academia
-            </Typography>
-            <Typography variant="h2" sx={ { mx: 'auto', mb: '4rem', textAlign: { xs: 'center', md: 'left' }, color: 'primary.main', fontSize: { xs: '2rem', sm: '3rem' }, fontWeight: 600 } }>
+            </div>
+            <h2 className="text-3xl sm:text-5xl font-semibold text-primary mb-8">
                 Accede al calendario y a los reglamentos
-            </Typography>
-            <Box
-                sx={ {
-                    display: 'flex',
-                    flexDirection: { xs: 'column', lg: 'row' },
-                    alignItems: 'center',
-                    justifyContent: 'space-between',
-                    mx: 'auto',
-                    mb: '6rem',
-                } }
-            >
-                <Box sx={ { width: { xs: '100%', lg: '50%' } } }>
-                    <img src={ academicCalendarGraphic } alt="Academic Calendar Graphic" style={ { width: '100%' } } />
-                </Box>
-                <Box sx={ { width: { xs: '100%', lg: '40%' }, textAlign: 'left' } }>
-                    <Typography variant="h3" sx={ { color: 'text.main', fontSize: { xs: '1.5rem', sm: '2rem' }, fontWeight: 600 } }>
-                        Calendario
-                    </Typography>
-                    <Typography variant="h3" sx={ { color: 'secondary.main', fontSize: { xs: '1.5rem', sm: '2rem' }, fontWeight: 600 } }>
-                        Académico
-                    </Typography>
-                    <Typography variant="body1" sx={ { mx: { xs: 'auto', lg: 0 }, my: '2rem', lineHeight: 2 } }>
-                        <Box component="span" sx={ { color: 'primary.main', lineHeight: 1 } }>Universidad</Box> <Box component="span" sx={ { color: 'primary.main', fontFamily: '"DIN Alternate", sans-serif' } }>CENFOTEC</Box> ofrece un Calendario Académico anual para carreras cuatrimestrales y técnicos por microcursos. Cada enlace lleva al documento en PDF descargable. Además, cada rubro dirige a enlaces con más información o formularios según el trámite necesario.
-                    </Typography>
-                    <Button
-                        variant='contained'
-                        color="primary"
-                        size="large"
-                        href='https://centrodeasistencia.ucenfotec.ac.cr/portal/es/kb/articles/c%C3%B3mo-puedo-ver-el-calendario-acad%C3%A9mico-ucenfotec'
-                        target='_blank'
-                        sx={ {
-                            fontSize: { xs: '1rem', sm: '1.5rem' },
-                            fontWeight: 600,
-                            px: { xs: '2rem', sm: '3rem' },
-                            mr: '2rem',
-                            mb: '1rem'
-                        } }
+            </h2>
 
-                    >
-                        Acceso al Calendario Académico
-                    </Button>
-                </Box>
-            </Box>
+            <div className="card bg-base-100 shadow-xl mb-24">
+                <div className="card-body p-8 lg:p-12">
+                    <div className="flex flex-col lg:flex-row items-center justify-between mx-auto">
+                        <div className="w-full lg:w-1/2 mb-8 lg:mb-0">
+                            <img src={ academicCalendarGraphic } alt="Academic Calendar Graphic" className="w-full rounded-lg" />
+                        </div>
+                        <div className="w-full lg:w-2/5 text-left">
+                            <h3 className="text-2xl sm:text-3xl font-semibold text-gray-600 mb-2">
+                                Calendario
+                            </h3>
+                            <h3 className="text-2xl sm:text-3xl font-semibold text-secondary mb-6">
+                                Académico
+                            </h3>
+                            <p className="text-gray-600 leading-relaxed mb-6">
+                                <span className="text-primary font-semibold">Universidad</span> <span className="text-primary font-din font-semibold">CENFOTEC</span> ofrece un Calendario Académico anual para carreras cuatrimestrales y técnicos por microcursos. Cada enlace lleva al documento en PDF descargable. Además, cada rubro dirige a enlaces con más información o formularios según el trámite necesario.
+                            </p>
+                            <a
+                                href='https://centrodeasistencia.ucenfotec.ac.cr/portal/es/kb/articles/c%C3%B3mo-puedo-ver-el-calendario-acad%C3%A9mico-ucenfotec'
+                                target='_blank'
+                                rel="noopener noreferrer"
+                                className="btn btn-primary text-white btn-lg text-base sm:text-xl font-semibold px-8 sm:px-12 shadow-lg hover:shadow-xl transition-all duration-300"
+                            >
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={ 2 } d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                </svg>
+                                Acceso al Calendario Académico
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-            <Grid container sx={ { textAlign: 'center', mb: '2rem' } } spacing={ 4 }>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
                 {/* Feature 1 */ }
-                <Grid item xs={ 12 } md={ 4 }>
-                    <Card sx={ { maxWidth: '100%', mx: 'auto', boxShadow: 0 } }>
-                        <CardContent>
-                            <Button
-                                variant='contained'
-                                color='primary'
+                <div className="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300">
+                    <div className="card-body items-center text-center p-8">
+                        <div className="mb-4">
+                            <a
                                 href='https://centrodeasistencia.ucenfotec.ac.cr/portal/es/kb/articles/reglamento-acad%C3%A9mico'
                                 target='_blank'
-                                sx={ {
-                                    width: '6.375rem',
-                                    height: '6.375rem',
-                                    borderRadius: '1.625rem',
-                                    display: 'flex',
-                                    justifyContent: 'center',
-                                    alignItems: 'center',
-                                    mx: 'auto',
-                                } }
+                                rel="noopener noreferrer"
+                                className="btn btn-primary text-white w-24 h-24 rounded-3xl flex justify-center items-center shadow-lg hover:shadow-xl transition-all duration-300"
                             >
-                                <FileIcon style={ { fontSize: '2.8125rem', color: 'white' } } />
-                            </Button>
-                            <Typography variant="h3" sx={ { fontSize: '1.5rem', fontWeight: 600, color: 'secondary.main', maxWidth: '12.5rem', mx: 'auto', my: '1.5rem' } }>
-                                Reglamento Académico
-                            </Typography>
-                        </CardContent>
-                    </Card>
-                </Grid>
+                                <FileIcon className="text-4xl text-white" />
+                            </a>
+                        </div>
+                        <h3 className="card-title text-2xl font-semibold text-secondary mb-4">
+                            Reglamento Académico
+                        </h3>
+                        <div className="card-actions justify-end mt-4">
+                            <a
+                                href='https://centrodeasistencia.ucenfotec.ac.cr/portal/es/kb/articles/reglamento-acad%C3%A9mico'
+                                target='_blank'
+                                rel="noopener noreferrer"
+                                className="btn btn-outline btn-primary btn-sm hover:text-white"
+                            >
+                                Ver Documento
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={ 2 } d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
                 {/* Feature 2 */ }
-                <Grid item xs={ 12 } md={ 4 }>
-                    <Card sx={ { maxWidth: '100%', mx: 'auto', boxShadow: 0 } }>
-                        <CardContent>
-                            <Button
-                                variant='contained'
-                                color='primary'
+                <div className="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300">
+                    <div className="card-body items-center text-center p-8">
+                        <div className="mb-4">
+                            <a
                                 href='https://centrodeasistencia.ucenfotec.ac.cr/portal/es/kb/articles/reglamento-de-r%C3%A9gimen-estudiantil'
                                 target='_blank'
-                                sx={ {
-                                    width: '6.375rem',
-                                    height: '6.375rem',
-                                    borderRadius: '1.625rem',
-                                    display: 'flex',
-                                    justifyContent: 'center',
-                                    alignItems: 'center',
-                                    mx: 'auto',
-                                } }
+                                rel="noopener noreferrer"
+                                className="btn btn-primary text-white w-24 h-24 rounded-3xl flex justify-center items-center shadow-lg hover:shadow-xl transition-all duration-300"
                             >
-                                <AwardIcon style={ { fontSize: '2.8125rem', color: 'white' } } />
-                            </Button>
-                            <Typography variant="h3" sx={ { fontSize: '1.5rem', fontWeight: 600, color: 'secondary.main', maxWidth: '15.5rem', mx: 'auto', my: '1.5rem' } }>
-                                Reglamento Régimen Estudiantil
-                            </Typography>
-                        </CardContent>
-                    </Card>
-                </Grid>
+                                <AwardIcon className="text-4xl text-white" />
+                            </a>
+                        </div>
+                        <h3 className="card-title text-2xl font-semibold text-secondary mb-4">
+                            Reglamento Régimen Estudiantil
+                        </h3>
+                        <div className="card-actions justify-end mt-4">
+                            <a
+                                href='https://centrodeasistencia.ucenfotec.ac.cr/portal/es/kb/articles/reglamento-de-r%C3%A9gimen-estudiantil'
+                                target='_blank'
+                                rel="noopener noreferrer"
+                                className="btn btn-outline btn-primary btn-sm hover:text-white"
+                            >
+                                Ver Documento
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={ 2 } d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
                 {/* Feature 3 */ }
-                {/* TODO: PENDIENTE EN BASE DE CONOCIMIENTOS */ }
-                <Grid item xs={ 12 } md={ 4 }>
-                    <Card sx={ { maxWidth: '100%', mx: 'auto', boxShadow: 0 } }>
-                        <CardContent>
-                            <Button
-                                variant='contained'
-                                color='primary'
+                <div className="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300">
+                    <div className="card-body items-center text-center p-8">
+                        <div className="mb-4">
+                            <a
                                 href='https://drive.google.com/file/d/1uQyrBTEHeipNHPt8ja1MaKXXxSY1kNuG/view?usp=sharing'
                                 target='_blank'
-                                sx={ {
-                                    width: '6.375rem',
-                                    height: '6.375rem',
-                                    borderRadius: '1.625rem',
-                                    display: 'flex',
-                                    justifyContent: 'center',
-                                    alignItems: 'center',
-                                    mx: 'auto',
-                                } }
+                                rel="noopener noreferrer"
+                                className="btn btn-primary text-white w-24 h-24 rounded-3xl flex justify-center items-center shadow-lg hover:shadow-xl transition-all duration-300"
                             >
-                                <MonitorIcon style={ { fontSize: '2.8125rem', color: 'white' } } />
-                            </Button>
-                            <Typography variant="h3" sx={ { fontSize: '1.5rem', fontWeight: 600, color: 'secondary.main', maxWidth: '18.5rem', mx: 'auto', my: '1.25rem' } }>
-                                Lineamientos Sesiones Sincrónicas y Presenciales
-                            </Typography>
-                        </CardContent>
-                    </Card>
-                </Grid>
-            </Grid>
-        </Box>
+                                <MonitorIcon className="text-4xl text-white" />
+                            </a>
+                        </div>
+                        <h3 className="card-title text-2xl font-semibold text-secondary mb-4">
+                            Lineamientos Sesiones Sincrónicas y Presenciales
+                        </h3>
+                        <div className="card-actions justify-end mt-4">
+                            <a
+                                href='https://drive.google.com/file/d/1uQyrBTEHeipNHPt8ja1MaKXXxSY1kNuG/view?usp=sharing'
+                                target='_blank'
+                                rel="noopener noreferrer"
+                                className="btn btn-outline btn-primary btn-sm hover:text-white"
+                            >
+                                Ver Documento
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={ 2 } d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     );
 };
 

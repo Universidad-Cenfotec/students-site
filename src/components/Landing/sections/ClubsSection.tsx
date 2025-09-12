@@ -1,11 +1,6 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
 import { ClubCard } from "@/components/Community/components/ClubCard";
 import { Club } from "@/types/club";
 
@@ -60,70 +55,18 @@ const ClubsSection: React.FC = () => {
                 ¿Ya conoces nuestros clubes?
             </h2>
 
-            <div className="card bg-base-100 shadow-xl overflow-visible">
-                <div className="card-body p-8 lg:p-12 overflow-visible">
-                    <div className="my-8 mx-auto h-auto min-h-[500px] w-full overflow-visible">
-                        <Swiper
-                            modules={ [Navigation, Pagination, Autoplay] }
-                            slidesPerView={ 1 }
-                            spaceBetween={ 20 }
-                            breakpoints={ {
-                                640: {
-                                    slidesPerView: 1,
-                                    spaceBetween: 20
-                                },
-                                768: {
-                                    slidesPerView: 2,
-                                    spaceBetween: 24
-                                },
-                                1024: {
-                                    slidesPerView: 3,
-                                    spaceBetween: 24
-                                }
-                            } }
-                            loop={ clubs.length > 3 }
-                            autoplay={ {
-                                delay: 4000,
-                                disableOnInteraction: false,
-                                pauseOnMouseEnter: true
-                            } }
-                            navigation={ {
-                                nextEl: '.swiper-button-next',
-                                prevEl: '.swiper-button-prev',
-                            } }
-                            pagination={ {
-                                clickable: true,
-                                dynamicBullets: true,
-                            } }
-                            grabCursor={ true }
-                            centeredSlides={ false }
-                            watchSlidesProgress={ false }
-                            className="club-swiper w-full"
-                            style={ {
-                                width: '100%',
-                                paddingLeft: '60px',
-                                paddingRight: '60px',
-                                paddingTop: '20px',
-                                paddingBottom: '80px'
-                            } }
-                        >
-                            { clubs.map((club) => (
-                                <SwiperSlide key={ club.id } style={ { width: 'auto', minWidth: '320px' } }>
-                                    <div className="flex justify-center w-full">
-                                        <ClubCard
-                                            id={ club.id }
-                                            title={ club.name }
-                                            description={ club.description }
-                                            imageUrl={ club.banner?.url ?? club.logo?.url ?? "/placeholder.jpg" }
-                                        />
-                                    </div>
-                                </SwiperSlide>
-                            )) }
-                        </Swiper>
-
-                        {/* Navigation buttons */ }
-                        <div className="swiper-button-prev !text-primary !w-12 !h-12 !mt-0 !-translate-y-1/2 !top-1/2 !left-0 !bg-white !shadow-lg !rounded-full hover:!bg-primary hover:!text-white transition-all duration-300"></div>
-                        <div className="swiper-button-next !text-primary !w-12 !h-12 !mt-0 !-translate-y-1/2 !top-1/2 !right-0 !bg-white !shadow-lg !rounded-full hover:!bg-primary hover:!text-white transition-all duration-300"></div>
+            <div className="card bg-base-100 shadow-xl">
+                <div className="card-body p-8 lg:p-12">
+                    <div className="flex flex-wrap justify-center gap-8">
+                        { clubs.map((club) => (
+                            <ClubCard
+                                key={ club.id }
+                                id={ club.id }
+                                title={ club.name }
+                                description={ club.description }
+                                imageUrl={ club.banner?.url ?? club.logo?.url ?? "/placeholder.jpg" }
+                            />
+                        )) }
                     </div>
 
                     <div className="divider"></div>

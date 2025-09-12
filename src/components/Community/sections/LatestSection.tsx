@@ -10,11 +10,11 @@ const LatestSection: React.FC = () => {
 
             <div className="card bg-base-100 shadow-xl mb-24">
                 <div className="card-body p-8 lg:p-12">
-                    <div className="flex flex-col lg:flex-row items-center justify-between mx-auto">
-                        <div className="w-full lg:w-3/5 h-96 mb-8 lg:mb-0">
-                            <div className="relative w-full h-full rounded-lg overflow-hidden shadow-lg">
+                    <div className="flex flex-col items-center justify-between mx-auto">
+                        <div className="w-full mb-8">
+                            <div className="relative w-full aspect-video rounded-lg overflow-hidden shadow-lg">
                                 <iframe
-                                    className="w-full h-full rounded-lg"
+                                    className="absolute top-0 left-0 w-full h-full rounded-lg"
                                     src={ 'https://www.youtube.com/embed/8_sZJtCdGS8?si=9ieD0pU_ocmqv02e' }
                                     frameBorder="0"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -23,19 +23,13 @@ const LatestSection: React.FC = () => {
                                 ></iframe>
                             </div>
                         </div>
-                        <div className="w-full lg:w-2/5 text-left">
+                        <div className="w-full text-center">
                             <h3 className="text-2xl sm:text-3xl font-semibold text-secondary mb-6">
                                 Conoce a Jeremy Villegas
                             </h3>
                             <p className="text-gray-600 leading-relaxed">
                                 Un joven talentoso que combina su pasión por la tecnología con su habilidad en el ajedrez. Estudiante destacado de Ingeniería de Software en <span className="text-primary font-semibold">Universidad</span> <span className="text-primary font-din font-semibold">CENFOTEC</span>, Jeremy es un campeón universitario de ajedrez y ha representado a su país en diversas competencias.
                             </p>
-
-                            <div className="mt-6 flex flex-wrap gap-2">
-                                <div className="badge badge-outline badge-sm">Estudiante Destacado</div>
-                                <div className="badge badge-outline badge-sm">Campeón de Ajedrez</div>
-                                <div className="badge badge-outline badge-sm">Ingeniería de Software</div>
-                            </div>
                         </div>
                     </div>
                 </div>

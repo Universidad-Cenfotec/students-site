@@ -11,9 +11,11 @@ interface BlogContentProps {
 export default function BlogContent ({ content }: BlogContentProps) {
     return (
         <div
+            className="blog-content prose prose-lg max-w-none"
             style={ { fontSize: "18px", lineHeight: "1.75", color: "#333" } }
         >
             <RichText data={ content } />
         </div>
     );
 }
+

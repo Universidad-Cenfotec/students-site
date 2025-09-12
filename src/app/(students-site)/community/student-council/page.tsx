@@ -7,9 +7,11 @@ import CurrentCouncilSection from '@/components/Community/pages/Student-Council/
 export default function StudentCouncilPage () {
     return (
         <ClientLayout>
-            <StudentCouncilSection />
-            <CurrentCouncilSection />
-            {/* <ElectionsSection /> - HIDDEN */ }
+            <div className="pt-24">
+                <StudentCouncilSection />
+                <CurrentCouncilSection />
+                {/* <ElectionsSection /> - HIDDEN */ }
+            </div>
         </ClientLayout>
     );
 };

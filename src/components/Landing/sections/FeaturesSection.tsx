@@ -12,12 +12,12 @@ const FeaturesSection: React.FC = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 my-8">
                 {/* Feature 1 */ }
-                <div className="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300">
+                <div className="card bg-base-100 shadow-lg hover:shadow-xl transition-shadow duration-200">
                     <div className="card-body items-center text-center p-8">
                         <div className="mb-4">
                             <a
                                 href='/academy'
-                                className="btn btn-primary text-white w-24 h-24 rounded-3xl flex justify-center items-center shadow-lg hover:shadow-xl transition-all duration-300"
+                                className="btn btn-primary text-white w-24 h-24 rounded-3xl flex justify-center items-center shadow-lg hover:shadow-xl transition-shadow duration-200"
                             >
                                 <SearchIcon className="text-4xl text-white" />
                             </a>
@@ -32,12 +32,12 @@ const FeaturesSection: React.FC = () => {
                 </div>
 
                 {/* Feature 2 */ }
-                <div className="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300">
+                <div className="card bg-base-100 shadow-lg hover:shadow-xl transition-shadow duration-200">
                     <div className="card-body items-center text-center p-8">
                         <div className="mb-4">
                             <a
                                 href='/community'
-                                className="btn btn-primary text-white w-24 h-24 rounded-3xl flex justify-center items-center shadow-lg hover:shadow-xl transition-all duration-300"
+                                className="btn btn-primary text-white w-24 h-24 rounded-3xl flex justify-center items-center shadow-lg hover:shadow-xl transition-shadow duration-200"
                             >
                                 <CommentIcon className="text-4xl text-white" />
                             </a>
@@ -52,12 +52,12 @@ const FeaturesSection: React.FC = () => {
                 </div>
 
                 {/* Feature 3 */ }
-                <div className="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300">
+                <div className="card bg-base-100 shadow-lg hover:shadow-xl transition-shadow duration-200">
                     <div className="card-body items-center text-center p-8">
                         <div className="mb-4">
                             <a
                                 href='/about'
-                                className="btn btn-primary text-white w-24 h-24 rounded-3xl flex justify-center items-center shadow-lg hover:shadow-xl transition-all duration-300"
+                                className="btn btn-primary text-white w-24 h-24 rounded-3xl flex justify-center items-center shadow-lg hover:shadow-xl transition-shadow duration-200"
                             >
                                 <HeartIcon className="text-4xl text-white" />
                             </a>

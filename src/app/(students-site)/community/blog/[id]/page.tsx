@@ -46,7 +46,7 @@ export default function BlogPost () {
 
     return (
         <ClientLayout>
-            <div className="min-h-[60vh]">
+            <div className="pt-24 min-h-[60vh]">
                 {/* Hero Image Section */ }
                 { blogPost?.image?.url && (
                     <div

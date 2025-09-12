@@ -8,10 +8,12 @@ import CalendarSection from '@/components/Academy/sections/CalendarSection';
 export default function AcademyPage () {
     return (
         <ClientLayout>
-            <EducationModelSection />
-            <PlatformsSection />
-            <GuidesSection />
-            <CalendarSection />
+            <div className="pt-24">
+                <EducationModelSection />
+                <PlatformsSection />
+                <GuidesSection />
+                <CalendarSection />
+            </div>
         </ClientLayout>
     );
 };

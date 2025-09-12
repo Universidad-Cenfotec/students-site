@@ -21,3 +21,14 @@ html {
   --font-din: 'DIN Alternate', sans-serif;
   --font-circular: 'CircularStd', sans-serif;
 }
+
+/* Blog content video styling - simple vertical stacking */
+.blog-content iframe,
+.blog-content video,
+.blog-content embed,
+.blog-content object {
+    margin: 2rem auto !important;
+    max-width: 100% !important;
+    display: block !important;
+    width: 100% !important;
+}

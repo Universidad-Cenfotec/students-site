@@ -20,7 +20,7 @@ export const GuideCard = ({ title, link, imageUrl, style }: GuideCardProps) => {
                     href={ link }
                     target='_blank'
                     rel="noopener noreferrer"
-                    className="btn btn-primary text-white btn-lg"
+                    className="btn btn-primary text-white btn-lg text-sm sm:text-base font-semibold px-6 sm:px-8 shadow-lg hover:shadow-xl transition-shadow duration-200"
                 >
                     Ver Guía
                 </a>

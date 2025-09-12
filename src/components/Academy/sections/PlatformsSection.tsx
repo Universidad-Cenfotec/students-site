@@ -36,7 +36,7 @@ const PlatformsSection: React.FC = () => {
                                 href='https://drive.google.com/file/d/1Sa7iCv-jPC60Gp3tIdz9KFvlIl-Xm1OQ/view?usp=sharing'
                                 target='_blank'
                                 rel="noopener noreferrer"
-                                className="btn btn-outline btn-secondary btn-lg text-base sm:text-xl font-semibold px-8 sm:px-12 shadow-lg hover:shadow-xl hover:text-white transition-all duration-300"
+                                className="btn btn-outline btn-secondary btn-lg text-sm sm:text-base font-semibold px-6 sm:px-8 shadow-lg hover:shadow-xl hover:text-white transition-shadow duration-200"
                             >
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={ 2 } d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4 0h1m-6 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -70,7 +70,7 @@ const PlatformsSection: React.FC = () => {
                                     href='https://www.google.com/url?q=https%3A%2F%2Fcentrodeasistencia.ucenfotec.ac.cr%2Fportal%2Fes%2Fsignin&sa=D&sntz=1&usg=AOvVaw1w7zTbLRWka2Hi0qIhehUE'
                                     target='_blank'
                                     rel="noopener noreferrer"
-                                    className="btn btn-primary text-white btn-lg text-base sm:text-xl font-semibold px-8 sm:px-12 shadow-lg hover:shadow-xl transition-all duration-300"
+                                    className="btn btn-primary text-white btn-lg text-sm sm:text-base font-semibold px-6 sm:px-8 shadow-lg hover:shadow-xl transition-shadow duration-200"
                                 >
                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={ 2 } d="M13 7l5 5m0 0l-5 5m5-5H6" />
@@ -81,7 +81,7 @@ const PlatformsSection: React.FC = () => {
                                     href='https://drive.google.com/file/d/1JXB_1BcveV84CXMjJ-xOHCzlTFddtejz/view?usp=sharing'
                                     target='_blank'
                                     rel="noopener noreferrer"
-                                    className="btn btn-outline btn-primary btn-lg text-base sm:text-xl font-semibold px-8 sm:px-12 shadow-lg hover:shadow-xl hover:text-white transition-all duration-300"
+                                    className="btn btn-outline btn-primary btn-lg text-sm sm:text-base font-semibold px-6 sm:px-8 shadow-lg hover:shadow-xl hover:text-white transition-shadow duration-200"
                                 >
                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={ 2 } d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -113,7 +113,7 @@ const PlatformsSection: React.FC = () => {
                                     href='http://gmail.com/'
                                     target='_blank'
                                     rel="noopener noreferrer"
-                                    className="btn btn-primary text-white btn-lg text-base sm:text-xl font-semibold px-8 sm:px-12 shadow-lg hover:shadow-xl transition-all duration-300"
+                                    className="btn btn-primary text-white btn-lg text-sm sm:text-base font-semibold px-6 sm:px-8 shadow-lg hover:shadow-xl transition-shadow duration-200"
                                 >
                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={ 2 } d="M13 7l5 5m0 0l-5 5m5-5H6" />
@@ -124,7 +124,7 @@ const PlatformsSection: React.FC = () => {
                                     href='https://drive.google.com/file/d/1g_eSdPWqUcK0soH5XaCS1CllwJUEYzVO/view?usp=sharing'
                                     target='_blank'
                                     rel="noopener noreferrer"
-                                    className="btn btn-outline btn-primary btn-lg text-base sm:text-xl font-semibold px-8 sm:px-12 shadow-lg hover:shadow-xl hover:text-white transition-all duration-300"
+                                    className="btn btn-outline btn-primary btn-lg text-sm sm:text-base font-semibold px-6 sm:px-8 shadow-lg hover:shadow-xl hover:text-white transition-shadow duration-200"
                                 >
                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={ 2 } d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -156,7 +156,7 @@ const PlatformsSection: React.FC = () => {
                                     href='https://www.google.com/url?q=https%3A%2F%2Fautoservicio.ucenfotec.ac.cr%2Flogin&sa=D&sntz=1&usg=AOvVaw02sJsMaE89NnVrE2k36Ek_'
                                     target='_blank'
                                     rel="noopener noreferrer"
-                                    className="btn btn-primary text-white btn-lg text-base sm:text-xl font-semibold px-8 sm:px-12 shadow-lg hover:shadow-xl transition-all duration-300"
+                                    className="btn btn-primary text-white btn-lg text-sm sm:text-base font-semibold px-6 sm:px-8 shadow-lg hover:shadow-xl transition-shadow duration-200"
                                 >
                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={ 2 } d="M13 7l5 5m0 0l-5 5m5-5H6" />
@@ -167,7 +167,7 @@ const PlatformsSection: React.FC = () => {
                                     href='https://drive.google.com/file/d/1S9MhVGGtoCuTRQ8CulihRVEkFw4mf6F5/view?usp=sharing'
                                     target='_blank'
                                     rel="noopener noreferrer"
-                                    className="btn btn-outline btn-primary btn-lg text-base sm:text-xl font-semibold px-8 sm:px-12 shadow-lg hover:shadow-xl hover:text-white transition-all duration-300"
+                                    className="btn btn-outline btn-primary btn-lg text-sm sm:text-base font-semibold px-6 sm:px-8 shadow-lg hover:shadow-xl hover:text-white transition-shadow duration-200"
                                 >
                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={ 2 } d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -198,7 +198,7 @@ const PlatformsSection: React.FC = () => {
                                 href='https://drive.google.com/file/d/1weozk5K0qioQQPR1Wlxy_-fxl0lUKeQB/view?usp=sharing'
                                 target='_blank'
                                 rel="noopener noreferrer"
-                                className="btn btn-outline btn-primary btn-lg text-base sm:text-xl font-semibold px-8 sm:px-12 shadow-lg hover:shadow-xl transition-all duration-300"
+                                className="btn btn-outline btn-primary btn-lg text-sm sm:text-base font-semibold px-6 sm:px-8 shadow-lg hover:shadow-xl transition-shadow duration-200"
                             >
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={ 2 } d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -229,7 +229,7 @@ const PlatformsSection: React.FC = () => {
                                     href='https://www.google.com/url?q=https%3A%2F%2Fmoodle.ucenfotec.ac.cr%2Flogin%2Findex.php&sa=D&sntz=1&usg=AOvVaw10A_qWvr6486kV1TNHQrTF'
                                     target='_blank'
                                     rel="noopener noreferrer"
-                                    className="btn btn-primary text-white btn-lg text-base sm:text-xl font-semibold px-8 sm:px-12 shadow-lg hover:shadow-xl transition-all duration-300"
+                                    className="btn btn-primary text-white btn-lg text-sm sm:text-base font-semibold px-6 sm:px-8 shadow-lg hover:shadow-xl transition-shadow duration-200"
                                 >
                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={ 2 } d="M13 7l5 5m0 0l-5 5m5-5H6" />
@@ -240,7 +240,7 @@ const PlatformsSection: React.FC = () => {
                                     href='https://drive.google.com/file/d/1_oAxgfRXohm5Am_59_t_GAZudRUhlhmj/view?usp=sharing'
                                     target='_blank'
                                     rel="noopener noreferrer"
-                                    className="btn btn-outline btn-primary btn-lg text-base sm:text-xl font-semibold px-8 sm:px-12 shadow-lg hover:shadow-xl hover:text-white transition-all duration-300"
+                                    className="btn btn-outline btn-primary btn-lg text-sm sm:text-base font-semibold px-6 sm:px-8 shadow-lg hover:shadow-xl hover:text-white transition-shadow duration-200"
                                 >
                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={ 2 } d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -271,7 +271,7 @@ const PlatformsSection: React.FC = () => {
                                 href='https://www.google.com/url?q=https%3A%2F%2Fsites.google.com%2Fucenfotec.ac.cr%2Fbiblioteca-ignacio-trejos-zela%3Fpli%3D1&sa=D&sntz=1&usg=AOvVaw1BzTmZyEFn7IigIfPWSyYX'
                                 target='_blank'
                                 rel="noopener noreferrer"
-                                className="btn btn-primary text-white btn-lg text-base sm:text-xl font-semibold px-8 sm:px-12 shadow-lg hover:shadow-xl transition-all duration-300"
+                                className="btn btn-primary text-white btn-lg text-sm sm:text-base font-semibold px-6 sm:px-8 shadow-lg hover:shadow-xl transition-shadow duration-200"
                             >
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={ 2 } d="M13 7l5 5m0 0l-5 5m5-5H6" />

@@ -7,9 +7,11 @@ import SupportServicesSection from '@/components/About/sections/SupportServicesS
 export default async function AboutPage () {
     return (
         <ClientLayout>
-            <StudentAffairsSection />
-            <DiversityStatementSection />
-            <SupportServicesSection />
+            <div className="pt-24">
+                <StudentAffairsSection />
+                <DiversityStatementSection />
+                <SupportServicesSection />
+            </div>
         </ClientLayout>
     );
 };

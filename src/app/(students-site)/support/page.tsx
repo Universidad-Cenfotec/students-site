@@ -6,8 +6,10 @@ import SchoolsSection from '../../../components/Support/sections/SchoolsSection'
 export default function SupportPage () {
     return (
         <ClientLayout>
-            <AssistanceSection />
-            <SchoolsSection />
+            <div className="pt-24">
+                <AssistanceSection />
+                <SchoolsSection />
+            </div>
         </ClientLayout>
     );
 };

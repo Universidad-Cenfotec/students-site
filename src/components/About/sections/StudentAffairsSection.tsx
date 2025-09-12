@@ -4,7 +4,7 @@ const StudentAffairsSection: React.FC = () => {
     const logoUrl = 'https://res.cloudinary.com/glovooker/image/upload/v1719730516/students-site/student-affairs-lg.png';
 
     return (
-        <div className="w-full max-w-7xl mx-auto h-auto text-center md:text-left my-16 px-8 md:px-24">
+        <div className="w-full max-w-7xl mx-auto h-auto text-center md:text-left mt-8 mb-16 px-8 md:px-24">
             <div className="badge badge-primary badge-lg mb-2 text-xs sm:text-sm font-semibold tracking-wider text-white">
                 Sobre Nosotros
             </div>
@@ -53,19 +53,6 @@ const StudentAffairsSection: React.FC = () => {
                         <p className="text-gray-600 leading-relaxed">
                             Conectamos empresas con los mejores perfiles tecnológicos y damos seguimiento a la colocación laboral de nuestro estudiantado.
                         </p>
-                        <div className="card-actions justify-end mt-4">
-                            <a
-                                href='https://ucenfotec.ac.cr/bolsatrabajo/'
-                                target='_blank'
-                                rel="noopener noreferrer"
-                                className="btn btn-outline btn-primary btn-sm hover:text-white"
-                            >
-                                Visitar
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={ 2 } d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                                </svg>
-                            </a>
-                        </div>
                     </div>
                 </div>
 
@@ -86,14 +73,6 @@ const StudentAffairsSection: React.FC = () => {
                         <p className="text-gray-600 leading-relaxed">
                             Ofrecemos orientación y herramientas para mejorar el desempeño académico de los y las estudiantes.
                         </p>
-                        <div className="card-actions justify-end mt-4">
-                            <a href='#support-services' className="btn btn-outline btn-primary btn-sm hover:text-white">
-                                Conocer Más
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={ 2 } d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                                </svg>
-                            </a>
-                        </div>
                     </div>
                 </div>
 
@@ -114,14 +93,6 @@ const StudentAffairsSection: React.FC = () => {
                         <p className="text-gray-600 leading-relaxed">
                             Contamos con profesionales que ofrecen orientación vocacional para guiarte en tu desarrollo académico y profesional.
                         </p>
-                        <div className="card-actions justify-end mt-4">
-                            <a href='#support-services' className="btn btn-outline btn-primary btn-sm hover:text-white">
-                                Conocer Más
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={ 2 } d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                                </svg>
-                            </a>
-                        </div>
                     </div>
                 </div>
             </div>

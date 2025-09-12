@@ -22,19 +22,15 @@ export default function ClubSection ({ clubs }: ClubSectionProps) {
             <div className="card bg-base-100 shadow-xl">
                 <div className="card-body p-8 lg:p-12">
                     { activeClubs.length > 0 ? (
-                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 justify-center items-stretch">
+                        <div className="flex flex-wrap justify-center gap-8">
                             { activeClubs.map((club) => (
-                                <div
+                                <ClubCard
                                     key={ club.id }
-                                    className="flex justify-center"
-                                >
-                                    <ClubCard
-                                        id={ club.id }
-                                        title={ club.name }
-                                        description={ club.description }
-                                        imageUrl={ club.banner?.url || club.logo?.url || "/placeholder.jpg" }
-                                    />
-                                </div>
+                                    id={ club.id }
+                                    title={ club.name }
+                                    description={ club.description }
+                                    imageUrl={ club.banner?.url || club.logo?.url || "/placeholder.jpg" }
+                                />
                             )) }
                         </div>
                     ) : (

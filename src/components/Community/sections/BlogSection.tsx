@@ -22,19 +22,15 @@ export default function BlogSection ({ blogPosts }: BlogSectionProps) {
             <div className="card bg-base-100 shadow-xl">
                 <div className="card-body p-8 lg:p-12">
                     { publishedPosts.length > 0 ? (
-                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 justify-center items-stretch">
+                        <div className="flex flex-wrap justify-center gap-8">
                             { publishedPosts.map((post) => (
-                                <div
+                                <BlogCard
                                     key={ post.id }
-                                    className="flex justify-center"
-                                >
-                                    <BlogCard
-                                        id={ post.id }
-                                        title={ post.title }
-                                        description={ post.description }
-                                        imageUrl={ post.image?.url || "/placeholder.jpg" }
-                                    />
-                                </div>
+                                    id={ post.id }
+                                    title={ post.title }
+                                    description={ post.description }
+                                    imageUrl={ post.image?.url || "/placeholder.jpg" }
+                                />
                             )) }
                         </div>
                     ) : (

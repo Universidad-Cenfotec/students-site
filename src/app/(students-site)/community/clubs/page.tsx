@@ -13,7 +13,9 @@ export default async function ClubsPage () {
 
     return (
         <ClientLayout>
-            <ClubSection clubs={ clubsResponse.docs } />
+            <div className="pt-24">
+                <ClubSection clubs={ clubsResponse.docs } />
+            </div>
         </ClientLayout>
     );
 }

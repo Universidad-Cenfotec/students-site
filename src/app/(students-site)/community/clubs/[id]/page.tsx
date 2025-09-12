@@ -65,7 +65,7 @@ export default function ClubPage () {
 
     return (
         <ClientLayout>
-            <div className="min-h-[60vh]">
+            <div className="pt-24 min-h-[60vh]">
                 {/* Hero Image Section */ }
                 { heroImageUrl && (
                     <div

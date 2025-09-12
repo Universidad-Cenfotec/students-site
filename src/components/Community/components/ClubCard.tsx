@@ -16,16 +16,15 @@ export const ClubCard = ({ id, title, description, imageUrl, style }: ClubCardPr
     return (
         <div
             onClick={ () => router.push(`/community/clubs/${ id }`) }
-            className="card w-80 h-[455px] bg-base-100 shadow-xl hover:shadow-2xl cursor-pointer transition-all duration-300 hover:scale-105"
+            className="card w-80 h-[455px] bg-base-100 shadow-lg hover:shadow-xl cursor-pointer transition-shadow duration-200"
             style={ style }
         >
             <figure className="h-[236px] overflow-hidden relative">
                 <img
                     src={ imageUrl }
                     alt={ title }
-                    className="w-full h-full object-cover object-top transition-transform duration-300 hover:scale-110"
+                    className="w-full h-full object-cover object-top"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="absolute top-4 right-4">
                     <div className="badge badge-primary badge-sm text-white">
                         Club
@@ -33,7 +32,7 @@ export const ClubCard = ({ id, title, description, imageUrl, style }: ClubCardPr
                 </div>
             </figure>
             <div className="card-body text-left p-6">
-                <h2 className="card-title text-secondary font-semibold text-xl leading-tight line-clamp-3 mb-3 hover:text-primary transition-colors duration-200">
+                <h2 className="card-title text-secondary font-semibold text-xl leading-tight line-clamp-3 mb-3">
                     { title }
                 </h2>
                 <p className="text-gray-600 text-sm leading-relaxed line-clamp-3 mb-4">

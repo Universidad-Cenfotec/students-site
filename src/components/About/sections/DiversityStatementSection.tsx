@@ -47,14 +47,6 @@ const DiversityStatementSection: React.FC = () => {
                                     Fomentamos el empoderamiento de nuestra población estudiantil, y toda persona que forma parte de nuestra Universidad, de manera que sostenga estos principios en alto, como un principio indispensable para la excelencia. Trabajamos con voluntad y dedicación para que, quienes alguna vez hayan experimentado la exclusión, reconozcan en nuestra institución un espacio seguro, de diálogo y respeto mutuo, en el que siempre se reconozca el honor y la dignidad de todas y todos sus miembros.
                                 </p>
                             </div>
-
-                            <div className="mt-8 flex flex-wrap gap-2 justify-center lg:justify-start">
-                                <div className="badge badge-outline badge-sm">Inclusión</div>
-                                <div className="badge badge-outline badge-sm">Equidad</div>
-                                <div className="badge badge-outline badge-sm">Diversidad</div>
-                                <div className="badge badge-outline badge-sm">Respeto</div>
-                                <div className="badge badge-outline badge-sm">Excelencia</div>
-                            </div>
                         </div>
                     </div>
                 </div>

@@ -114,9 +114,9 @@ export default function CustomBubbleMenu ({
     const pathname = usePathname();
 
     const overlayRef = useRef<HTMLDivElement>(null);
-    const bubblesRef = useRef<HTMLAnchorElement[]>([]);
+    const bubblesRef = useRef<HTMLButtonElement[]>([]);
     const labelRefs = useRef<HTMLSpanElement[]>([]);
-    const submenuBubblesRef = useRef<HTMLAnchorElement[]>([]);
+    const submenuBubblesRef = useRef<HTMLButtonElement[]>([]);
     const submenuLabelRefs = useRef<HTMLSpanElement[]>([]);
 
     const menuItems = items?.length ? items : CENFOTEC_ITEMS;

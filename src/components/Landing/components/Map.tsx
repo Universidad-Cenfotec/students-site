@@ -20,6 +20,8 @@ export const Map = () => {
 
             // Add a small delay to ensure the container is fully rendered
             const timer = setTimeout(() => {
+                if (!mapContainerRef.current) return;
+
                 const map = new mapboxgl.Map({
                     container: mapContainerRef.current,
                     style: 'mapbox://styles/mapbox/streets-v11',

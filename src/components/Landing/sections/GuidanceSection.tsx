@@ -3,7 +3,7 @@ import { BlogGraphic, StudentKitGraphic } from '@/components/Landing/components/
 
 const GuidanceSection: React.FC = () => {
 
-    const electionsGraphic = 'https://res.cloudinary.com/glovooker/image/upload/v1726848070/students-site/elections.png';
+    const studentCouncilGraphic = 'https://res.cloudinary.com/glovooker/image/upload/v1722830884/students-site/student-council.png';
 
     return (
         <div className="w-full max-w-7xl mx-auto h-auto text-center md:text-left my-40 px-8 md:px-24">
@@ -78,12 +78,12 @@ const GuidanceSection: React.FC = () => {
                 </div>
             </div>
 
-            {/* Student Council Section - HIDDEN */ }
-            {/* <div className="card bg-base-100 shadow-xl">
+            {/* Student Council Section */ }
+            <div className="card bg-base-100 shadow-xl">
                 <div className="card-body p-8 lg:p-12">
                     <div className="flex flex-col lg:flex-row items-center gap-8">
                         <div className="w-full lg:w-1/2">
-                            <img src={ electionsGraphic } alt="Elecciones" className="w-full h-auto rounded-lg" />
+                            <img src={ studentCouncilGraphic } alt="Student Council" className="w-full h-auto rounded-lg" />
                         </div>
                         <div className="w-full lg:w-1/2 text-center lg:text-left">
                             <h3 className="text-2xl sm:text-3xl font-semibold text-gray-600 mb-2">
@@ -107,7 +107,7 @@ const GuidanceSection: React.FC = () => {
                         </div>
                     </div>
                 </div>
-            </div> */}
+            </div>
         </div>
     );
 };

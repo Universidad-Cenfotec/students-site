@@ -26,15 +26,15 @@ const StudentCouncilSection: React.FC = () => {
                 <div className="w-full lg:w-[45%] text-left">
                     <div className="card bg-base-100 shadow-xl">
                         <div className="card-body">
-                            <h3 className="card-title text-xl sm:text-2xl font-semibold text-gray-600 mb-4">
-                                Requisitos para formar parte del <span className="text-secondary text-xl sm:text-2xl font-semibold">Consejo Estudiantil de la Escuela:</span>
+                            <h3 className="text-xl sm:text-2xl font-semibold mb-4 leading-tight">
+                                <span className="text-gray-600">Requisitos para formar parte del</span><span className="text-secondary text-xl sm:text-2xl font-semibold"> Consejo Estudiantil de la Escuela:</span>
                             </h3>
                             <ul className="list-decimal list-inside space-y-3">
                                 <li className="text-gray-700">
                                     Ser mayor de edad.
                                 </li>
                                 <li className="text-gray-700">
-                                    Ser estudiante activo (periodo 2024-3) de la <span className="text-primary">Universidad</span> <span className="text-primary font-din">CENFOTEC</span> en el momento de la elección. La suspensión de estudios y la aplicación de una sanción disciplinaria, hará perder la calidad de representante estudiantil.
+                                    Ser estudiante activo (periodo 2025-3) de la <span className="text-primary">Universidad</span> <span className="text-primary font-din">CENFOTEC</span> en el momento de la elección. La suspensión de estudios y la aplicación de una sanción disciplinaria, hará perder la calidad de representante estudiantil.
                                 </li>
                                 <li className="text-gray-700">
                                     No desempeñar cargos administrativos o docentes dentro de la <span className="text-primary">Universidad</span> <span className="text-primary font-din">CENFOTEC</span>.
@@ -52,8 +52,8 @@ const StudentCouncilSection: React.FC = () => {
                 <div className="w-full lg:w-[45%] text-left">
                     <div className="card bg-base-100 shadow-xl">
                         <div className="card-body">
-                            <h3 className="card-title text-xl sm:text-2xl font-semibold text-gray-600 mb-4">
-                                Responsabilidades de los representantes <span className="text-secondary text-xl sm:text-2xl font-semibold">del Consejo Estudiantil de la Escuela:</span>
+                            <h3 className="text-xl sm:text-2xl font-semibold mb-4 leading-tight">
+                                <span className="text-gray-600">Responsabilidades de los representantes</span><span className="text-secondary text-xl sm:text-2xl font-semibold"> del Consejo Estudiantil de la Escuela:</span>
                             </h3>
                             <ul className="list-decimal list-inside space-y-3">
                                 <li className="text-gray-700">

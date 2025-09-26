@@ -19,11 +19,8 @@ const AssistanceSection: React.FC = () => {
                             <img src={ assistanceGraphic } alt="Assistance Graphic" className="w-11/12 mx-auto rounded-lg" />
                         </div>
                         <div className="w-full lg:w-2/5 text-left">
-                            <h3 className="text-2xl sm:text-3xl font-semibold text-gray-600 mb-2">
-                                Visita Nuestro
-                            </h3>
-                            <h3 className="text-2xl sm:text-3xl font-semibold text-secondary mb-6">
-                                Centro de Asistencia
+                            <h3 className="text-2xl sm:text-3xl font-semibold mb-2 leading-tight">
+                                <span className="text-gray-600">Visita Nuestro</span><span className="text-secondary text-2xl sm:text-3xl font-semibold"> Centro de Asistencia</span>
                             </h3>
                             <p className="text-gray-600 leading-relaxed mb-6">
                                 El <span className="text-primary font-semibold">Centro de Asistencia</span> es el principal medio de comunicación, por el cual podrá ponerse en contacto con cualquiera de los departamentos de la Universidad a través de un tiquete de soporte.

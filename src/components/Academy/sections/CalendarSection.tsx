@@ -19,11 +19,8 @@ const CalendarSection: React.FC = () => {
                             <img src={ academicCalendarGraphic } alt="Academic Calendar Graphic" className="w-full rounded-lg" />
                         </div>
                         <div className="w-full lg:w-2/5 text-left">
-                            <h3 className="text-2xl sm:text-3xl font-semibold text-gray-600 mb-2">
-                                Calendario
-                            </h3>
-                            <h3 className="text-2xl sm:text-3xl font-semibold text-secondary mb-6">
-                                Académico
+                            <h3 className="text-2xl sm:text-3xl font-semibold mb-2 leading-tight">
+                                <span className="text-gray-600">Calendario</span><span className="text-secondary text-2xl sm:text-3xl font-semibold"> Académico</span>
                             </h3>
                             <p className="text-gray-600 leading-relaxed mb-6">
                                 <span className="text-primary font-semibold">Universidad</span> <span className="text-primary font-din font-semibold">CENFOTEC</span> ofrece un Calendario Académico anual para carreras cuatrimestrales y técnicos por microcursos. Cada enlace lleva al documento en PDF descargable. Además, cada rubro dirige a enlaces con más información o formularios según el trámite necesario.

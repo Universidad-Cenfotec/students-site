@@ -1,6 +1,6 @@
 const ElectionsSection: React.FC = () => {
 
-    const electionsFlyer = 'https://res.cloudinary.com/glovooker/image/upload/v1722969249/students-site/elections-flyer.png';
+    const electionsFlyer = 'https://res.cloudinary.com/glovooker/image/upload/v1758908770/students-site/elections-flyer.png';
 
     return (
         <div className="w-full max-w-7xl mx-auto h-auto text-center md:text-left my-8 px-8 md:px-24">
@@ -18,8 +18,8 @@ const ElectionsSection: React.FC = () => {
                 <div className="w-full lg:w-[55%] text-left">
                     <div className="card bg-base-100 shadow-xl">
                         <div className="card-body">
-                            <h3 className="card-title text-xl sm:text-2xl font-semibold text-gray-600 mb-4">
-                                ¿Deseas inscribirte como candidato para formar <span className="text-primary font-medium">parte del Consejo Estudiantil de tu escuela?</span>
+                            <h3 className="text-xl sm:text-2xl font-semibold mb-4 leading-tight">
+                                <span className="text-gray-600">¿Deseas inscribirte como candidato para formar</span><span className="text-primary font-medium"> parte del Consejo Estudiantil de tu escuela?</span>
                             </h3>
                             <p className="mx-auto lg:mx-0 my-8 leading-relaxed text-lg">
                                 La <span className="text-primary">Universidad</span> <span className="text-primary font-din">CENFOTEC</span> invita a toda la Comunidad Estudiantil a participar del proceso electoral para elegir a los representantes estudiantiles que conformarán el Consejo Estudiantil de cada escuela. Las elecciones estudiantiles se realizarán una vez al año en el tercer periodo cuatrimestral.
@@ -31,7 +31,7 @@ const ElectionsSection: React.FC = () => {
                                 </svg>
                                 <div>
                                     <h4 className="font-bold">PERIODO DE INSCRIPCIÓN DE CANDIDATOS:</h4>
-                                    <div className="text-sm">23 de setiembre al 21 de octubre, 2024</div>
+                                    <div className="text-sm">21 de setiembre al 19 de octubre, 2025</div>
                                 </div>
                             </div>
 
@@ -41,16 +41,16 @@ const ElectionsSection: React.FC = () => {
                                 </svg>
                                 <div>
                                     <h4 className="font-bold">PERIODO DE ELECCIONES ESTUDIANTILES:</h4>
-                                    <div className="text-sm">28 de octubre al 01 de noviembre, 2024</div>
+                                    <div className="text-sm">27 de octubre al 02 de noviembre, 2025</div>
                                 </div>
                             </div>
 
-                            <div className="flex flex-col xl:flex-row items-center gap-4">
+                            <div className="flex flex-col items-center gap-4">
                                 <a
                                     href='https://forms.zoho.com/pbrenes/form/Formulariodeinscripcindecandidatosparaformarparted/formperma/6A2nIg0hvdOjOTxfflMD-wS5lRyIu1d3Y7KAwp3nORU?zf_lang=es'
                                     target='_blank'
                                     rel="noopener noreferrer"
-                                    className="btn btn-primary text-white btn-lg text-base sm:text-xl font-semibold px-8 sm:px-12"
+                                    className="btn btn-primary text-white btn-lg text-sm sm:text-base font-semibold px-6 sm:px-8 w-full"
                                 >
                                     Formulario de Inscripción de candidatos
                                 </a>
@@ -58,7 +58,7 @@ const ElectionsSection: React.FC = () => {
                                     href='https://drive.google.com/file/d/1D8E7z6_j-IfVV8VPhWkNdtlPJ6VYDmaM/view'
                                     target='_blank'
                                     rel="noopener noreferrer"
-                                    className="btn btn-outline btn-secondary btn-lg text-base sm:text-xl font-semibold px-8 sm:px-12 hover:text-white"
+                                    className="btn btn-outline btn-secondary btn-lg text-sm sm:text-base font-semibold px-6 sm:px-8 hover:text-white w-full"
                                 >
                                     Reglamento para la Organización Estudiantil
                                 </a>

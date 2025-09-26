@@ -62,7 +62,7 @@ const GuidanceSection: React.FC = () => {
                                 Entérate siempre de lo que está sucediendo en nuestra comunidad. Podrás estar al tanto de artículos, actividades, talleres, charlas, eventos, nuevos clubes, recursos, y mucho más a través de nuestro <span className="text-primary font-semibold">Blog Universitario</span>, siempre al día con las últimas novedades dentro de <span className="text-primary font-semibold">CENFOTEC</span>.
                             </p>
                             <a
-                                href="/community"
+                                href="/community/blog"
                                 className="btn btn-outline btn-secondary btn-lg text-base sm:text-xl font-semibold px-8 sm:px-12 shadow-lg hover:shadow-xl hover:!text-white transition-all duration-300"
                             >
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">

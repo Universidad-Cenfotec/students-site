@@ -36,7 +36,7 @@ const FeaturesSection: React.FC = () => {
                     <div className="card-body items-center text-center p-8">
                         <div className="mb-4">
                             <a
-                                href='/community'
+                                href='/community/blog'
                                 className="btn btn-primary text-white w-24 h-24 rounded-3xl flex justify-center items-center shadow-lg hover:shadow-xl transition-shadow duration-200"
                             >
                                 <CommentIcon className="text-4xl text-white" />

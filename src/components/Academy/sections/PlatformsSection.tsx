@@ -23,11 +23,8 @@ const PlatformsSection: React.FC = () => {
                 <div className="card-body p-8 lg:p-12">
                     <div className="flex flex-col-reverse lg:flex-row items-center justify-between mx-auto">
                         <div className="w-full lg:w-2/5 text-left">
-                            <h3 className="text-2xl sm:text-3xl font-semibold text-gray-600 mb-2">
-                                Video Informativo Sobre el
-                            </h3>
-                            <h3 className="text-2xl sm:text-3xl font-semibold text-secondary mb-6">
-                                Uso de las Plataformas
+                            <h3 className="text-2xl sm:text-3xl font-semibold mb-2 leading-tight">
+                                <span className="text-gray-600">Video Informativo Sobre el</span><span className="text-secondary text-2xl sm:text-3xl font-semibold"> Uso de las Plataformas</span>
                             </h3>
                             <p className="text-gray-600 leading-relaxed mb-6">
                                 A continuación, se muestran las diferentes plataformas que utiliza la universidad para el manejo de los diferentes cursos. Como estudiante de la <span className="text-primary font-semibold">Universidad</span> <span className="text-primary font-din font-semibold">CENFOTEC</span>, tendrás acceso a diferentes plataformas, a continuación encontrará un video informativo explicando cada una de ellas:

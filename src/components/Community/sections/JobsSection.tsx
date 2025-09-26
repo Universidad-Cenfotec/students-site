@@ -17,11 +17,8 @@ const JobsSection: React.FC = () => {
                             <img src={ jobsGraphic } alt="Jobs Graphic" className="w-4/5 mx-auto rounded-lg" />
                         </div>
                         <div className="w-full lg:w-2/5 text-left">
-                            <h3 className="text-2xl sm:text-3xl font-semibold text-gray-600 mb-2">
-                                Bolsa de
-                            </h3>
-                            <h3 className="text-2xl sm:text-3xl font-semibold text-secondary mb-6">
-                                Trabajo
+                            <h3 className="text-2xl sm:text-3xl font-semibold mb-2 leading-tight">
+                                <span className="text-gray-600">Bolsa de</span><span className="text-secondary text-2xl sm:text-3xl font-semibold"> Trabajo</span>
                             </h3>
                             <p className="text-gray-600 leading-relaxed mb-6">
                                 <span className="text-primary font-semibold">Universidad</span> <span className="text-primary font-din font-semibold">CENFOTEC</span> ofrece una gran oportunidad, en la que, a través de nuestra plataforma, podrán visualizar ofertas, postularse y comunicarse directamente con las empresas en las que hay mayor interés, de manera que sea un proceso transparente y confiable.

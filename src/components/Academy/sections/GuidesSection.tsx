@@ -2,21 +2,21 @@ import { GuideCard } from '../components/GuideCard';
 
 const GuidesSection: React.FC = () => {
     const guides = [
-        {
-            title: 'Microsoft Word',
-            link: 'https://drive.google.com/file/d/1yjSrVp49m8Ury3nryKF8bKDdK_wa1Xya/view?usp=sharing',
-            imageUrl: 'https://res.cloudinary.com/glovooker/image/upload/v1722920098/students-site/logo-word.png',
-        },
-        {
-            title: 'Microsoft Excel',
-            link: 'https://drive.google.com/file/d/1QxmyP_bQFpP4hcmpO3r5UNYDO7q27mUn/view?usp=sharing',
-            imageUrl: 'https://res.cloudinary.com/glovooker/image/upload/v1722920098/students-site/logo-excel.png',
-        },
-        {
-            title: 'Microsoft PowerPoint',
-            link: 'https://drive.google.com/file/d/1ApzyKf1IJ-IfyDyei4pb67zaXh6ighjH/view?usp=sharing',
-            imageUrl: 'https://res.cloudinary.com/glovooker/image/upload/v1722920098/students-site/logo-powerpoint.png',
-        },
+        // {
+        //     title: 'Microsoft Word',
+        //     link: 'https://drive.google.com/file/d/1yjSrVp49m8Ury3nryKF8bKDdK_wa1Xya/view?usp=sharing',
+        //     imageUrl: 'https://res.cloudinary.com/glovooker/image/upload/v1722920098/students-site/logo-word.png',
+        // },
+        // {
+        //     title: 'Microsoft Excel',
+        //     link: 'https://drive.google.com/file/d/1QxmyP_bQFpP4hcmpO3r5UNYDO7q27mUn/view?usp=sharing',
+        //     imageUrl: 'https://res.cloudinary.com/glovooker/image/upload/v1722920098/students-site/logo-excel.png',
+        // },
+        // {
+        //     title: 'Microsoft PowerPoint',
+        //     link: 'https://drive.google.com/file/d/1ApzyKf1IJ-IfyDyei4pb67zaXh6ighjH/view?usp=sharing',
+        //     imageUrl: 'https://res.cloudinary.com/glovooker/image/upload/v1722920098/students-site/logo-powerpoint.png',
+        // },
         {
             title: 'Discord',
             link: 'https://www.google.com/url?q=https%3A%2F%2Fsupport.discord.com%2Fhc%2Fes%2Farticles%2F360033931551-Primeros-pasos&sa=D&sntz=1&usg=AOvVaw3Rv7FmS9khnnBtMvgn24q4',

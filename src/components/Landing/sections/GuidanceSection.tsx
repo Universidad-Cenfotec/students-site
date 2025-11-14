@@ -79,7 +79,7 @@ const GuidanceSection: React.FC = () => {
             </div>
 
             {/* Student Council Section */ }
-            <div className="card bg-base-100 shadow-xl">
+            {/* <div className="card bg-base-100 shadow-xl">
                 <div className="card-body p-8 lg:p-12">
                     <div className="flex flex-col lg:flex-row items-center gap-8">
                         <div className="w-full lg:w-1/2">
@@ -107,7 +107,7 @@ const GuidanceSection: React.FC = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
         </div>
     );
 };

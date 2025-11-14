@@ -10,7 +10,7 @@ export default function StudentCouncilPage () {
             <div className="pt-24">
                 <StudentCouncilSection />
                 {/* <CurrentCouncilSection /> */ }
-                <ElectionsSection />
+                {/* <ElectionsSection /> */ }
             </div>
         </ClientLayout>
     );

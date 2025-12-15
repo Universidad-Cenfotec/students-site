@@ -1,7 +1,7 @@
 const CurrentCouncilSection: React.FC = () => {
 
-    const currentCouncilMember1 = 'https://res.cloudinary.com/glovooker/image/upload/v1734318011/students-site/Abel_Corrales_Vargas.jpg';
-    const currentCouncilMember2 = 'https://res.cloudinary.com/glovooker/image/upload/v1734318011/students-site/VargasJaramilloJoseIgnacio.jpg';
+    const currentCouncilMember1 = 'https://res.cloudinary.com/glovooker/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_10px_solid_blue,b_rgb:262c35/v1765559038/students-site/TatianaSolisQuesada.jpg';
+    const currentCouncilMember2 = 'https://res.cloudinary.com/glovooker/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_10px_solid_blue,b_rgb:262c35/v1765559263/students-site/DanielaMoralesMelendez.jpg';
 
     return (
         <div className="w-full max-w-7xl mx-auto h-auto text-center md:text-left my-8 px-8 md:px-24">
@@ -13,7 +13,7 @@ const CurrentCouncilSection: React.FC = () => {
             </h2>
 
             <div className="space-y-8 my-16">
-                {/* Member 1 - Abel Corrales Vargas */ }
+                {/* Member 1 - Tatiana Solís Quesada */ }
                 <div className="card bg-base-100 shadow-xl">
                     <div className="card-body p-8">
                         <div className="flex flex-col lg:flex-row items-start lg:items-center gap-8">
@@ -21,11 +21,11 @@ const CurrentCouncilSection: React.FC = () => {
                             <div className="w-full lg:w-1/3 flex flex-col items-center lg:items-start">
                                 <div className="avatar mb-4">
                                     <div className="w-32 h-32 lg:w-40 lg:h-40 rounded-full">
-                                        <img src={ currentCouncilMember1 } alt='Abel Corrales Vargas' className="object-cover object-top" />
+                                        <img src={ currentCouncilMember1 } alt='Tatiana Solís Quesada' className="object-cover object-top" />
                                     </div>
                                 </div>
                                 <h3 className="card-title text-xl sm:text-2xl font-semibold text-secondary mb-2 text-center lg:text-left">
-                                    Abel Corrales Vargas
+                                    Tatiana Solís Quesada
                                 </h3>
                                 <p className="text-gray-600 text-base sm:text-lg font-semibold text-center lg:text-left">
                                     Estudiante del Bachillerato en Ingeniería de Software
@@ -37,7 +37,7 @@ const CurrentCouncilSection: React.FC = () => {
                                 <div className="w-full">
                                     <div className="divider lg:hidden mb-4"></div>
                                     <blockquote className="text-sm sm:text-base text-gray-600 leading-relaxed italic">
-                                        "De manera personal, me consideraría sumamente feliz de poder ser una más de las personas que promueven que nuestra universidad sea un lugar integral, seguro y activo para todas las personas. Considero que puedo aportar una representación significativa para los estudiantes de la escuela de Software, y en lo que mis habilidades y tiempo me permitan, estar a disposición de escuchar y dialogar con los demás estudiantes para cualquier idea, problema o solicitud que yo como representante pueda abarcar"
+                                        "Me interesa involucrarme activamente en la vida universitaria y siento que formar parte del equipo electoral estudiantil es una gran oportunidad para aportar de manera responsable y con compromiso a la comunidad de CENFOTEC. Me motiva contribuir a que la participación estudiantil sea cada vez más sólida, justa e inclusiva, creando un espacio seguro para los estudiantes. Además, sé que esta experiencia me ayudará a seguir creciendo en habilidades como el liderazgo, la organización y el trabajo en equipo, mientras aporto con entusiasmo a nuestra comunidad estudiantil. Estoy convencida de que puedo ofrecer una visión amplia como estudiante, proponiendo ideas creativas que ayuden a la comunidad estudiantil a sentirse parte de nuestra Universidad. Considero que este espacio no solo me permitirá aprender de los demás, sino también impulsar soluciones que promuevan la unión, la colaboración y un ambiente universitario más participativo, inclusivo y enriquecedor para todos."
                                     </blockquote>
                                 </div>
                             </div>
@@ -45,7 +45,7 @@ const CurrentCouncilSection: React.FC = () => {
                     </div>
                 </div>
 
-                {/* Member 2 - Jose Ignacio Vargas Jaramillo */ }
+                {/* Member 2 - Daniela Morales Meléndez */ }
                 <div className="card bg-base-100 shadow-xl">
                     <div className="card-body p-8">
                         <div className="flex flex-col lg:flex-row items-start lg:items-center gap-8">
@@ -53,11 +53,11 @@ const CurrentCouncilSection: React.FC = () => {
                             <div className="w-full lg:w-1/3 flex flex-col items-center lg:items-start">
                                 <div className="avatar mb-4">
                                     <div className="w-32 h-32 lg:w-40 lg:h-40 rounded-full">
-                                        <img src={ currentCouncilMember2 } alt='Jose Ignacio Vargas Jaramillo' className="object-cover object-top" />
+                                        <img src={ currentCouncilMember2 } alt='Daniela Morales Meléndez' className="object-cover object-top" />
                                     </div>
                                 </div>
                                 <h3 className="card-title text-xl sm:text-2xl font-semibold text-secondary mb-2 text-center lg:text-left">
-                                    Jose Ignacio Vargas Jaramillo
+                                    Daniela Morales Meléndez
                                 </h3>
                                 <p className="text-gray-600 text-base sm:text-lg font-semibold text-center lg:text-left">
                                     Estudiante del Bachillerato en Ingeniería de Software
@@ -69,7 +69,7 @@ const CurrentCouncilSection: React.FC = () => {
                                 <div className="w-full">
                                     <div className="divider lg:hidden mb-4"></div>
                                     <blockquote className="text-sm sm:text-base text-gray-600 leading-relaxed italic">
-                                        "Quiero formar parte del consejo para romper esa brecha de comunicación entre los estudiantes. Crear una comunidad estudiantil y robusta, llena de actividades sociales dentro y fuera de la universidad. Fomentar competencias dentro de la universidad para  el continuo aprendizaje. Me interesa mucho abrir la puerta del diseño de videojuegos por medio de game jams universitarios en los cuales los estudiantes compitan entre sí. Otro de mis principales puntos de enfoque es la comunicación entre estudiantes de diferentes grados. Para esto me interesa la creación de canales de comunicación abiertos para cualquier estudiante en donde la comunidad estudiantil pueda preguntar sobre cursos, profesores y demás actividades de la universidad. Por último y no menos importante, promover actividades sociales como fiesta de bienvenida, cada inicio de cuatrimestre, torneos de videojuegos y eventos universitarios en donde se va a poder exponer su emprendimiento a los demás estudiantes"
+                                        "Mi objetivo es contribuir al fortalecimiento de la imagen de las mujeres en tecnología, impulsar los clubes estudiantiles de la universidad y reforzar la relación entre el estudiantado y los directivos. Deseo promover proyectos de intercambio de conocimiento y espacios de networking con otras universidades del mundo, así como desarrollar actividades de impacto tecnológico y social que permitan a los estudiantes de CENFOTEC destacar y proyectar su talento. Busco fortalecer tanto la imagen de la institución como la de sus estudiantes y profesores, e incentivar a la comunidad estudiantil a construir una relación con su alma mater que vaya más allá de obtener un título: una conexión basada en el crecimiento, la colaboración y el orgullo de pertenecer a CENFOTEC."
                                     </blockquote>
                                 </div>
                             </div>

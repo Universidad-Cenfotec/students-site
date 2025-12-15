@@ -1,44 +1,44 @@
 {
-    "name": "students-site",
-    "version": "0.1.0",
-    "private": true,
-    "scripts": {
-        "dev": "next dev",
-        "build": "next build",
-        "start": "next start",
-        "lint": "next lint"
-    },
-    "dependencies": {
-        "@lexical/html": "^0.21.0",
-        "@lexical/link": "^0.21.0",
-        "@lexical/list": "^0.21.0",
-        "@lexical/react": "^0.21.0",
-        "@lexical/rich-text": "^0.21.0",
-        "@lexical/utils": "^0.21.0",
-        "@notionhq/client": "^2.2.15",
-        "@payloadcms/db-mongodb": "^3.21.0",
-        "@payloadcms/next": "^3.21.0",
-        "@payloadcms/richtext-lexical": "^3.21.0",
-        "daisyui": "^4.12.10",
-        "gsap": "^3.12.2",
-        "framer-motion": "^11.0.0",
-        "graphql": "^16.10.0",
-        "lexical": "^0.21.0",
-        "mapbox-gl": "^3.6.0",
-        "next": "^15.1.6",
-        "payload": "^3.21.0",
-        "payload-cloudinary": "^1.5.0",
-        "react": "^19.0.0",
-        "react-dom": "^19.0.0",
-        "sharp": "^0.33.5"
-    },
-    "devDependencies": {
-        "@types/node": "^20",
-        "@types/react": "^19.0.0",
-        "@types/react-dom": "^19.0.0",
-        "autoprefixer": "^10.4.20",
-        "postcss": "^8.4.49",
-        "tailwindcss": "^3.4.15",
-        "typescript": "^5.2.2"
-    }
+  "name": "students-site",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@lexical/html": "^0.21.0",
+    "@lexical/link": "^0.21.0",
+    "@lexical/list": "^0.21.0",
+    "@lexical/react": "^0.21.0",
+    "@lexical/rich-text": "^0.21.0",
+    "@lexical/utils": "^0.21.0",
+    "@notionhq/client": "^2.2.15",
+    "@payloadcms/db-mongodb": "^3.21.0",
+    "@payloadcms/next": "^3.21.0",
+    "@payloadcms/richtext-lexical": "^3.21.0",
+    "daisyui": "^4.12.10",
+    "gsap": "^3.12.2",
+    "framer-motion": "^11.0.0",
+    "graphql": "^16.10.0",
+    "lexical": "^0.21.0",
+    "mapbox-gl": "^3.6.0",
+    "next": "15.1.11",
+    "payload": "^3.21.0",
+    "payload-cloudinary": "^1.5.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "sharp": "^0.33.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.15",
+    "typescript": "^5.2.2"
+  }
 }

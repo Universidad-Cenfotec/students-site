@@ -34,7 +34,7 @@ const StudentCouncilSection: React.FC = () => {
                                     Ser mayor de edad.
                                 </li>
                                 <li className="text-gray-700">
-                                    Ser estudiante activo (periodo 2025-3) de la <span className="text-primary">Universidad</span> <span className="text-primary font-din">CENFOTEC</span> en el momento de la elección. La suspensión de estudios y la aplicación de una sanción disciplinaria, hará perder la calidad de representante estudiantil.
+                                    Ser estudiante activo (periodo 2026-3) de la <span className="text-primary">Universidad</span> <span className="text-primary font-din">CENFOTEC</span> en el momento de la elección. La suspensión de estudios y la aplicación de una sanción disciplinaria, hará perder la calidad de representante estudiantil.
                                 </li>
                                 <li className="text-gray-700">
                                     No desempeñar cargos administrativos o docentes dentro de la <span className="text-primary">Universidad</span> <span className="text-primary font-din">CENFOTEC</span>.

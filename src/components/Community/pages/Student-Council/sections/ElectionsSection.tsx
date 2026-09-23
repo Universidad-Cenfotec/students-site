@@ -31,7 +31,7 @@ const ElectionsSection: React.FC = () => {
                                 </svg>
                                 <div>
                                     <h4 className="font-bold">PERIODO DE INSCRIPCIÓN DE CANDIDATOS:</h4>
-                                    <div className="text-sm">21 de setiembre al 19 de octubre, 2025</div>
+                                    <div className="text-sm">21 de setiembre al 19 de octubre, 2026</div>
                                 </div>
                             </div>
 
@@ -41,7 +41,7 @@ const ElectionsSection: React.FC = () => {
                                 </svg>
                                 <div>
                                     <h4 className="font-bold">PERIODO DE ELECCIONES ESTUDIANTILES:</h4>
-                                    <div className="text-sm">27 de octubre al 02 de noviembre, 2025</div>
+                                    <div className="text-sm">26 de octubre al 02 de noviembre, 2026</div>
                                 </div>
                             </div>
 

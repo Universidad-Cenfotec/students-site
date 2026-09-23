@@ -9,8 +9,8 @@ export default function StudentCouncilPage () {
         <ClientLayout>
             <div className="pt-24">
                 <StudentCouncilSection />
-                <CurrentCouncilSection />
-                {/* <ElectionsSection /> */ }
+                {/*<CurrentCouncilSection /> */ }
+                <ElectionsSection />
             </div>
         </ClientLayout>
     );

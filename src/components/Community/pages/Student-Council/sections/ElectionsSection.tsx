@@ -1,6 +1,6 @@
 const ElectionsSection: React.FC = () => {
 
-    const electionsFlyer = 'https://res.cloudinary.com/glovooker/image/upload/v1758908770/students-site/elections-flyer.png';
+    const electionsFlyer = 'https://res.cloudinary.com/uwgwvmjn/image/upload/f_auto,q_auto/Elecciones-Estudiantiles-B-1';
 
     return (
         <div className="w-full max-w-7xl mx-auto h-auto text-center md:text-left my-8 px-8 md:px-24">

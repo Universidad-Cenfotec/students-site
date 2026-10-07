@@ -80,6 +80,11 @@ const CENFOTEC_ITEMS: MenuItem[] = [
                 label: 'Clubes',
                 href: '/community/clubs',
                 ariaLabel: 'Clubes'
+            },
+            {
+                label: 'Rueda de Empleabilidad',
+                href: '/community/job-fair',
+                ariaLabel: 'Rueda de Empleabilidad'
             }
         ]
     },

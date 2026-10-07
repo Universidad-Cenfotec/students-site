@@ -34,10 +34,16 @@ export const Navbar = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    // Arreglo auxiliar para saber si una subruta de Comunidad NO es la principal /community
+    const isSubCommunityPath = 
+        pathname === '/community/student-council' || 
+        pathname === '/community/clubs' || 
+        pathname === '/community/employability-fair';
+
     return (
         <div className={ `navbar sticky top-0 z-50 transition-all duration-300 ${ isScrolled ? 'bg-base-100 shadow-lg' : 'bg-transparent shadow-none' }` }>
             <div className="navbar-start">
-                {/* Mobile menu button */ }
+                {/* Mobile menu button */}
                 <div className="dropdown lg:hidden">
                     <div tabIndex={ 0 } role="button" className="btn btn-ghost btn-circle" onClick={ toggleDrawer }>
                         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -46,13 +52,13 @@ export const Navbar = () => {
                     </div>
                 </div>
 
-                {/* Logo */ }
+                {/* Logo */}
                 <Link href="/" className="btn btn-ghost text-xl">
                     <img src='/images/logo.png' alt="Logo" className="h-10 w-auto" />
                 </Link>
             </div>
 
-            {/* Desktop Navigation */ }
+            {/* Desktop Navigation */}
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 gap-2">
                     <li>
@@ -77,9 +83,9 @@ export const Navbar = () => {
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={ 2 } d="M19 9l-7 7-7-7" />
                             </svg>
                         </div>
-                        <ul tabIndex={ 0 } className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow-xl">
+                        <ul tabIndex={ 0 } className="dropdown-content menu bg-base-100 rounded-box z-[1] w-56 p-2 shadow-xl">
                             <li>
-                                <Link href="/community" className={ `flex items-center gap-3 ${ isActive('/community') && pathname !== '/community/student-council' && pathname !== '/community/clubs' ? 'bg-primary text-white hover:bg-primary hover:text-white' : 'hover:bg-base-200' }` }>
+                                <Link href="/community" className={ `flex items-center gap-3 ${ isActive('/community') && !isSubCommunityPath ? 'bg-primary text-white hover:bg-primary hover:text-white' : 'hover:bg-base-200' }` }>
                                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={ 2 } d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
                                     </svg>
@@ -102,6 +108,15 @@ export const Navbar = () => {
                                     Clubes
                                 </Link>
                             </li>
+                            {/* NUEVA OPCION: Rueda de Empleabilidad */}
+                            <li>
+                                <Link href="/community/employability-fair" className={ `flex items-center gap-3 ${ isActive('/community/employability-fair') ? 'bg-primary text-white hover:bg-primary hover:text-white' : 'hover:bg-base-200' }` }>
+                                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={ 2 } d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                    </svg>
+                                    Rueda de Empleabilidad
+                                </Link>
+                            </li>
                         </ul>
                     </li>
                     <li>
@@ -112,11 +127,11 @@ export const Navbar = () => {
                 </ul>
             </div>
 
-            {/* Right side - empty to maintain center alignment */ }
+            {/* Right side */}
             <div className="navbar-end">
             </div>
 
-            {/* Mobile Drawer */ }
+            {/* Mobile Drawer */}
             { isDrawerOpen && (
                 <div className="drawer-side z-50">
                     <div className="drawer-overlay" onClick={ closeDrawer }></div>
@@ -160,7 +175,7 @@ export const Navbar = () => {
                                 <span className="text-sm font-semibold text-gray-500 uppercase tracking-wider">Comunidad</span>
                             </li>
                             <li>
-                                <Link href="/community" className={ `flex items-center gap-3 text-lg ${ isActive('/community') && pathname !== '/community/student-council' && pathname !== '/community/clubs' ? 'bg-primary text-white hover:bg-primary hover:text-white' : 'hover:bg-base-200' }` } onClick={ closeDrawer }>
+                                <Link href="/community" className={ `flex items-center gap-3 text-lg ${ isActive('/community') && !isSubCommunityPath ? 'bg-primary text-white hover:bg-primary hover:text-white' : 'hover:bg-base-200' }` } onClick={ closeDrawer }>
                                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={ 2 } d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
                                     </svg>
@@ -181,6 +196,15 @@ export const Navbar = () => {
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={ 2 } d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                                     </svg>
                                     Clubes
+                                </Link>
+                            </li>
+                            {/* NUEVA OPCION MOBILE: Rueda de Empleabilidad */}
+                            <li>
+                                <Link href="/community/employability-fair" className={ `flex items-center gap-3 text-lg ${ isActive('/community/employability-fair') ? 'bg-primary text-white hover:bg-primary hover:text-white' : 'hover:bg-base-200' }` } onClick={ closeDrawer }>
+                                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={ 2 } d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                    </svg>
+                                    Rueda de Empleabilidad
                                 </Link>
                             </li>
                             <li>

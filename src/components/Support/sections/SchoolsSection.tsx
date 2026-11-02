@@ -10,12 +10,22 @@ const SchoolsSection: React.FC = () => {
             ],
         },
         {
-            src: 'https://res.cloudinary.com/glovooker/image/upload/v1734327318/students-site/Intelligent-Systems-Color.png',
-            heading: 'Escuela de Sistemas Inteligentes',
-            email: 'esint@ucenfotec.ac.cr',
-            director: 'Tomás de Camino Beck',
+            src: 'https://res.cloudinary.com/glovooker/image/upload/v1734327318/students-site/Computing-Fundamentals-Color.png',
+            heading: 'Escuela de Fundamentos',
+            email: 'efun@ucenfotec.ac.cr',
+            director: 'Yusselin Murcia Cespedes',
             assistants: [
-                { name: 'Gabriela Urbina Hernández', phone: '6294-6231' }
+                { name: 'Álvaro Ospina Beltrán', phone: '6097-2749' }
+            ],
+        },
+        {
+            src: 'https://res.cloudinary.com/glovooker/image/upload/v1734327318/students-site/Software-Engineering-Color.png',
+            heading: 'Escuela de Ingeniería del Software',
+            email: 'esoft@ucenfotec.ac.cr',
+            director: 'Sergio Oviedo Seas',
+            assistants: [
+                { name: 'Ingrid Mora Segura', phone: '6391-2632' },
+                { name: 'Priscilla Díaz Rodríguez', phone: '64656346' }
             ],
         },
         {
@@ -28,6 +38,15 @@ const SchoolsSection: React.FC = () => {
             ],
         },
         {
+            src: 'https://res.cloudinary.com/glovooker/image/upload/v1734327318/students-site/Intelligent-Systems-Color.png',
+            heading: 'Escuela de Sistemas Inteligentes',
+            email: 'esint@ucenfotec.ac.cr',
+            director: 'Tomás de Camino Beck',
+            assistants: [
+                { name: 'Kendy Cortés Durán', phone: '6294-6231' }
+            ],
+        },
+        {
             src: 'https://res.cloudinary.com/glovooker/image/upload/v1734327318/students-site/Information-Technology-Color.png',
             heading: 'Escuela de Tecnologías de Información',
             email: 'eti@ucenfotec.ac.cr',
@@ -37,22 +56,21 @@ const SchoolsSection: React.FC = () => {
             ],
         },
         {
-            src: 'https://res.cloudinary.com/glovooker/image/upload/v1734327318/students-site/Software-Engineering-Color.png',
-            heading: 'Escuela de Ingeniería del Software',
-            email: 'esoft@ucenfotec.ac.cr',
-            director: 'Sergio Oviedo Seas',
+            src: 'https://res.cloudinary.com/glovooker/image/upload/v1734327318/students-site/Business-Administration-Color.png', // Reemplazar URL por el logo oficial correspondiente
+            heading: 'Escuela de Administración de Empresas',
+            email: 'eae@ucenfotec.ac.cr',
+            director: 'Viviana Monge Marín',
             assistants: [
-                { name: 'Ingrid Mora Segura', phone: '6391-2632' },
-                { name: 'Priscilla Diaz Rodriguez', phone: '6465-6346' }
+                { name: 'Alexa Pereira Torres', phone: '6326-5283' }
             ],
         },
         {
-            src: 'https://res.cloudinary.com/glovooker/image/upload/v1734327318/students-site/Computing-Fundamentals-Color.png',
-            heading: 'Escuela de Fundamentos',
-            email: 'efun@ucenfotec.ac.cr',
-            director: 'Christian Sibaja Fernández',
+            src: 'https://res.cloudinary.com/glovooker/image/upload/v1734327318/students-site/Industrial-Systems-Color.png', // Reemplazar URL por el logo oficial correspondiente
+            heading: 'Escuela de Sistemas Industriales',
+            email: 'esind@ucenfotec.ac.cr',
+            director: 'Katherine Marín Guzmán',
             assistants: [
-                { name: 'Álvaro Ospina Beltrán', phone: '6097-2749' }
+                { name: 'Soporte General', phone: '4000-3951' }
             ],
         },
     ];

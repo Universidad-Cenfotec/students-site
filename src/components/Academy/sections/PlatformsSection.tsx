@@ -18,7 +18,7 @@ const PlatformsSection: React.FC = () => {
                 Conoce nuestras plataformas
             </h2>
 
-            {/* Video Section */ }
+            {/* Video Section */}
             <div className="card bg-base-100 shadow-xl mb-24">
                 <div className="card-body p-8 lg:p-12">
                     <div className="flex flex-col-reverse lg:flex-row items-center justify-between mx-auto">
@@ -48,7 +48,7 @@ const PlatformsSection: React.FC = () => {
                 </div>
             </div>
 
-            {/* Assistance Center */ }
+            {/* Assistance Center */}
             <div className="card bg-base-100 shadow-xl mb-16">
                 <div className="card-body p-8 lg:p-12">
                     <div className="flex flex-col lg:flex-row items-center justify-between mx-auto">
@@ -91,7 +91,7 @@ const PlatformsSection: React.FC = () => {
                 </div>
             </div>
 
-            {/* Gmail */ }
+            {/* Gmail */}
             <div className="card bg-base-100 shadow-xl mb-16">
                 <div className="card-body p-8 lg:p-12">
                     <div className="flex flex-col lg:flex-row items-center justify-between mx-auto">
@@ -134,7 +134,7 @@ const PlatformsSection: React.FC = () => {
                 </div>
             </div>
 
-            {/* Self Service */ }
+            {/* Self Service */}
             <div className="card bg-base-100 shadow-xl mb-16">
                 <div className="card-body p-8 lg:p-12">
                     <div className="flex flex-col lg:flex-row items-center justify-between mx-auto">
@@ -161,7 +161,7 @@ const PlatformsSection: React.FC = () => {
                                     Enlace Directo
                                 </a>
                                 <a
-                                    href='https://drive.google.com/file/d/1S9MhVGGtoCuTRQ8CulihRVEkFw4mf6F5/view?usp=sharing'
+                                    href='https://drive.google.com/file/d/15kX43hpghXlr6fyssv-sk4zEhibsnhfQ/view?usp=sharing'
                                     target='_blank'
                                     rel="noopener noreferrer"
                                     className="btn btn-outline btn-primary btn-lg text-sm sm:text-base font-semibold px-6 sm:px-8 shadow-lg hover:shadow-xl hover:text-white transition-shadow duration-200"
@@ -177,7 +177,7 @@ const PlatformsSection: React.FC = () => {
                 </div>
             </div>
 
-            {/* Google Meet */ }
+            {/* Google Meet */}
             <div className="card bg-base-100 shadow-xl mb-16">
                 <div className="card-body p-8 lg:p-12">
                     <div className="flex flex-col lg:flex-row items-center justify-between mx-auto">
@@ -207,7 +207,7 @@ const PlatformsSection: React.FC = () => {
                 </div>
             </div>
 
-            {/* Moodle */ }
+            {/* Moodle */}
             <div className="card bg-base-100 shadow-xl mb-16">
                 <div className="card-body p-8 lg:p-12">
                     <div className="flex flex-col lg:flex-row items-center justify-between mx-auto">
@@ -250,7 +250,7 @@ const PlatformsSection: React.FC = () => {
                 </div>
             </div>
 
-            {/* Library */ }
+            {/* Library */}
             <div className="card bg-base-100 shadow-xl">
                 <div className="card-body p-8 lg:p-12">
                     <div className="flex flex-col lg:flex-row items-center justify-between mx-auto">

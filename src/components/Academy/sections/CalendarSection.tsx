@@ -66,7 +66,7 @@ const CalendarSection: React.FC = () => {
                     <div className="card-body items-center text-center p-8">
                         <div className="mb-4">
                             <a
-                                href='https://centrodeasistencia.ucenfotec.ac.cr/portal/es/kb/articles/reglamento-de-r%C3%A9gimen-estudiantil'
+                                href='https://centrodeasistencia.ucenfotec.ac.cr/portal/es/kb/articles/qu%C3%A9-establece-el-reglamento-de-r%C3%A9gimen-estudiantil-16-4-2026'
                                 target='_blank'
                                 rel="noopener noreferrer"
                                 className="btn btn-primary text-white w-24 h-24 rounded-3xl flex justify-center items-center shadow-lg hover:shadow-xl transition-shadow duration-200"

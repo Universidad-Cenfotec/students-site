@@ -1,20 +1,76 @@
-import React from 'react';
-import { BlogGraphic, StudentKitGraphic } from '@/components/Landing/components/Graphics';
+"use client";
 
-const GuidanceSection: React.FC = () => {
+import React, { useEffect, useRef, useState } from 'react';
+import { BlogCard } from '@/components/Community/components/BlogCard';
+import { BlogPost } from '@/types/blog';
+import { StudentKitGraphic } from '@/components/Landing/components/Graphics';
 
+interface GuidanceSectionProps {
+    blogPosts?: BlogPost[];
+}
+
+const GuidanceSection: React.FC<GuidanceSectionProps> = ({ blogPosts }) => {
     const studentCouncilGraphic = 'https://res.cloudinary.com/glovooker/image/upload/v1722830884/students-site/student-council.png';
+    const [posts, setPosts] = useState<BlogPost[]>(blogPosts || []);
+
+    // Fallback: Si no se enviaron blogPosts por props, intentamos cargar los blogs directamente desde la API de Payload
+    useEffect(() => {
+        if (!blogPosts || blogPosts.length === 0) {
+            fetch('/api/blogs')
+                .then((res) => res.json())
+                .then((data) => {
+                    if (data?.docs) {
+                        setPosts(data.docs);
+                    } else if (Array.isArray(data)) {
+                        setPosts(data);
+                    }
+                })
+                .catch((err) => console.error("Error al obtener los artículos del blog:", err));
+        } else {
+            setPosts(blogPosts);
+        }
+    }, [blogPosts]);
+
+    // Filtrar publicaciones válidas (publicadas o sin propiedad status definida)
+    const publishedPosts = posts.filter((post) => !post.status || post.status === "published");
+
+    // Referencia para controlar el carrusel automático
+    const carouselRef = useRef<HTMLDivElement>(null);
+
+    // Efecto para el movimiento automático del carrusel
+    useEffect(() => {
+        const carousel = carouselRef.current;
+        if (!carousel || publishedPosts.length <= 1) return;
+
+        const interval = setInterval(() => {
+            const cardWidth = 320 + 24; // Ancho de la tarjeta (w-80 = 320px) + espacio (space-x-6 = 24px)
+            const maxScrollLeft = carousel.scrollWidth - carousel.clientWidth;
+
+            if (carousel.scrollLeft >= maxScrollLeft - 10) {
+                // Regresa suavemente al inicio cuando llega al final
+                carousel.scrollTo({ left: 0, behavior: 'smooth' });
+            } else {
+                // Avanza a la siguiente tarjeta
+                carousel.scrollBy({ left: cardWidth, behavior: 'smooth' });
+            }
+        }, 3500); // Se desplaza cada 3.5 segundos
+
+        return () => clearInterval(interval);
+    }, [publishedPosts.length]);
 
     return (
         <div className="w-full max-w-7xl mx-auto h-auto text-center md:text-left my-40 px-8 md:px-24">
+            {/* Header original - OCULTO */}
+            {/* 
             <div className="badge badge-primary badge-lg mb-2 text-xs sm:text-sm font-semibold tracking-wider text-white">
                 Sitio de Estudiantes
             </div>
             <h2 className="text-3xl sm:text-5xl font-semibold text-primary mb-8">
                 ¿Necesitas guía?
             </h2>
+            */}
 
-            {/* Student Kit Section - HIDDEN */ }
+            {/* Student Kit Section - HIDDEN */}
             {/* <div className="card bg-base-100 shadow-xl mb-16">
                 <div className="card-body p-8 lg:p-12">
                     <div className="flex flex-col lg:flex-row items-center gap-8">
@@ -47,38 +103,53 @@ const GuidanceSection: React.FC = () => {
                 </div>
             </div> */}
 
-            {/* Blog Section */ }
+            {/* Blog Section converted into an Automatic and Dynamic Carousel */}
             <div className="card bg-base-100 shadow-xl mb-16">
                 <div className="card-body p-8 lg:p-12">
-                    <div className="flex flex-col-reverse lg:flex-row items-center gap-8">
-                        <div className="w-full lg:w-1/2 text-center lg:text-left">
-                            <h3 className="text-2xl sm:text-3xl font-semibold text-gray-600 mb-2">
-                                No Te Pierdas de
-                            </h3>
-                            <h3 className="text-2xl sm:text-3xl font-semibold text-secondary mb-6">
-                                Nuestras Novedades
-                            </h3>
-                            <p className="text-gray-600 leading-relaxed mb-6 max-w-2xl mx-auto lg:mx-0">
-                                Entérate siempre de lo que está sucediendo en nuestra comunidad. Podrás estar al tanto de artículos, actividades, talleres, charlas, eventos, nuevos clubes, recursos, y mucho más a través de nuestro <span className="text-primary font-semibold">Blog Universitario</span>, siempre al día con las últimas novedades dentro de <span className="text-primary font-semibold">CENFOTEC</span>.
-                            </p>
-                            <a
-                                href="/community/blog"
-                                className="btn btn-outline btn-secondary btn-lg text-base sm:text-xl font-semibold px-8 sm:px-12 shadow-lg hover:shadow-xl hover:!text-white transition-all duration-300"
-                            >
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={ 2 } d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
-                                </svg>
-                                Visitar Blog
-                            </a>
-                        </div>
-                        <div className="w-full lg:w-1/2">
-                            <BlogGraphic className="w-full lg:w-5/6 h-auto" />
-                        </div>
+                    <div className="flex flex-col mb-8 text-center md:text-left">
+                        <h3 className="text-2xl sm:text-3xl font-semibold text-gray-600 mb-2">
+                            No Te Pierdas de
+                        </h3>
+                        <h3 className="text-2xl sm:text-3xl font-semibold text-secondary mb-6">
+                            Nuestras Novedades
+                        </h3>
                     </div>
+
+                    {publishedPosts.length > 0 ? (
+                        <div className="relative w-full">
+                            <div 
+                                ref={carouselRef}
+                                className="carousel carousel-center w-full space-x-6 p-4 bg-base-200/50 rounded-box overflow-x-auto scroll-smooth"
+                            >
+                                {publishedPosts.map((post) => (
+                                    <div key={post.id} className="carousel-item">
+                                        <BlogCard
+                                            id={post.id}
+                                            title={post.title}
+                                            description={post.description}
+                                            imageUrl={post.image?.url || "/placeholder.jpg"}
+                                        />
+                                    </div>
+                                ))}
+                            </div>
+                            <div className="flex justify-center w-full py-3 gap-2 text-xs text-gray-400">
+                                Desliza manualmente o espera el movimiento automático &larr; &rarr;
+                            </div>
+                        </div>
+                    ) : (
+                        <div className="text-center py-12">
+                            <div className="alert alert-info">
+                                <div>
+                                    <h3 className="font-bold">No hay artículos disponibles</h3>
+                                    <div className="text-sm">Próximamente se publicarán nuevas novedades en el blog</div>
+                                </div>
+                            </div>
+                        </div>
+                    )}
                 </div>
             </div>
 
-            {/* Student Council Section */ }
+            {/* Student Council Section */}
             {/* <div className="card bg-base-100 shadow-xl">
                 <div className="card-body p-8 lg:p-12">
                     <div className="flex flex-col lg:flex-row items-center gap-8">

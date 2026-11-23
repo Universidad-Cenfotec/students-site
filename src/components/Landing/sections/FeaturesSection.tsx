@@ -10,8 +10,9 @@ const FeaturesSection: React.FC = () => {
                 ¿Qué puedes hacer?
             </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 my-8">
-                {/* Feature 1 */ }
+            {/* Cambiado de md:grid-cols-3 a md:grid-cols-4 para acomodar las 4 tarjetas */}
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 my-8">
+                {/* Feature 1 */}
                 <div className="card bg-base-100 shadow-lg hover:shadow-xl transition-shadow duration-200">
                     <div className="card-body items-center text-center p-8">
                         <div className="mb-4">
@@ -31,7 +32,7 @@ const FeaturesSection: React.FC = () => {
                     </div>
                 </div>
 
-                {/* Feature 2 */ }
+                {/* Feature 2 */}
                 <div className="card bg-base-100 shadow-lg hover:shadow-xl transition-shadow duration-200">
                     <div className="card-body items-center text-center p-8">
                         <div className="mb-4">
@@ -51,7 +52,7 @@ const FeaturesSection: React.FC = () => {
                     </div>
                 </div>
 
-                {/* Feature 3 */ }
+                {/* Feature 3 */}
                 <div className="card bg-base-100 shadow-lg hover:shadow-xl transition-shadow duration-200">
                     <div className="card-body items-center text-center p-8">
                         <div className="mb-4">
@@ -67,6 +68,26 @@ const FeaturesSection: React.FC = () => {
                         </h3>
                         <p className="text-gray-600 leading-relaxed">
                             Accede a servicios de soporte dedicados al bienestar estudiantil, diseñados para ayudarte en cada paso de tu jornada educativa.
+                        </p>
+                    </div>
+                </div>
+
+                {/* Feature 4: Visitar Blog */}
+                <div className="card bg-base-100 shadow-lg hover:shadow-xl transition-shadow duration-200">
+                    <div className="card-body items-center text-center p-8">
+                        <div className="mb-4">
+                            <a
+                                href='/community/blog'
+                                className="btn btn-primary text-white w-24 h-24 rounded-3xl flex justify-center items-center shadow-lg hover:shadow-xl transition-shadow duration-200"
+                            >
+                                <CommentIcon className="text-4xl text-white" />
+                            </a>
+                        </div>
+                        <h3 className="card-title text-2xl font-semibold text-secondary mb-4">
+                            Visitar Blog
+                        </h3>
+                        <p className="text-gray-600 leading-relaxed">
+                            Explora las últimas noticias, artículos de interés y publicaciones compartidas por nuestra comunidad estudiantil.
                         </p>
                     </div>
                 </div>

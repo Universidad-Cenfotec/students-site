@@ -56,7 +56,7 @@ const SchoolsSection: React.FC = () => {
             ],
         },
         {
-            src: 'https://res.cloudinary.com/glovooker/image/upload/v1734327318/students-site/Business-Administration-Color.png', // Reemplazar URL por el logo oficial correspondiente
+            src: 'https://res.cloudinary.com/uwgwvmjn/image/upload/v1795463319/Business_Administration.jpg', 
             heading: 'Escuela de Administración de Empresas',
             email: 'eae@ucenfotec.ac.cr',
             director: 'Viviana Monge Marín',
@@ -65,7 +65,7 @@ const SchoolsSection: React.FC = () => {
             ],
         },
         {
-            src: 'https://res.cloudinary.com/glovooker/image/upload/v1734327318/students-site/Industrial-Systems-Color.png', // Reemplazar URL por el logo oficial correspondiente
+            src: 'https://res.cloudinary.com/uwgwvmjn/image/upload/v1795463319/Industrial_System.jpg', 
             heading: 'Escuela de Sistemas Industriales',
             email: 'esind@ucenfotec.ac.cr',
             director: 'Katherine Marín Guzmán',
